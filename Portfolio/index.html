@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fb6627ec67.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        
+        <div class="container">
+            <nav>
+                <h1><span>S</span>hreyansh.</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+            <div class="header-text">
+                <p>Frontend Developer</p>
+                <h1>Hi,I'm <span class="ani"></span><br>I am a Student</h1>
+            </div>
+            
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="frontend-development-tools.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p></p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI </span><br>Designing Web realted interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Language</span><br>C++, C, Python, MySql</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br>UI development learning from own</li>
+                            <li><span>2023</span><br>Internship in NGO</li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021</span><br>Python course in School</li>
+                            <li><span>2022</span><br>MySql cousre in School</li>
+                            <li><span>2022</span><br>C language from MSIT</li>
+                            <li><span>2023</span><br>DSA in C++ by Love Babbar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Web development is the process of creating websites and web applications. It involves: Design, Layout, Coding, Content creation, Functionality.</p>
+                    <a href="https://en.wikipedia.org/wiki/Web_development#:~:text=Web%20development%20is%20the%20work,businesses%2C%20and%20social%20network%20services." target="_blank">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI Design</h2>
+                    <p>User interface (UI) design is the process of creating menus and tools that allow users to navigate digital products. This includes websites, mobile apps, train ticket machines, TVs, and coffee machines</p>
+                    <a href="https://www.coursera.org/in/articles/ui-design#:~:text=User%20interface%20(UI)%20design%20is,%2C%20behaviour%2C%20and%20overall%20feel." target="_blank">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App Development</h2>
+                    <p>App development is the process of creating software applications for businesses. The process involves: Planning, Designing, Creating, Testing, Deploying.</p>
+                    <a href="https://developer.android.com/" target="_blank">Learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="download.jpg" alt="Web design" >
+                    <div class="layer">
+                        <h3>Web App/Design</h3>
+                        <p>the process of creating a website application that provides a user-friendly experience.It involves creating a clear and compelling user interface (UI) that meets users' needs.</p>
+                        <a href="https://github.com/02shreyansh/CODSOFT" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="download2.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Social media apps are applications that allow users to interact with each other online. 
+                            They can be downloaded and stored on a phone or tablet, or streamed through a browser.</p>
+                        <a href="https://github.com/02shreyansh/CODSOFT" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="dowbload4.jpg" alt="">
+                    <div class="layer">
+                        <h3>UI Design</h3>
+                        <p>the process of creating interfaces for software or computerized devices. UI design focuses on the look and feel of a product, including its interactivity, usability, and overall feel.</p>
+                        <a href="https://github.com/02shreyansh/CODSOFT" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/02shreyansh?tab=repositories" target="_blank" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><a href="mailto:02.shreyansh.10@gmail.com?subject=Feedback&body=Hello%20there!"><i class="fas fa-paper-plane"></i></a> 02.shreyansh.10@gmail.com</p>
+                    <p><a href="tel:+9971535101"><i class="fas fa-phone-square-alt"></i></a> 9971535101</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/_shreyansh_02" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://instagram.com/02_shreyansh" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/shreyansh-techenthusiastic/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message"   rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright shreyansh.Made by Me</p>
+        </div>
+    </div>
+
+<script>
+    // about
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+    var sidemeu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemeu.style.right="0";
+
+    }
+    function closemenu(){
+        sidemeu.style.right="-130px";
+        
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxOEEzlTHxhVMhxwlotRrBifkKIQ3A3ueucnvMKwlqBbOrqFG73GJIEmFh28NIcduRN/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Submit Sucessfully!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed=new Typed(".ani",{
+        strings: ["Shreyansh !","Developer !","Engineer !"],
+        typeSpeed:150,
+        backSpeed:150,
+        loop:true
+    })
+</script>
+
+
+</body>
+</html>
