@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 html,body{
     width: 100%;
@@ -26,7 +27,9 @@ html,body{
     width: 100%;
     height: 100%;
     
-    object-fit: cover;
+    -o-object-fit: cover;
+    
+       object-fit: cover;
 
 }
 .top{
@@ -52,9 +55,15 @@ html,body{
 .nav{
     width: 100%;
     padding:20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     top:9px;
     padding-bottom: 30px;
     
@@ -76,8 +85,12 @@ html,body{
 
 }
 .nav-right{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap:60px;
 }
 .nav-right button{
@@ -107,7 +120,9 @@ html,body{
     content: '';
     position: absolute;
     width: 100%;
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
     height: 2px;
     top:30px;
     left:0;
@@ -115,21 +130,37 @@ html,body{
 
     background-color: aqua;
     
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    
+    transition: -webkit-transform 0.25s ease-out;
+    
+    -o-transition: transform 0.25s ease-out;
+    
     transition: transform 0.25s ease-out;
+    
+    transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 .nav a:hover::after{
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
    
 }
 
 
 .hero{
-    transform: translate(0%,-50%);
+    -webkit-transform: translate(0%,-50%);
+        -ms-transform: translate(0%,-50%);
+            transform: translate(0%,-50%);
     position:absolute;
     top:60%;
     left:0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
    
     
@@ -207,9 +238,16 @@ html,body{
 
 
 .heroright{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     width: 25%;
     
    
@@ -237,3 +275,4 @@ html,body{
 .heroright p:nth-child(3){
     margin-bottom: 50px;
 }
+
