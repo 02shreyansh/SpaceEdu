@@ -66,6 +66,9 @@ To run the SpaceEdu landing page locally, follow these steps:
 
 To experience the interactive features, simply clone the repository and open the `index.html` file in a web browser. Interact with the hero section to explore information about each planet and enjoy the dynamic animations.
 
-Feel free to customize and extend the project based on your specific requirements. If you have any questions or suggestions, please feel free to reach out.
+Feel free to customize and extend the project based on your specific requirements. 
+---
+
+Thank you for exploring SpaceEdu! We hope you enjoy the interactive journey through our solar system. If you have any feedback or would like to contribute, don't hesitate to get in touch. Safe travels through the cosmos!
 
 
