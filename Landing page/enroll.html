@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #dfd7d7, #8137c1);
+            background: linear-gradient(to right, #a2b4f4, #304ee7);
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,12 +17,13 @@
         }
 
         form {
-            background: linear-gradient(to right, #e4d6f5, #ae93f5);
+            background: linear-gradient(to right, #c5bfec, #405add);
             padding: 20px;
             border:3px solid #010109;
             border-radius: 40px;
             box-shadow: 40px 40px 40px rgba(37, 40, 54, 0.308);
-            width: 300px;
+            width: 500px;
+            
         }
 
         label {
@@ -35,13 +36,15 @@
             padding: 8px;
             margin-bottom: 16px;
             box-sizing: border-box;
-            border: 0px solid #eae6e6;
-            border-radius: 4px;
+            border: none;
+            border-bottom:1px solid black;
+            outline :none;
+            background: linear-gradient(to right, #c5bfec, #405add);
         }
 
         button {
-            background-color: #0b0712;
-            color: #ffffff;
+            background-color: #405add;
+            color: #e8e9ee;
             padding: 10px 15px;
             border: none;
             border-radius: 4px;
@@ -54,6 +57,7 @@
 
         textarea{
             border:0px solid white;
+            background: linear-gradient(to right, #c5bfec, #405add);
         }
 
     </style>
@@ -73,9 +77,8 @@
         <input type="tel" id="phone" name="phone" required>
 
         <label for="comments">Additional Comments:</label>
-        <textarea id="comments" name="comments" rows="4"></textarea>
-
-        <button type="submit">Submit</button>
+        <textarea id="comments" name="comments" rows="4"></textarea><br>
+        <center><button type="submit">Submit</button></center>
     </form>
 
 </body>
