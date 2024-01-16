@@ -6,9 +6,13 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
 </head>
 <body>
+    <div id="loader">
+        <img id="loading-image" src="logoo.webp" alt="Loading Image">
+    </div>
     <div class="main">
         <div class="back">
             <img src="https://cdn.mos.cms.futurecdn.net/QHvQLhnFjrD6RgWgyZSHRn-1200-80.jpg" alt="Mercury">
@@ -51,6 +55,10 @@
                         
 
                         <a href="enroll.html">Enroll</a>
+
+                        <a href="#contact">Contact</a>
+
+
 
                     </div>
                     
@@ -118,6 +126,33 @@
                 </div>
             </div>
 
+        </div>
+        <div id="contact">
+            <div id="contact-info">
+                <center><h1>Contact</h1></center>
+            <h5>02.shreyansh.10@gmail.com<br>9971535101
+            <br></h5>
+            <br>
+            <h4>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i></h4>
+                   
+            </div>
+            <form>
+        
+                <label for="fullName">Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder='Your Name'required><br>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder='Your Email' required><br>
+
+                <label for="comments">Message:</label>
+                <textarea id="comments" name="comments" rows="6" placeholder='Your Message'></textarea><br>
+                <center><button type="submit">Submit</button></center>
+            </form>
+        
         </div>
     </div>
     

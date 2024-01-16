@@ -67,11 +67,19 @@ var elems = document.querySelectorAll(".elem");
 elems.forEach(function (elem) {
   var h1s = elem.querySelectorAll("h1");
   var h3s = elem.querySelectorAll("h3");
-
+  
   var index1 = 0;
   var index = 0;
-
-  var animating = false;
+  var animating=false;
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      document.getElementById("loader").style.transform = "translateY(-100%)";
+      document.getElementById("loader").style.opacity = 0;
+      document.getElementById("main-content").style.opacity = 1;
+    }, 2000);
+  });
+  
   document.querySelector(".main").addEventListener("click", function () {
     if (!animating) {
       animating = true;
