@@ -276,3 +276,41 @@ html,body{
     margin-bottom: 50px;
 }
 
+
+
+/* footer css */
+
+#footr{
+    height: 16rem;
+    background-color: #1E1E1E;
+}
+#footr h3{
+    color: #fff;
+}
+#footr p{
+    color: #fff;
+}
+
+#footr a{
+    color: #90CAF9;
+    font-size: 1.5rem;
+}
+
+
+
+.footer_content{
+    padding: 2rem;
+    display:flex ;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+   
+}
+
+.socialicons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
