@@ -9,6 +9,37 @@ html,body{
     height:100%;
     
 }
+
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 999;
+    opacity: 1;
+    transform: translateY(0%);
+    transition: transform 0.5s steps(5000), opacity 0.5s steps(5000);
+}
+
+#loading-image {
+    width: 200px;
+    height: auto;
+    transition: transform 2s steps(500);
+    animation: pixelAnimation 2s forwards;
+}
+
+@keyframes pixelAnimation {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 .main{
     width: 100%;
     height: 100vh;
