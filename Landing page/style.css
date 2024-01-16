@@ -308,6 +308,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -410,7 +411,6 @@ h4{
 /* footer css */
 
 #footr{
-    height: 16rem;
     background-color: #1E1E1E;
 }
 #footr h3{
