@@ -38,48 +38,51 @@ const heroright = document.querySelector(".heroright");
 const herorightText = heroright.querySelector("p:nth-child(1)");
 const herorightImage = heroright.querySelector(".image");
 const herorightPs = heroright.querySelectorAll("p");
+
 //Animates the heroright class elements on loading
-gsap.from(herorightText, {
-  y: 50,
-  opacity: 0,
-  duration: 1,
-  delay: 0.5,
-  ease: "power3.out",
-});
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.from(herorightText, {
+    y: 50,
+    opacity: 0,
+    duration: 2,
+    delay: 2,
+    ease: "power3.out",
+  });
 
-gsap.from(herorightPs, {
-  transform: "translateY(50px)",
-  opacity: 0,
-  duration: 1,
-  delay: 0,
-  ease: "power3.out",
-});
+  gsap.from(herorightPs, {
+    transform: "translateY(50px)",
+    opacity: 0,
+    duration: 1,
+    delay: 0,
+    ease: "power3.out",
+  });
 
-gsap.from(herorightImage, {
-  y: 50,
-  opacity: 0,
-  duration: 1,
-  delay: 1,
-  ease: "power3.out",
+  gsap.from(herorightImage, {
+    y: 50,
+    opacity: 0,
+    duration: 2,
+    delay: 2,
+    ease: "power3.out",
+  });
 });
 
 var elems = document.querySelectorAll(".elem");
 elems.forEach(function (elem) {
   var h1s = elem.querySelectorAll("h1");
   var h3s = elem.querySelectorAll("h3");
-  
+
   var index1 = 0;
   var index = 0;
-  var animating=false;
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
+  var animating = false;
+
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
       document.getElementById("loader").style.transform = "translateY(-100%)";
       document.getElementById("loader").style.opacity = 0;
       document.getElementById("main-content").style.opacity = 1;
     }, 2000);
   });
-  
+
   document.querySelector(".main").addEventListener("click", function () {
     if (!animating) {
       animating = true;
