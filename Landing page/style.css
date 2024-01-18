@@ -6,8 +6,7 @@
 }
 html,body{
     width: 100%;
-    height:100%;
-    
+    height:100%;    
 }
 
 #loader {
@@ -71,9 +70,6 @@ html,body{
     left: 0;
     width: 100%;
     height: 100vh;
-    
-
-    
 }
 .workingarea{
     position: relative;
@@ -84,101 +80,103 @@ html,body{
     
     
 }
-.nav{
+.nav {
+    position: relative;
     width: 100%;
-    padding:20px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    padding: 20px 0;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    top:9px;
+    justify-content: space-between;
+    align-items: center;
+    top: 9px;
     padding-bottom: 30px;
-    
-    
-
+    color: #fff;
+    overflow: hidden;
 }
-.nav-left h2{
+.nav-left h2 {
     padding-left: 7px;
-    color:#fff;
+    color: #fff;
     font-family: "Arial";
-    font-size: 20px;
-    
+    font-size: 24px;
+    font-weight: bold;
 }
-.nav-left span{
-    color:rgb(0, 200, 255)
+.nav-left span {
+    color: rgb(0, 200, 255);
 }
 #hr{
     color:white;
 
 }
-.nav-right{
-    display: -webkit-box;
-    display: -ms-flexbox;
+.nav-right {
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap:60px;
+    align-items: center;
+    gap: 40px; /* Reduce the gap between links */
 }
-.nav-right button{
-    pointer-events: all;
-    padding: 9px 30px;
+.nav-right button {
+    padding: 10px 20px;
     border-radius: 34px;
-    color:#000;
+    color: #000;
     font-family: "Arial";
     font-weight: 600;
-   
+    background-color: #ffd700; /* Add a gold color for the button */
+    border: 2px solid #ffd700; /* Add border color */
+    transition: background-color 2s ease;
 }
 
-.nav a{
-    pointer-events: all;
+.nav a {
     text-decoration: none;
-    font-size:15px;
-    color:#fff;
+    font-size: 18px; /* Increase font size */
+    color: #fff;
     font-family: "Arial";
     font-weight: 600;
-    display:inline-block;
+    display: inline-block;
     position: relative;
-    
-
-    
 }
-.nav a::after{
+.nav a::after {
     content: '';
     position: absolute;
     width: 100%;
-    -webkit-transform: scaleX(0);
-        -ms-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
     height: 2px;
-    top:30px;
-    left:0;
-   
-
+    top: 30px;
+    left: 0;
     background-color: aqua;
-    
-    -webkit-transition: -webkit-transform 0.25s ease-out;
-    
-    transition: -webkit-transform 0.25s ease-out;
-    
-    -o-transition: transform 0.25s ease-out;
-    
     transition: transform 0.25s ease-out;
-    
-    transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
-.nav a:hover::after{
-    -webkit-transform: scaleX(1);
-        -ms-transform: scaleX(1);
-            transform: scaleX(1);
-   
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+.nav-right button:hover {
+    background-color: transparent;
+    color: #ffd700;
+}
+@keyframes planetRotate {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
 }
 
+/* Apply planet animation to .nav-left */
+.nav-left {
+    animation: planetRotate 5s linear infinite;
+    transform-style: preserve-3d;
+}
+
+/* Add a subtle glow effect to the planets */
+.nav-left h2 span {
+    animation: planetGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes planetGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 200, 255, 1);
+    }
+}
 
 .hero{
     -webkit-transform: translate(0%,-50%);
@@ -194,25 +192,14 @@ html,body{
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-   
-    
 }
 .heroleft{
-    width: 38%;
-    
-  
-
-    
+    width: 38%;    
 }
 .heroleft .elem{
     position:relative;
     overflow: hidden;
-    
-    height:6vw;
-    
-    
-   
-    
+    height:6vw; 
 }
 .heroleft .elem h1{
     top:100%;
@@ -224,7 +211,6 @@ html,body{
     text-decoration: underline;
     text-transform: uppercase;
     font-size: 3vw;
-  
 }
 .heroleft .elem h1:nth-child(1){
     top:0;
@@ -276,14 +262,9 @@ html,body{
         -ms-flex-align: end;
             align-items: flex-end;
     width: 25%;
-    
-   
-
     color:#fff;
-    
 }
 .heroright p{
-    
     text-align: right;
     font-weight: 300;
     font-size: 15px;
@@ -402,6 +383,21 @@ h4{
 ::placeholder{
     color: #000000;
 }
-
+.nav-right {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1F51FF, 0 0 40px #1F51FF, 0 0 50px #1F51FF, 0 0 60px #1F51FF, 0 0 70px #1F51FF;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #1F51FF, 0 0 40px #1F51FF, 0 0 50px #1F51FF, 0 0 60px #1F51FF, 0 0 70px #1F51FF, 0 0 80px #1F51FF;
+    }
+  }
 
 
