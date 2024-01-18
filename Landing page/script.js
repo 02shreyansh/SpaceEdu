@@ -39,83 +39,6 @@ const herorightText = heroright.querySelector("p:nth-child(1)");
 const herorightImage = heroright.querySelector(".image");
 const herorightPs = heroright.querySelectorAll("p");
 
-<<<<<<< HEAD
-    var h1s =elem.querySelectorAll("h1");
-    var h3s =elem.querySelectorAll("h3");
-    var index1=0;
-    var index =0;
-
-    var animating=false;
-    document.querySelector(".main")
-    .addEventListener("click",function(){
-        if(!animating){
-            animating=true;
-            gsap.to(h1s[index1],{
-                top:"-=100%",
-                ease: Expo.easeInOut,
-                duration:1,
-                onComplete: function(){
-                    gsap.set(this._targets[0],{top:"100%"})
-                    animating=false;
-                },
-            });
-            index1++;
-            index1=== h1s.length ? (index1=0):null;
-            gsap.to(h1s[index1],{
-                top:"-=100%",
-                ease: Expo.easeInOut,
-                duration:1,
-            });
-
-            gsap.to(h3s[index],{
-                top:"-=100%",
-                ease: Expo.easeInOut,
-                duration:1,
-                onComplete: function(){
-                    gsap.set(this._targets[0],{top:"100%"})
-                    animating=false;
-                }
-            });
-            index++;
-            index=== h3s.length ? (index=0):null;
-            gsap.to(h3s[index],{
-                top:"-=100%",
-                ease: Expo.easeInOut,
-                duration:1,
-
-            });
-        }
-    });
-});
-
-
-let burgerMenu = document.querySelector(".burger-menu");
-let burgerBtn = document.querySelector(".burger-menu-btn");
-let toggleBtn = document.querySelector("#btn");
-
-let isBurgerOpen = true;
-
-burgerBtn.onclick = function () {
-    toggleBurgerMenu();
-};
-
-toggleBtn.onclick = function () {
-    toggleBurgerMenu();
-};
-
-function toggleBurgerMenu() {
-    if (isBurgerOpen) {
-        burgerMenu.style.display = "none";
-        isBurgerOpen = false;
-    } else {
-        burgerMenu.style.display = "block";
-        isBurgerOpen = true;
-    }
-}
-
-
-
-=======
 //Animates the heroright class elements on loading
 document.addEventListener("DOMContentLoaded", function () {
   gsap.from(herorightText, {
@@ -200,4 +123,29 @@ elems.forEach(function (elem) {
     }
   });
 });
->>>>>>> upstream/main
+let burgerMenu = document.querySelector(".burger-menu");
+let burgerBtn = document.querySelector(".burger-menu-btn");
+let toggleBtn = document.querySelector("#btn");
+
+let isBurgerOpen = true;
+
+burgerBtn.onclick = function () {
+    toggleBurgerMenu();
+};
+
+toggleBtn.onclick = function () {
+    toggleBurgerMenu();
+};
+
+function toggleBurgerMenu() {
+    if (isBurgerOpen) {
+        burgerMenu.style.display = "none";
+        isBurgerOpen = false;
+    } else {
+        burgerMenu.style.display = "block";
+        isBurgerOpen = true;
+    }
+}
+
+
+
