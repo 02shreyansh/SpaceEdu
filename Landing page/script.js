@@ -3,15 +3,8 @@ Shery.imageEffect(".back",{style: 5,config:{"a":{"value":2,"range":[0,30]},"b":{
 var elems=document.querySelectorAll(".elem")
 elems.forEach(function(elem){
 
-    
-    
-    
     var h1s =elem.querySelectorAll("h1");
     var h3s =elem.querySelectorAll("h3");
-
-    
-    
-    
     var index1=0;
     var index =0;
 
@@ -20,7 +13,6 @@ elems.forEach(function(elem){
     .addEventListener("click",function(){
         if(!animating){
             animating=true;
-            
             gsap.to(h1s[index1],{
                 top:"-=100%",
                 ease: Expo.easeInOut,
@@ -29,7 +21,6 @@ elems.forEach(function(elem){
                     gsap.set(this._targets[0],{top:"100%"})
                     animating=false;
                 },
-    
             });
             index1++;
             index1=== h1s.length ? (index1=0):null;
@@ -37,8 +28,6 @@ elems.forEach(function(elem){
                 top:"-=100%",
                 ease: Expo.easeInOut,
                 duration:1,
-                
-    
             });
 
             gsap.to(h3s[index],{
@@ -49,9 +38,6 @@ elems.forEach(function(elem){
                     gsap.set(this._targets[0],{top:"100%"})
                     animating=false;
                 }
-
-
-
             });
             index++;
             index=== h3s.length ? (index=0):null;
@@ -62,9 +48,33 @@ elems.forEach(function(elem){
 
             });
         }
-
-        
-
     });
-
 });
+
+
+let burgerMenu = document.querySelector(".burger-menu");
+let burgerBtn = document.querySelector(".burger-menu-btn");
+let toggleBtn = document.querySelector("#btn");
+
+let isBurgerOpen = true;
+
+burgerBtn.onclick = function () {
+    toggleBurgerMenu();
+};
+
+toggleBtn.onclick = function () {
+    toggleBurgerMenu();
+};
+
+function toggleBurgerMenu() {
+    if (isBurgerOpen) {
+        burgerMenu.style.display = "none";
+        isBurgerOpen = false;
+    } else {
+        burgerMenu.style.display = "block";
+        isBurgerOpen = true;
+    }
+}
+
+
+
