@@ -138,7 +138,7 @@ html,body{
     position: relative;
 }
 .nav a::after{
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -406,22 +406,6 @@ h4{
     color: #000000;
 }
 
-.glow {
-    font-size: 80px;
-    color: #fff;
-    text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-@keyframes glow {
-    
 
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1F51FF, 0 0 40px #1F51FF, 0 0 50px #1F51FF, 0 0 60px #1F51FF, 0 0 70px #1F51FF;
-    }
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #1F51FF, 0 0 40px #1F51FF, 0 0 50px #1F51FF, 0 0 60px #1F51FF, 0 0 70px #1F51FF, 0 0 80px #1F51FF;
-    }
-}
+
 
