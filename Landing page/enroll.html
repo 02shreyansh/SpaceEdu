@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enrollment Form</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma,Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
             background-image: url('https://wallpaperaccess.com/full/31366.jpg');
             background-repeat: no-repeat;
             background-size: cover;
@@ -19,13 +20,13 @@
         }
 
         form {
-           background-image: url('https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg');
+            background-image: url('https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg');
             padding: 20px;
-            border:3px solid #010109;
+            border: 3px solid #010109;
             border-radius: 40px;
             box-shadow: 40px 40px 40px rgba(37, 40, 54, 0.308);
             width: 500px;
-            
+
         }
 
         label {
@@ -38,14 +39,14 @@
             padding: 8px;
             margin-bottom: 16px;
             background-image: url('https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg');
-            color:white;
+            color: white;
             box-sizing: border-box;
             border-top: none;
-            border-left:none;
+            border-left: none;
             border-right: none;
-            border-bottom:1px solid rgb(255, 234, 234);
-            outline :none;
-            
+            border-bottom: 1px solid rgb(255, 234, 234);
+            outline: none;
+
         }
 
         button {
@@ -55,28 +56,152 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            border: 1px solid ;
+            border: 1px solid;
         }
 
-        textarea{
+        textarea {
             background-image: url('https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg');
             border-top: none;
-            border-left:none;
+            border-left: none;
             border-right: none;
-            border-bottom:1px solid rgb(255, 234, 234);
-            color:white;
-           
-        }
-        h2,label{
-            color:white;
+            border-bottom: 1px solid rgb(255, 234, 234);
+            color: white;
+
         }
 
+        h2,
+        label {
+            color: white;
+        }
+
+        .nav {
+
+            position: absolute;
+            width: 100%;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            top: 9px;
+            padding-bottom: 30px;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .nav-left h2 {
+            padding-left: 40px;
+            color: #fff;
+            font-family: "Arial";
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-left span {
+            color: rgb(0, 200, 255)
+        }
+
+        .nav-right {
+            pointer-events: all;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-right button {
+            padding: 10px 20px;
+            border-radius: 34px;
+            color: #000;
+            font-family: "Arial";
+            font-weight: 600;
+            background-color: #ffd700;
+            border: 2px solid #ffd700;
+            transition: background-color 2s ease;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 20px;
+            /* Increase font size */
+            color: #fff;
+            font-family: "Arial";
+            font-weight: 600;
+            display: inline-block;
+            position: relative;
+        }
+
+        .nav a::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            top: 30px;
+            left: 0;
+            background-color: aqua;
+            transition: transform 0.25s ease-out;
+        }
+
+        .nav a:hover::after {
+            transform: scaleX(1);
+
+        }
+
+        .nav-right button:hover {
+            background-color: transparent;
+            color: #ffd700;
+        }
+
+        @keyframes planetRotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .nav-left {
+            animation: planetRotate 20s linear infinite;
+        }
+
+        .nav-left h2 span {
+            animation: planetGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes planetGlow {
+            0% {
+                text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
+            }
+
+            100% {
+                text-shadow: 0 0 10px rgba(0, 200, 255, 1);
+            }
+        }
     </style>
 </head>
+
 <body>
-    
+    <div class="nav">
+        <div class="nav-left">
+            <h2>space<span>edu</span></h2>
+        </div>
+
+        <div class="nav-right">
+            <a href="index.html">Home</a>
+            <a href="#">Planets</a>
+            <a href="#">Trailer</a>
+            <a href="#">Tickets</a>
+            <a href="#">Blog</a>
+            <a href="login.html" >Login</a>
+            <a href="feedback.html">Rate Us</a>
+            <a href="#"><button>Enroll</button></a>
+        </div>
+    </div>
     <form>
-        <h2><center>Enrollment Form</center></h2>
+        <h2>
+            <center>Enrollment Form</center>
+        </h2>
 
         <label for="fullName">Full Name:</label>
         <input type="text" id="fullName" name="fullName" required>
@@ -93,4 +218,5 @@
     </form>
 
 </body>
+
 </html>
