@@ -295,37 +295,50 @@ body {
   justify-content: center;
   height: 100vh;
 }
-#contact {
+#contact { 
   display: flex;
   justify-content: center;
+  padding-top:50px ;
 }
 #contact-info h1 {
-  font-size: 50px;
+  margin-bottom: 10px;
+  font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 100px;
+  margin-left: 10px;
   color: white;
+  margin-top: 50PX;
 }
 #contact-info h5 {
   font-size: 15px;
-  display: flex;
+  display: flex; 
   align-items: center;
   justify-content: center;
-  margin-left: 50px;
-  color: white;
-}
+  margin-left: 100px;
+  color: white; 
+  line-height: 20px;
+ } 
 
 form {
   padding: 70px;
   border: 3px solid #030303;
   border-radius: 40px;
   box-shadow: 40px 40px 40px rgba(57, 58, 65, 0.308);
-  width: 500px;
-  margin-left: 600px;
+  /* width: 500px; */
+  width: 397px;
+  /* margin-left: 600px; */
+  margin-left: 474px;
+  margin-bottom: 40px;
   background-color: #404040;
 }
-
+.feed{
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-left: 350px;
+  font-weight: 500;
+}
 label {
   display: block;
   margin-bottom: 8px;
@@ -348,6 +361,7 @@ input {
 button {
   color: #080808;
   padding: 10px 15px;
+  margin-top: 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -361,6 +375,7 @@ textarea {
   border-right: none;
   border-bottom: 1px solid rgb(255, 234, 234);
   color: rgb(239, 227, 227);
+  width: 253px;
 }
 h1 {
   display: flex;
@@ -385,16 +400,19 @@ h4 {
   box-sizing: border-box;
 }
 footer {
+  overflow-x: hidden;
   margin-top: 50px;
   background-color: #1a1a1a;
 }
 .footerContainer {
   width: 100%;
-  padding: 60px 30px 15px;
+  padding-top: 50px;
 }
 .socialIcons {
   display: flex;
   justify-content: center;
+  margin-right: 250px;
+  margin-top: 15px;
 }
 .socialIcons a {
   text-decoration: none;
@@ -420,9 +438,11 @@ footer {
 .socials {
   display: flex;
   justify-content: center;
+  
 }
 .footerNav {
   margin: 30px 0;
+  margin-right: 250px;
 }
 .footerNav ul {
   display: flex;
@@ -454,4 +474,79 @@ footer {
     text-align: center;
     margin: 10px;
   }
+}
+
+.faq {
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+  background: linear-gradient(to right bottom ,rgb(11, 11, 42) , rgb(21, 21, 21) , rgb(17, 17, 41));
+  margin: 100px auto;
+  max-width: 80%;
+  border-radius: 10px;
+
+
+}
+
+.faq h2 {
+  margin-top: 50px;
+  font-weight: -500;
+  font-size: 40px;
+  color: #c2c5c7;
+}
+
+.accordion {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+}
+
+.accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+label::after {
+  content: '+';
+  font-size: 34px;
+  position: absolute;
+  /* right: 20px; */
+  right: 130px;
+  transition: transform 0.5s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.accordion .content {
+  background-color: #303030;
+  color: white;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked+label+.content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked+label::after {
+  transform: rotate(135deg);
 }
