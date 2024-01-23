@@ -297,9 +297,31 @@ body {
 }
 #contact { 
   display: flex;
-  justify-content: center;
   padding-top:50px ;
 }
+.contact-card {
+  margin-top: 50px;
+  margin-left: 5%;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  height: 400px;
+}
+
+.glow {
+  animation: glowing 1s infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  }
+}
+
 #contact-info h1 {
   margin-bottom: 10px;
   font-size: 30px;
