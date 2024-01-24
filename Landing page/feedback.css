@@ -12,6 +12,101 @@ html,body{
   text-align: center;
   background-image: url("daksh.jpg");
 }
+
+.nav{
+    
+  position: absolute;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 9px;
+  padding-bottom: 30px;
+  color: #fff;
+  overflow: hidden;
+}
+.nav-left h2{
+  padding-left: 7px;
+  color: #fff;
+  font-family: "Arial";
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-left span{
+  color:rgb(0, 200, 255)
+}
+.nav-right{
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  gap: 40px; 
+}
+.nav-right button{
+  padding: 10px 20px;
+  border-radius: 34px;
+  color: #000;
+  font-family: "Arial";
+  font-weight: 600;
+  background-color: #ffd700; 
+  border: 2px solid #ffd700; 
+  transition: background-color 2s ease;
+}
+
+.nav a{
+  text-decoration: none;
+  font-size: 20px; /* Increase font size */
+  color: #fff;
+  font-family: "Arial";
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+.nav a::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  top: 30px;
+  left: 0;
+  background-color: aqua;
+  transition: transform 0.25s ease-out;
+}
+.nav a:hover::after{
+  transform: scaleX(1);
+ 
+}
+.nav-right button:hover {
+  background-color: transparent;
+  color: #ffd700;
+}
+@keyframes planetRotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.nav-left {
+  animation: planetRotate 20s linear infinite;
+}
+
+.nav-left h2 span {
+  animation: planetGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes planetGlow {
+  0% {
+      text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
+  }
+  100% {
+      text-shadow: 0 0 10px rgba(0, 200, 255, 1);
+  }
+}
+
 .container{
   position: relative;
   width: 400px;
