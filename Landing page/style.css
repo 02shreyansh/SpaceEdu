@@ -103,8 +103,8 @@ body {
   font-weight: bold;
 }
 
-hr{
-    color:white;
+hr {
+  color: white;
 }
 .nav-left span {
   color: rgb(0, 200, 255);
@@ -252,39 +252,6 @@ hr{
 .heroleft a:hover {
   color: blue;
 }
-.heroright {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  width: 25%;
-
-  color: #fff;
-}
-.heroright p {
-  text-align: right;
-  font-weight: 300;
-  font-size: 15px;
-  color: white;
-}
-.heroright .image {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  width: 100%;
-  height: 170px;
-  background-image: url(https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?q=80&w=1942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-size: cover;
-  background-position: center;
-}
-.heroright p:nth-child(3) {
-  margin-bottom: 50px;
-}
 body {
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   background-color: #000000;
@@ -295,10 +262,10 @@ body {
   justify-content: center;
   height: 100vh;
 }
-#contact { 
+#contact {
   display: flex;
   justify-content: center;
-  padding-top:50px ;
+  padding-top: 50px;
 }
 #contact-info h1 {
   margin-bottom: 10px;
@@ -308,17 +275,17 @@ body {
   justify-content: center;
   margin-left: 10px;
   color: white;
-  margin-top: 50PX;
+  margin-top: 50px;
 }
 #contact-info h5 {
   font-size: 15px;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 100px;
-  color: white; 
+  color: white;
   line-height: 20px;
- } 
+}
 
 form {
   padding: 70px;
@@ -332,7 +299,7 @@ form {
   margin-bottom: 40px;
   background-color: #404040;
 }
-.feed{
+.feed {
   color: white;
   font-size: 30px;
   margin-bottom: 10px;
@@ -438,7 +405,6 @@ footer {
 .socials {
   display: flex;
   justify-content: center;
-  
 }
 .footerNav {
   margin: 30px 0;
@@ -480,12 +446,15 @@ footer {
   padding: 10px 12%;
   text-align: center;
   font-size: 18px;
-  background: linear-gradient(to right bottom ,rgb(11, 11, 42) , rgb(21, 21, 21) , rgb(17, 17, 41));
+  background: linear-gradient(
+    to right bottom,
+    rgb(11, 11, 42),
+    rgb(21, 21, 21),
+    rgb(17, 17, 41)
+  );
   margin: 100px auto;
   max-width: 80%;
   border-radius: 10px;
-
-
 }
 
 .faq h2 {
@@ -520,7 +489,7 @@ footer {
 }
 
 label::after {
-  content: '+';
+  content: "+";
   font-size: 34px;
   position: absolute;
   /* right: 20px; */
@@ -542,11 +511,11 @@ input[type="radio"] {
   transition: max-height 0.5s, padding 0.5s;
 }
 
-.accordion input[type="radio"]:checked+label+.content {
+.accordion input[type="radio"]:checked + label + .content {
   max-height: 600px;
   padding: 30px 20px;
 }
 
-.accordion input[type="radio"]:checked+label::after {
+.accordion input[type="radio"]:checked + label::after {
   transform: rotate(135deg);
 }
