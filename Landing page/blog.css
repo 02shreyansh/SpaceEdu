@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 
 .top {
     pointer-events: none;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -199,4 +199,60 @@ body {
 .content a:hover{
     color: #ffd700;
     background-color: #333;
+}
+footer{
+    width: 100%;
+    color: white;
+    /* margin: 10px; */
+    margin-top: 80px;
+    border-top: 1px solid white;
+
+}
+.connect{
+    padding: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+.connect h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+.connect a{
+    padding-top: 20px;
+    color: white;
+    font-size: 1.57rem;
+    line-height: 40px;
+    letter-spacing: 20px;
+}
+.connect a:hover{
+    color: aqua;
+}
+.links{
+    text-align: center;
+}
+.links h2{
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+.links li{
+    list-style: none;
+}
+.links li a{
+    text-decoration: none;
+    color:  cadetblue;
+    line-height: 35px;
+    font-size: 1.30rem;
+
+}
+.links li a:hover{
+    color: bisque;
+    text-decoration: underline;
+}
+.copyright{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
 }
