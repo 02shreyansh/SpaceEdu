@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css" />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <style>
       body {
-        font-family: 'Arial', sans-serif;
+        font-family: "Arial", sans-serif;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -21,78 +21,80 @@
         cursor: pointer;
       }
     </style>
-</head>
-<body>
-  <div class="nav">
-    <div class="nav-left">
-      <h2>space<span>edu</span></h2>
-    </div>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="nav-left">
+        <h2>space<span>edu</span></h2>
+      </div>
 
-    <div class="nav-right">
-      <a href="index.html" >Home</a>
-      <a href="planet.html" >Planets</a>
-      <a href="#" >Trailer</a>
-      <a href="#" >Tickets</a>
-      <a href="blog.html" >Blog</a>
-      <a href="#" >Login</a>
-      <a href="feedback.html" >Rate Us</a>
-      <a href="enroll.html" ><button>Enroll</button></a>
+      <div class="nav-right">
+        <a class="nav-option" href="index.html">Home</a>
+        <a class="nav-option" href="planet.html">Planets</a>
+        <a class="nav-option" href="#">Trailer</a>
+        <a class="nav-option" href="#">Tickets</a>
+        <a class="nav-option" href="blog.html">Blog</a>
+        <a class="nav-option" href="#">Login</a>
+        <a class="nav-option" href="feedback.html">Rate Us</a>
+        <a href="enroll.html"><button>Enroll</button></a>
+      </div>
     </div>
-  </div>
     <div class="fold">
-    <form action="#">
-    <h2>SpaceEdu</h2>
-    <div class="input-field">
-    <input type="text" required>
-    <label>Enter your email</label>   
-    </div>    
-    <div class="input-field">
-    <input type="password" required>
-    <label>Enter your password</label>
-    </div>
-    <div class="forget">
-    <label for="remember">
-    <input type="checkbox" id="remember">
-    <p>Remember Me</p>    
-    </label>    
-    <a href="#">Forgot Password?</a>
-    </div>
-    <button type="submit">Log In</button>
-    <div class="register">
-    <p>Don't have an account? <a href="#">Register</a>
-    <button id="login-button">Sign in with Gmail</button>
-           </p>
+      <form action="#">
+        <h2>SpaceEdu</h2>
+        <div class="input-field">
+          <input type="text" required />
+          <label>Enter your email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" required />
+          <label>Enter your password</label>
+        </div>
+        <div class="forget">
+          <label for="remember">
+            <input type="checkbox" id="remember" />
+            <p>Remember Me</p>
+          </label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit">Log In</button>
+        <div class="register">
+          <p>
+            Don't have an account? <a href="#">Register</a>
+            <button id="login-button">Sign in with Gmail</button>
+          </p>
         </div>
       </form>
     </div>
     <script>
       function onSignIn(googleUser) {
         const profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId());
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail());
+        console.log("ID: " + profile.getId());
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
       }
-  
+
       function renderButton() {
-        gapi.signin2.render('login-button', {
-          'scope': 'profile email',
-          'width': 200,
-          'height': 40,
-          'longtitle': true,
-          'theme': 'dark',
-          'onsuccess': onSignIn,
+        gapi.signin2.render("login-button", {
+          scope: "profile email",
+          width: 200,
+          height: 40,
+          longtitle: true,
+          theme: "dark",
+          onsuccess: onSignIn,
         });
       }
-  
+
       window.onload = function () {
-        gapi.load('auth2', function () {
+        gapi.load("auth2", function () {
           gapi.auth2.init({
-            client_id: '430826684-5ed6aaol7p2eh56i96e0f8k4hedd451g.apps.googleusercontent.com', // Replace with your own client ID
+            client_id:
+              "430826684-5ed6aaol7p2eh56i96e0f8k4hedd451g.apps.googleusercontent.com", // Replace with your own client ID
           });
           renderButton();
         });
       };
     </script>
-</body>
+  </body>
 </html>

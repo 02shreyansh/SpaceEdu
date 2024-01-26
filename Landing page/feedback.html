@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Star Rating Form</title>
-    <link rel="stylesheet" href="feedback.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="feedback.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
-
     <div class="nav">
       <div class="nav-left">
         <h2>space<span>edu</span></h2>
       </div>
-  
+
       <div class="nav-right">
-        <a href="index.html" >Home</a>
-        <a href="planet.html" >Planets</a>
-        <a href="#" >Trailer</a>
-        <a href="#" >Tickets</a>
-        <a href="blog.html" >Blog</a>
-        <a href="login.html" >Login</a>
-        <a href="#" >Rate Us</a>
-        <a href="enroll.html" ><button>Enroll</button></a>
+        <a class="nav-option" href="index.html">Home</a>
+        <a class="nav-option" href="planet.html">Planets</a>
+        <a class="nav-option" href="#">Trailer</a>
+        <a class="nav-option" href="#">Tickets</a>
+        <a class="nav-option" href="blog.html">Blog</a>
+        <a class="nav-option" href="login.html">Login</a>
+        <a class="nav-option" href="#">Rate Us</a>
+        <a href="enroll.html"><button>Enroll</button></a>
       </div>
     </div>
 
@@ -29,23 +31,26 @@
       <div class="post">
         <div class="text">Thanks for rating us!</div>
         <div class="edit">EDIT</div>
-        <div class ="Home" onclick="nav('index.html')">Home</div>
-    </div>
+        <div class="Home" onclick="nav('index.html')">Home</div>
+      </div>
       <div class="star-widget">
-        <input type="radio" name="rate" id="rate-5">
+        <input type="radio" name="rate" id="rate-5" />
         <label for="rate-5" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-4">
+        <input type="radio" name="rate" id="rate-4" />
         <label for="rate-4" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-3">
+        <input type="radio" name="rate" id="rate-3" />
         <label for="rate-3" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-2">
+        <input type="radio" name="rate" id="rate-2" />
         <label for="rate-2" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-1">
+        <input type="radio" name="rate" id="rate-1" />
         <label for="rate-1" class="fas fa-star"></label>
         <form action="#">
           <header></header>
           <div class="textarea">
-            <textarea cols="30" placeholder="Describe your experience.."></textarea>
+            <textarea
+              cols="30"
+              placeholder="Describe your experience.."
+            ></textarea>
           </div>
           <div class="btn">
             <button type="submit">Post</button>
@@ -59,19 +64,18 @@
       const widget = document.querySelector(".star-widget");
       const editBtn = document.querySelector(".edit");
       const homeBtn = document.querySelector(".Home");
-      function nav(page) {   
-        window.location.href=page
-    }
-      btn.onclick = ()=>{
+      function nav(page) {
+        window.location.href = page;
+      }
+      btn.onclick = () => {
         widget.style.display = "none";
         post.style.display = "block";
-        editBtn.onclick = ()=>{
+        editBtn.onclick = () => {
           widget.style.display = "block";
           post.style.display = "none";
-        }
+        };
         return false;
-      }
+      };
     </script>
-
   </body>
 </html>
