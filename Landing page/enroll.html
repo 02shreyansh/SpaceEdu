@@ -1,217 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enrollment Form</title>
-    <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
-        background-image: url("https://wallpaperaccess.com/full/31366.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enrollment Form</title>
+  <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      background-image: url("https://wallpaperaccess.com/full/31366.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      /* display: flex; */
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    form {
+      background-image: url("https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg");
+      padding: 20px;
+      border: 3px solid #010109;
+      border-radius: 40px;
+      box-shadow: 40px 40px 40px rgba(37, 40, 54, 0.308);
+      width: 500px;
+      margin: auto;
+      margin-top: 130px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      background-image: url("https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg");
+      color: white;
+      box-sizing: border-box;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid rgb(255, 234, 234);
+      outline: none;
+    }
+
+    button {
+      background-image: url("https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg");
+      color: #e8e9ee;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid;
+    }
+
+    textarea {
+      background-image: url("https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg");
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid rgb(255, 234, 234);
+      color: white;
+    }
+
+    h2,
+    label {
+      color: white;
+    }
+
+    .nav {
+      position: absolute;
+      width: 100%;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      top: 9px;
+      padding-bottom: 30px;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .nav-left h2 {
+      padding-left: 40px;
+      color: #fff;
+      font-family: "Arial";
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-left span {
+      color: rgb(0, 200, 255);
+    }
+
+    .nav-right {
+      pointer-events: all;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .nav-right button {
+      padding: 10px 20px;
+      border-radius: 34px;
+      color: #000;
+      font-family: "Arial";
+      font-weight: 700;
+      font-size: large;
+      background-color: #ffd700;
+      border: 2px solid #ffd700;
+      transition: background-color 2s ease;
+      margin-top: 0px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-size: 20px;
+      /* Increase font size */
+      color: #fff;
+      font-family: "Arial";
+      font-weight: 600;
+      display: inline-block;
+      position: relative;
+    }
+
+    .nav-option::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      top: 30px;
+      left: 0;
+      background-color: aqua;
+      transition: transform 0.25s ease-out;
+    }
+
+    .nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-right button:hover {
+      background-color: transparent;
+      color: #ffd700;
+    }
+
+    @keyframes planetRotate {
+      0% {
+        transform: rotate(0deg);
       }
 
-      form {
-        background-image: url("https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg");
-        padding: 20px;
-        border: 3px solid #010109;
-        border-radius: 40px;
-        box-shadow: 40px 40px 40px rgba(37, 40, 54, 0.308);
-        width: 500px;
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .nav-left {
+      animation: planetRotate 20s linear infinite;
+    }
+
+    .nav-left h2 span {
+      animation: planetGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes planetGlow {
+      0% {
+        text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
       }
 
-      label {
-        display: block;
-        margin-bottom: 8px;
+      100% {
+        text-shadow: 0 0 10px rgba(0, 200, 255, 1);
       }
+    }
 
-      input {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 16px;
-        background-image: url("https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg");
-        color: white;
-        box-sizing: border-box;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 1px solid rgb(255, 234, 234);
-        outline: none;
-      }
+    footer {
+      background-color: black;
+      border-top: 1px solid white;
+    }
 
-      button {
-        background-image: url("https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg");
-        color: #e8e9ee;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        border: 1px solid;
-      }
+    .connect {
+      padding: 30px;
+      padding-top: 20px;
+      text-align: center;
+    }
 
-      textarea {
-        background-image: url("https://i.pinimg.com/originals/1b/f2/d4/1bf2d49e0aadcc0bdd40dfa2f7ecb38d.jpg");
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 1px solid rgb(255, 234, 234);
-        color: white;
-      }
+    .connect h2 {
+      text-align: center;
+      padding-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
 
-      h2,
-      label {
-        color: white;
-      }
+    .connect a {
+      padding-top: 20px;
+      color: white;
+      font-size: 1.57rem;
+      line-height: 40px;
+      letter-spacing: 20px;
+    }
 
-      .nav {
-        position: absolute;
-        width: 100%;
-        padding: 10px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        top: 9px;
-        padding-bottom: 30px;
-        color: #fff;
-        overflow: hidden;
-      }
+    .connect a:hover {
+      color: rgb(111, 185, 225);
+    }
 
-      .nav-left h2 {
-        padding-left: 40px;
-        color: #fff;
-        font-family: "Arial";
-        font-size: 24px;
-        font-weight: bold;
-      }
+    .links {
+      text-align: center;
+    }
 
-      .nav-left span {
-        color: rgb(0, 200, 255);
-      }
+    .links h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
 
-      .nav-right {
-        pointer-events: all;
-        display: flex;
-        align-items: center;
-        gap: 40px;
-      }
+    .links li {
+      list-style: none;
+    }
 
-      .nav-right button {
-        padding: 10px 20px;
-        border-radius: 34px;
-        color: #000;
-        font-family: "Arial";
-        font-weight: 700;
-        font-size: large;
-        background-color: #ffd700;
-        border: 2px solid #ffd700;
-        transition: background-color 2s ease;
-        margin-top: 0px;
-      }
+    .links li a {
+      text-decoration: none;
+      color: rgb(11, 81, 155);
+      line-height: 35px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
 
-      .nav a {
-        text-decoration: none;
-        font-size: 20px;
-        /* Increase font size */
-        color: #fff;
-        font-family: "Arial";
-        font-weight: 600;
-        display: inline-block;
-        position: relative;
-      }
+    .links li a:hover {
+      color: rgb(114, 152, 204);
+      text-decoration: underline;
+    }
 
-      .nav-option::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        top: 30px;
-        left: 0;
-        background-color: aqua;
-        transition: transform 0.25s ease-out;
-      }
+    .copyright {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+  </style>
+</head>
 
-      .nav a:hover::after {
-        transform: scaleX(1);
-      }
+<body>
+  <div class="nav">
+    <div class="nav-left">
+      <h2>space<span>edu</span></h2>
+    </div>
 
-      .nav-right button:hover {
-        background-color: transparent;
-        color: #ffd700;
-      }
+    <div class="nav-right">
+      <a class="nav-option" href="index.html">Home</a>
+      <a class="nav-option" href="#">Planets</a>
+      <a class="nav-option" href="#">Trailer</a>
+      <a class="nav-option" href="#">Tickets</a>
+      <a class="nav-option" href="#">Blog</a>
+      <a class="nav-option" href="login.html">Login</a>
+      <a class="nav-option" href="feedback.html">Rate Us</a>
+      <a href="#"><button>Enroll</button></a>
+    </div>
+  </div>
+  <form>
+    <h2>
+      <center>Enrollment Form</center>
+    </h2>
 
-      @keyframes planetRotate {
-        0% {
-          transform: rotate(0deg);
-        }
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required />
 
-        100% {
-          transform: rotate(360deg);
-        }
-      }
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
 
-      .nav-left {
-        animation: planetRotate 20s linear infinite;
-      }
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required />
 
-      .nav-left h2 span {
-        animation: planetGlow 2s ease-in-out infinite alternate;
-      }
-
-      @keyframes planetGlow {
-        0% {
-          text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
-        }
-
-        100% {
-          text-shadow: 0 0 10px rgba(0, 200, 255, 1);
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="nav">
-      <div class="nav-left">
-        <h2>space<span>edu</span></h2>
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea><br />
+    <center><button type="submit">Submit</button></center>
+  </form>
+  <footer>
+    <div class="footer-container">
+      <div class="connect">
+        <h2>Connect With Us</h2>
+        <a href=""><i class="bi bi-github"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href=""><i class="bi bi-twitter"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-envelope"></i></a>
       </div>
-
-      <div class="nav-right">
-        <a class="nav-option" href="index.html">Home</a>
-        <a class="nav-option" href="#">Planets</a>
-        <a class="nav-option" href="#">Trailer</a>
-        <a class="nav-option" href="#">Tickets</a>
-        <a class="nav-option" href="#">Blog</a>
-        <a class="nav-option" href="login.html">Login</a>
-        <a class="nav-option" href="feedback.html">Rate Us</a>
-        <a href="#"><button>Enroll</button></a>
+      <div class="links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="enroll.html">ENROLL</a></li>
+          <li><a href="index.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; 2024 Landing Blog Page. All rights reserved. | Designed by
+          Shreyansh
+        </p>
       </div>
     </div>
-    <form>
-      <h2>
-        <center>Enrollment Form</center>
-      </h2>
+  </footer>
+</body>
 
-      <label for="fullName">Full Name:</label>
-      <input type="text" id="fullName" name="fullName" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required />
-
-      <label for="comments">Additional Comments:</label>
-      <textarea id="comments" name="comments" rows="4"></textarea><br />
-      <center><button type="submit">Submit</button></center>
-    </form>
-  </body>
 </html>

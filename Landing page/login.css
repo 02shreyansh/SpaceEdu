@@ -6,14 +6,17 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+html{
+  overflow-x: hidden;
+}
 
 body {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 
 body::before {
@@ -29,8 +32,10 @@ body::before {
 
 .fold {
   width: 400px;
+  margin:  auto;
   border-radius: 8px;
-  padding: 30px;
+  padding: 0 30px;
+  margin-bottom: 20px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(9px);
@@ -138,7 +143,7 @@ button:hover {
 }
 
 .nav {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   padding: 20px 0;
   display: flex;
@@ -230,3 +235,67 @@ button:hover {
     text-shadow: 0 0 10px rgba(0, 200, 255, 1);
   }
 }
+
+  footer{
+    content: "";
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    background: url("https://wallpapers-clan.com/wp-content/uploads/2023/11/space-fog-planets-desktop-wallpaper-preview.jpg"),
+      #000;
+    background-position: center;
+    background-size: cover;
+    border-top: 10px solid rgb(181, 203, 232);
+    padding-top: 40px;
+  }
+
+  .connect {
+    padding: 30px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .connect h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  .connect a {
+    padding-top: 20px;
+    color: white;
+    font-size: 1.57rem;
+    line-height: 40px;
+    letter-spacing: 20px;
+  }
+  .connect a:hover {
+    color:black;
+  }
+  .links {
+    text-align: center;
+  }
+  .links h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  .links li {
+    list-style: none;
+  }
+  .links li a {
+    text-decoration: none;
+    color:rgb(155, 11, 128);
+    line-height: 35px;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .links li a:hover {
+    color: rgb(24, 27, 31);
+    text-decoration: underline;
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
