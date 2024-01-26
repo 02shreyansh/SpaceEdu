@@ -123,12 +123,13 @@ hr {
   border-radius: 34px;
   color: #000;
   font-family: "Arial";
-  font-weight: 600;
+  font-weight: 700;
+  font-size: large;
   background-color: #ffd700;
   border: 2px solid #ffd700;
   transition: background-color 2s ease;
+  margin-top: 0px;
 }
-
 .nav a {
   text-decoration: none;
   font-size: 18px; /* Increase font size */
@@ -138,7 +139,7 @@ hr {
   display: inline-block;
   position: relative;
 }
-.nav a::after {
+.nav-option::after {
   content: "";
   position: absolute;
   width: 100%;
