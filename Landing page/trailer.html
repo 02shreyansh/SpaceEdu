@@ -1,0 +1,218 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <style>
+        #video-container {
+            text-align: center;
+        }
+        video#video1 {
+            display: inline-block;
+            margin-top: 190px;
+            border: blueviolet;
+            border-width: 2px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-20 {
+  appearance: button;
+  background-color: #4D4AE8;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+  border: 1px solid #4D4AE8;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  padding: .5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-20:focus:not(:focus-visible),
+.button-20:focus {
+  outline: 0;
+}
+
+.button-20:hover {
+  background-color: #3733E5;
+  border-color: #3733E5;
+}
+
+.button-20:focus {
+  background-color: #413FC5;
+  border-color: #3E3BBA;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+}
+
+.button-20:active {
+  background-color: #3E3BBA;
+  background-image: none;
+  border-color: #3A38AE;
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+}
+
+.button-20:active:focus {
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+}
+
+.button-20:disabled {
+  background-image: none;
+  box-shadow: none;
+  opacity: .65;
+  pointer-events: none;
+}
+body {
+            background-image: url('bg.jpg'); /* Replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .nav-right {
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nav-right button {
+  padding: 10px 20px;
+  border-radius: 34px;
+  color: #000;
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: large;
+  background-color: #ffd700;
+  border: 2px solid #ffd700;
+  transition: background-color 2s ease;
+  margin-top: 0px;
+}
+.nav a {
+  text-decoration: none;
+  font-size: 18px; /* Increase font size */
+  color: #fff;
+  font-family: "Arial";
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+.nav-option::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  top: 30px;
+  left: 0;
+  background-color: aqua;
+  transition: transform 0.25s ease-out;
+}
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+.nav-right button:hover {
+  background-color: transparent;
+  color: #ffd700;
+}
+.nav {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 9px;
+  padding-bottom: 30px;
+  color: #fff;
+  overflow: hidden;
+}
+@keyframes planetRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-left {
+  animation: planetRotate 20s linear infinite;
+}
+
+.nav-left h2 span {
+  animation: planetGlow 2s ease-in-out infinite alternate;
+}
+    </style>
+    
+</head>
+<body> 
+  <div class="top">
+    <div class="workingarea">
+        <div class="nav">
+            <div class="nav-left">
+                <h2>space<span>edu</span></h2>
+            </div>
+            <div class="nav-right">
+                <a class="nav-option" href="about.html">About</a>
+                <a class="nav-option" href="planet.html">Planets</a>
+                <a class="nav-option" href="trailer.html">Trailer</a>
+                <a class="nav-option" href="#">Tickets</a>
+                <a class="nav-option" href="blog.html">Blog</a>
+                <a class="nav-option" href="login.html" target="_blank">Login</a>
+                <a class="nav-option" href="#contact">Contact</a>
+                <a class="nav-option" href="feedback.html">Rate Us</a>
+                <a href="enroll.html"><button>Enroll</button></a>
+            </div>
+        </div>
+        <hr />
+<div id="video-container"> 
+  <video id="video1" width="560">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support HTML video. 
+  </video>
+</div>
+<div class="button-container"> 
+  <button class="button-20" onclick="playPause()">Play/Pause</button> 
+  <button  class="button-20" onclick="makeBig()">Big</button>
+  <button class="button-20" onclick="makeSmall()">Small</button>
+  <button class="button-20" onclick="makeNormal()">Normal</button>
+</div>
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 700; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 500; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 560; // Original width
+} 
+</script> 
+
+</body> 
+</html>
