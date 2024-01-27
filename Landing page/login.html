@@ -1,132 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
-    <link rel="stylesheet" href="login.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        /* display: flex; */
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-      }
-      #login-button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="nav">
-      <div class="nav-left">
-        <h2>space<span>edu</span></h2>
-      </div>
 
-      <div class="nav-right">
-        <a class="nav-option" href="index.html">Home</a>
-        <a class="nav-option" href="planet.html">Planets</a>
-        <a class="nav-option" href="#">Trailer</a>
-        <a class="nav-option" href="#">Tickets</a>
-        <a class="nav-option" href="blog.html">Blog</a>
-        <a class="nav-option" href="#">Login</a>
-        <a class="nav-option" href="feedback.html">Rate Us</a>
-        <a href="enroll.html"><button>Enroll</button></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      /* display: flex; */
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #login-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #progress {
+      background-color: white;
+      position: fixed;
+      bottom: 20px;
+      right: 10px;
+      height: 60px;
+      width: 60px;
+      display: none;
+      place-items: center;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+
+    }
+
+    #progress-value {
+      display: block;
+      height: calc(100% - 15px);
+      width: calc(100% - 15px);
+      background-color: #1f3959;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 25px;
+      font-weight: 700;
+      /* color: #001a2e; */
+      color: white;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-left">
+      <h2>space<span>edu</span></h2>
+    </div>
+
+    <div class="nav-right">
+      <a class="nav-option" href="index.html">Home</a>
+      <a class="nav-option" href="planet.html">Planets</a>
+      <a class="nav-option" href="#">Trailer</a>
+      <a class="nav-option" href="#">Tickets</a>
+      <a class="nav-option" href="blog.html">Blog</a>
+      <a class="nav-option" href="#">Login</a>
+      <a class="nav-option" href="feedback.html">Rate Us</a>
+      <a href="enroll.html"><button>Enroll</button></a>
+    </div>
+  </div>
+  <div class="fold">
+    <form action="#">
+      <h2>SpaceEdu</h2>
+      <div class="input-field">
+        <input type="text" required />
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required />
+        <label>Enter your password</label>
+      </div>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember" />
+          <p>Remember Me</p>
+        </label>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit">Log In</button>
+      <div class="register">
+        <p>
+          Don't have an account? <a href="#">Register</a>
+          <button id="login-button">Sign in with Gmail</button>
+        </p>
+      </div>
+    </form>
+  </div>
+  <script>
+    function onSignIn(googleUser) {
+      const profile = googleUser.getBasicProfile();
+      console.log("ID: " + profile.getId());
+      console.log("Name: " + profile.getName());
+      console.log("Image URL: " + profile.getImageUrl());
+      console.log("Email: " + profile.getEmail());
+    }
+
+    function renderButton() {
+      gapi.signin2.render("login-button", {
+        scope: "profile email",
+        width: 200,
+        height: 40,
+        longtitle: true,
+        theme: "dark",
+        onsuccess: onSignIn,
+      });
+    }
+
+    window.onload = function () {
+      gapi.load("auth2", function () {
+        gapi.auth2.init({
+          client_id:
+            "430826684-5ed6aaol7p2eh56i96e0f8k4hedd451g.apps.googleusercontent.com", // Replace with your own client ID
+        });
+        renderButton();
+      });
+    };
+  </script>
+  <footer>
+    <div class="footer-container">
+      <div class="connect">
+        <h2>Connect With Us</h2>
+        <a href=""><i class="bi bi-github"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href=""><i class="bi bi-twitter"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-envelope"></i></a>
+      </div>
+      <div class="links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="enroll.html">ENROLL</a></li>
+          <li><a href="index.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; 2024 Landing Blog Page. All rights reserved. | Designed by
+          Shreyansh
+        </p>
       </div>
     </div>
-    <div class="fold">
-      <form action="#">
-        <h2>SpaceEdu</h2>
-        <div class="input-field">
-          <input type="text" required />
-          <label>Enter your email</label>
-        </div>
-        <div class="input-field">
-          <input type="password" required />
-          <label>Enter your password</label>
-        </div>
-        <div class="forget">
-          <label for="remember">
-            <input type="checkbox" id="remember" />
-            <p>Remember Me</p>
-          </label>
-          <a href="#">Forgot Password?</a>
-        </div>
-        <button type="submit">Log In</button>
-        <div class="register">
-          <p>
-            Don't have an account? <a href="#">Register</a>
-            <button id="login-button">Sign in with Gmail</button>
-          </p>
-        </div>
-      </form>
-    </div>
-    <script>
-      function onSignIn(googleUser) {
-        const profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId());
-        console.log("Name: " + profile.getName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
-      }
+  </footer>
+  <div id="progress">
+    <span id="progress-value">&#x1F815; </span>
+  </div>
+  <script src="scroll.js"></script>
+</body>
 
-      function renderButton() {
-        gapi.signin2.render("login-button", {
-          scope: "profile email",
-          width: 200,
-          height: 40,
-          longtitle: true,
-          theme: "dark",
-          onsuccess: onSignIn,
-        });
-      }
-
-      window.onload = function () {
-        gapi.load("auth2", function () {
-          gapi.auth2.init({
-            client_id:
-              "430826684-5ed6aaol7p2eh56i96e0f8k4hedd451g.apps.googleusercontent.com", // Replace with your own client ID
-          });
-          renderButton();
-        });
-      };
-    </script>
-    <footer>
-      <div class="footer-container">
-        <div class="connect">
-          <h2>Connect With Us</h2>
-          <a href=""><i class="bi bi-github"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
-          <a href=""><i class="bi bi-twitter"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-envelope"></i></a>
-        </div>
-        <div class="links">
-          <h2>Quick Links</h2>
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="enroll.html">ENROLL</a></li>
-            <li><a href="index.html">CONTACT</a></li>
-          </ul>
-        </div>
-        <div class="copyright">
-          <p>
-            &copy; 2024 Landing Blog Page. All rights reserved. | Designed by
-            Shreyansh
-          </p>
-        </div>
-      </div>
-    </footer>
-  </body>
 </html>
