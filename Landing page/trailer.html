@@ -88,6 +88,17 @@ body {
   align-items: center;
   gap: 40px;
 }
+.nav-left h2 {
+  padding-left: 7px;
+  color: #23224C;
+  font-family: "Arial";
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-left span {
+  color: #0190FF;
+}
 .nav-right button {
   padding: 10px 20px;
   border-radius: 34px;
@@ -139,21 +150,16 @@ body {
   color: #fff;
   overflow: hidden;
 }
-@keyframes planetRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.nav-left {
-  animation: planetRotate 20s linear infinite;
-}
-
 .nav-left h2 span {
   animation: planetGlow 2s ease-in-out infinite alternate;
+}
+@keyframes planetGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 200, 255, 1);
+  }
 }
     </style>
     
@@ -163,7 +169,7 @@ body {
     <div class="workingarea">
         <div class="nav">
             <div class="nav-left">
-                <h2>space<span>edu</span></h2>
+                <h2>Spaces<span>EDU</span></h2>
             </div>
             <div class="nav-right">
                 <a class="nav-option" href="about.html">About</a>
