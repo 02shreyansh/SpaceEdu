@@ -77,6 +77,111 @@
         color: white;
       }
 
+    }
+
+    footer {
+      background-color: black;
+      border-top: 1px solid white;
+    }
+
+    .connect {
+      padding: 30px;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    .connect h2 {
+      text-align: center;
+      padding-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
+
+    .connect a {
+      padding-top: 20px;
+      color: white;
+      font-size: 1.57rem;
+      line-height: 40px;
+      letter-spacing: 20px;
+    }
+
+    .connect a:hover {
+      color: rgb(111, 185, 225);
+    }
+
+    .links {
+      text-align: center;
+    }
+
+    .links h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
+
+    .links li {
+      list-style: none;
+    }
+
+    .links li a {
+      text-decoration: none;
+      color: rgb(11, 81, 155);
+      line-height: 35px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .links li a:hover {
+      color: rgb(114, 152, 204);
+      text-decoration: underline;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    #progress {
+      background-color: white;
+      position: fixed;
+      bottom: 20px;
+      right: 10px;
+      height: 60px;
+      width: 60px;
+      display: none;
+      place-items: center;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+
+    }
+
+    #progress-value {
+      display: block;
+      height: calc(100% - 15px);
+      width: calc(100% - 15px);
+      background-color: #1f3959;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 25px;
+      font-weight: 700;
+      /* color: #001a2e; */
+      color: white;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-left">
+      <h2>space<span>edu</span></h2>
+    </div>
+
+
       .nav {
         position: absolute;
         width: 100%;
@@ -250,6 +355,7 @@
         <a href="#"><button>Enroll</button></a>
       </div>
     </div>
+
     <form>
       <h2>
         <center>Enrollment Form</center>
@@ -297,3 +403,13 @@
     </footer>
   </body>
 </html>
+
+    <div id="progress">
+      <span id="progress-value">&#x1F815; </span>
+    </div>
+    <script src="scroll.js"></script>
+  </footer>
+</body>
+
+</html>
+

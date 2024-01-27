@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 </head>
 
 <body>
@@ -58,7 +60,7 @@
             <a class="nav-option" href="blog.html">Blog</a>
 
             <a class="nav-option" href="login.html" target="_blank">Login</a>
-            <a class="nav-option" href="#contact">Contact</a>
+            <a class="nav-option" href="#container">Contact</a>
             <a class="nav-option" href="feedback.html">Rate Us</a>
             <a href="enroll.html"><button>Enroll</button></a>
           </div>
@@ -228,8 +230,6 @@
 
 
 
-
-
     <!-- <div id="contact">
       <div id="contact-info">
         <center>
@@ -243,7 +243,7 @@
           <i class="fa-brands fa-instagram"></i>
           <i class="fa-brands fa-linkedin"></i>
         </h4> -->
-       <!-- </div> 
+    <!-- </div> 
       <form>
         <label for="fullName">Name:</label>
         <input type="text" id="fullName" name="fullName" placeholder="Your Name" required /><br />
@@ -256,62 +256,127 @@
         <center><button type="submit">Submit</button></center>
       </form>
     </div>  -->
-    <footer>
-      <div id="contact">
-        <div id="contact-info">
-          <center>
-            <h1>Contact</h1>
-          </center>
-          
-          <h5>Email: 02.shreyansh.10@gmail.com<br /><br>Phone No.: <br>9971535101 <br /></h5>
-          <br />
-        </div>
-      <div class="footerContainer footerEl">
-        <div align="center" class="feed">Feedback: </div>
-        <form>
-          <label for="fullName">Name:</label>
-          <input type="text" id="fullName" name="fullName" placeholder="Your Name" required /><br />
-  
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" required /><br />
-  
-          <label for="comments">Message:</label>
-          <textarea id="comments" name="comments" rows="6" placeholder="Your Message"></textarea><br />
-          <center><button type="submit">Submit</button></center>
-        </form>
-        <div class="socialIcons footerEl">
-          <a href="https://www.linkedin.com/in/shreyansh-techenthusiastic/ "><i><i
-                class="fa-brands fa-linkedin-in"></i></i></a>
-          <a href="https://github.com/02shreyansh"><i><i class="fa-brands fa-github"></i></i></a>
-          <a href=""><i><i class="fa-regular fa-envelope"></i></i></a>
-          <a href=""><i><i class="fa-brands fa-instagram"></i></i></a>
-          <a href=""><i><i class="fa-brands fa-twitter"></i></a>
+
+
+    <div id="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Email us with any questions or inquiries or call 9971535101 . We would be happy to answer your questions .
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>92 Cherry Drive Uniondale, NY 11553</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>02.shreyansh.10@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="img/phone.png" class="icon" alt="" />
+              <p>9971535101</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/shreyansh-techenthusiastic/">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="footerNav footerEl">
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="footer-container">
+        <div class="connect">
+          <h2>Connect With Us</h2>
+          <a href=""><i class="bi bi-github"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href=""><i class="bi bi-twitter"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-envelope"></i></a>
+        </div>
+        <div class="links">
+          <h2>Quick Links</h2>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li>
-              <a href="https://02shreyansh.github.io/Portfolio/">Contact Me</a>
-            </li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="enroll.html">ENROLL</a></li>
+            <li><a href="index.html">CONTACT</a></li>
           </ul>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; 2024 Landing Blog Page. All rights reserved. | Designed by
+            Shreyansh
+          </p>
         </div>
       </div>
     </footer>
-  </div>
-  </div>
+    <div id="progress">
+      <span id="progress-value">&#x1F815; </span>
+    </div>
+    <script src="scroll.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>
