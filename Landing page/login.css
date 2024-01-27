@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-html{
+html {
   overflow-x: hidden;
 }
 
@@ -32,7 +32,7 @@ body::before {
 
 .fold {
   width: 400px;
-  margin:  auto;
+  margin: auto;
   border-radius: 8px;
   padding: 0 30px;
   margin-bottom: 20px;
@@ -156,13 +156,13 @@ button:hover {
 }
 .nav-left h2 {
   padding-left: 7px;
-  color: #fff;
+  color: #23224c;
   font-family: "Arial";
   font-size: 24px;
   font-weight: bold;
 }
 .nav-left span {
-  color: rgb(0, 200, 255);
+  color: #0190ff;
 }
 .nav-right {
   pointer-events: all;
@@ -215,7 +215,7 @@ button:hover {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -236,66 +236,65 @@ button:hover {
   }
 }
 
-  footer{
-    content: "";
-    position: absolute;
-    width: 100%;
-    /* height: 100%; */
-    background: url("https://wallpapers-clan.com/wp-content/uploads/2023/11/space-fog-planets-desktop-wallpaper-preview.jpg"),
-      #000;
-    background-position: center;
-    background-size: cover;
-    border-top: 10px solid rgb(181, 203, 232);
-    padding-top: 40px;
-  }
+footer {
+  content: "";
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */
+  background: url("https://wallpapers-clan.com/wp-content/uploads/2023/11/space-fog-planets-desktop-wallpaper-preview.jpg"),
+    #000;
+  background-position: center;
+  background-size: cover;
+  border-top: 10px solid rgb(181, 203, 232);
+  padding-top: 40px;
+}
 
-  .connect {
-    padding: 30px;
-    padding-top: 20px;
-    text-align: center;
-  }
-  .connect h2 {
-    text-align: center;
-    padding-bottom: 20px;
-    font-weight: 600;
-    font-size: 1.7rem;
-  }
-  .connect a {
-    padding-top: 20px;
-    color: white;
-    font-size: 1.57rem;
-    line-height: 40px;
-    letter-spacing: 20px;
-  }
-  .connect a:hover {
-    color:black;
-  }
-  .links {
-    text-align: center;
-  }
-  .links h2 {
-    margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 1.7rem;
-  }
-  .links li {
-    list-style: none;
-  }
-  .links li a {
-    text-decoration: none;
-    color:rgb(155, 11, 128);
-    line-height: 35px;
-    font-size: 1.3rem;
-    font-weight: 600;
-  }
-  .links li a:hover {
-    color: rgb(24, 27, 31);
-    text-decoration: underline;
-  }
-  .copyright {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #ccc;
-  }
-  
+.connect {
+  padding: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+.connect h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.connect a {
+  padding-top: 20px;
+  color: white;
+  font-size: 1.57rem;
+  line-height: 40px;
+  letter-spacing: 20px;
+}
+.connect a:hover {
+  color: black;
+}
+.links {
+  text-align: center;
+}
+.links h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.links li {
+  list-style: none;
+}
+.links li a {
+  text-decoration: none;
+  color: rgb(155, 11, 128);
+  line-height: 35px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.links li a:hover {
+  color: rgb(24, 27, 31);
+  text-decoration: underline;
+}
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ccc;
+}

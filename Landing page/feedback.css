@@ -28,13 +28,13 @@ body {
 }
 .nav-left h2 {
   padding-left: 7px;
-  color: #fff;
+  color: #23224c;
   font-family: "Arial";
   font-size: 24px;
   font-weight: bold;
 }
 .nav-left span {
-  color: rgb(0, 200, 255);
+  color: #0190ff;
 }
 .nav-right {
   pointer-events: all;
@@ -81,19 +81,6 @@ body {
   background-color: transparent;
   color: #ffd700;
 }
-@keyframes planetRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.nav-left {
-  animation: planetRotate 20s linear infinite;
-}
-
 .nav-left h2 span {
   animation: planetGlow 2s ease-in-out infinite alternate;
 }
