@@ -13,10 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
-        <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <style>
         body {
             width: 100%;
@@ -373,62 +370,72 @@
                 text-shadow: 0 0 10px rgba(0, 200, 255, 1);
             }
         }
+
         footer {
-  width: 100%;
-  color: white;
-  /* margin: 10px; */
+            width: 100%;
+            color: white;
+            /* margin: 10px; */
 
-  border-top: 1px solid white;
-  background-color: black;
-}
-.connect {
-  padding: 30px;
-  padding-top: 20px;
-  text-align: center;
-}
-.connect h2 {
-  text-align: center;
-  padding-bottom: 20px;
-  font-weight: 600;
-  font-size: 1.7rem;
-}
-.connect a {
-  padding-top: 20px;
-  color: white;
-  font-size: 1.57rem;
-  line-height: 40px;
-  letter-spacing: 20px;
-}
-.connect a:hover {
-  color: aqua;
-}
-.links {
-  text-align: center;
-}
-.links h2 {
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 1.7rem;
-}
-.links li {
-  list-style: none;
-}
-.links li a {
-  text-decoration: none;
-  color: cadetblue;
-  line-height: 35px;
-  font-size: 1.3rem;
-}
-.links li a:hover {
-  color: bisque;
-  text-decoration: underline;
-}
-.copyright {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1.2rem;
-}
+            border-top: 1px solid white;
+            background-color: black;
+        }
 
+        .connect {
+            padding: 30px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .connect h2 {
+            text-align: center;
+            padding-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.7rem;
+        }
+
+        .connect a {
+            padding-top: 20px;
+            color: white;
+            font-size: 1.57rem;
+            line-height: 40px;
+            letter-spacing: 20px;
+        }
+
+        .connect a:hover {
+            color: aqua;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        .links h2 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.7rem;
+        }
+
+        .links li {
+            list-style: none;
+        }
+
+        .links li a {
+            text-decoration: none;
+            color: cadetblue;
+            line-height: 35px;
+            font-size: 1.3rem;
+        }
+
+        .links li a:hover {
+            color: bisque;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 
@@ -528,31 +535,32 @@
 
     <footer>
         <div class="footer-container">
-          <div class="connect">
-            <h2>Connect With Us</h2>
-            <a href=""><i class="bi bi-github"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-            <a href=""><i class="bi bi-twitter"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-envelope"></i></a>
-          </div>
-          <div class="links">
-            <h2>Quick Links</h2>
-            <ul>
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="login.html">LOGIN</a></li>
-              <li><a href="enroll.html">ENROLL</a></li>
-              <li><a href="index.html">CONTACT</a></li>
-            </ul>
-          </div>
-          <div class="copyright">
-            <p>
-              &copy; 2024 Landing Blog Page. All rights reserved. | Designed by
-              Shreyansh
-            </p>
-          </div>
+            <div class="connect">
+                <h2>Connect With Us</h2>
+                <a href=""><i class="bi bi-github"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-envelope"></i></a>
+            </div>
+            <div class="links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="enroll.html">ENROLL</a></li>
+                    <li><a href="index.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>
+                    &copy; 2024 Landing Blog Page. All rights reserved. | Designed by
+                    Shreyansh
+                </p>
+            </div>
         </div>
-      </footer>
+    </footer>
+
     <script>
         let seats = document.querySelector(".all-seats");
         for (var i = 0; i < 59; i++) {
@@ -573,6 +581,15 @@
         let tickets = seats.querySelectorAll("input");
         tickets.forEach((ticket) => {
             ticket.addEventListener("change", () => {
+                if (ticket.checked) {
+                    // Check if the seat is booked
+                    if (ticket.nextElementSibling.classList.contains("booked")) {
+                        // If booked, prevent checking the checkbox
+                        ticket.checked = false;
+                        alert("This seat is already booked.");
+                        return;
+                    }
+                }
                 let amount = document.querySelector(".amount").innerHTML;
                 let count = document.querySelector(".count").innerHTML;
                 amount = Number(amount);
@@ -589,10 +606,18 @@
                 document.querySelector(".count").innerHTML = count;
             });
         });
+
         function myFunction() {
-            alert("Tickets are books");
+            let count = document.querySelector(".count").innerHTML;
+
+            if (count === '0') {
+                alert("No tickets booked. Please select seats before booking.");
+            } else {
+                alert(count + " tickets booked!");
+            }
         }
     </script>
+
 </body>
 
 </html>
