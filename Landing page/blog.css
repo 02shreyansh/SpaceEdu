@@ -121,14 +121,34 @@ body {
 
 .section {
   width: 95%;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  grid-gap: 25px;
+height: 100vh;
+background-color: #ffd700;
+margin: 40px auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); /* Add this line for a new row */
+grid-gap: 25px;
+max-width: 690px;
+
 }
+
+
+.blogcontainer{
+  width: 95%;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
 .card {
   background-color: #333;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+  height: 450px;
+  max-width: 350px;
+  margin-top: 50px;
 }
 .image-section {
   min-height: 200px;
@@ -152,6 +172,14 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.card .img-four {
+  background-image: url("./img/jwst-spacecraftpotentialtargetsmontageflip-1200px-4-jpg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .content {
   text-align: center;
   padding: 20px 10px;
@@ -271,3 +299,6 @@ footer {
   color: white;
   
 }
+
+
+
