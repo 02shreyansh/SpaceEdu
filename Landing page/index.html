@@ -11,6 +11,17 @@
   <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+  <script src="./index.js"></script>
+
+  <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+ (function(){
+    emailjs.init("WB9rAyWwwLZube-er");
+ })();
+</script>
 </head>
 
 <body>
@@ -311,26 +322,21 @@
           <form action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" />
+              <input type="text" name="name" class="input"  id="exampleInputName"/>
               <label for="">Username</label>
               <span>Username</span>
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" />
+              <input type="email" name="email" class="input" id="exampleInputEmail2"/>
               <label for="">Email</label>
               <span>Email</span>
             </div>
-            <div class="input-container">
-              <input type="tel" name="phone" class="input" />
-              <label for="">Phone</label>
-              <span>Phone</span>
-            </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
+              <textarea name="message" class="input" id="exampleInputMessage"></textarea>
               <label for="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <button type="submit" class="btn btn-primary" id="submitButton" onclick="sendMail()">Submit</button>
           </form>
         </div>
       </div>
