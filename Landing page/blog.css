@@ -180,6 +180,13 @@ max-width: 690px;
   background-position: center;
 }
 
+.card .img-five {
+  background-image: url("https://cdn.britannica.com/41/196341-050-6B55B7E7/solar-eclipse-moon-sun-space-astronomy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .content {
   text-align: center;
   padding: 20px 10px;
