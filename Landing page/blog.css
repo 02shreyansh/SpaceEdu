@@ -187,6 +187,13 @@ max-width: 690px;
   background-position: center;
 }
 
+.card .img-six {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/65/The_station_pictured_from_the_SpaceX_Crew_Dragon_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .content {
   text-align: center;
   padding: 20px 10px;
