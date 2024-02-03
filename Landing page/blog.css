@@ -201,6 +201,13 @@ max-width: 690px;
   background-position: center;
 }
 
+.card .img-eight {
+  background-image: url("https://physics.aps.org/assets/c3b9331f-5080-421d-b6d2-1944b1b26ae3/e28_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .content {
   text-align: center;
   padding: 20px 10px;
