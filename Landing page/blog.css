@@ -208,6 +208,13 @@ max-width: 690px;
   background-position: center;
 }
 
+.card .img-nine {
+  background-image: url("https://th-i.thgim.com/public/incoming/lvgcs6/article67249544.ece/alternates/LANDSCAPE_1200/PTI08_29_2023_000228B.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .content {
   text-align: center;
   padding: 20px 10px;
