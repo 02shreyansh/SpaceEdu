@@ -194,6 +194,13 @@ max-width: 690px;
   background-position: center;
 }
 
+.card .img-seven {
+  background-image: url("https://www.hindustantimes.com/ht-img/img/2023/08/11/550x309/Virgin-Galactic-Research-Flight-0_1691726439322_1691726470475.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .content {
   text-align: center;
   padding: 20px 10px;
