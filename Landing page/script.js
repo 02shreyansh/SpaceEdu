@@ -83,7 +83,7 @@ elems.forEach(function (elem) {
     }, 2000);
   });
 
-  document.querySelector(".main").addEventListener("click", function () {
+  document.querySelector(".back").addEventListener("click", function () {
     if (!animating) {
       animating = true;
 

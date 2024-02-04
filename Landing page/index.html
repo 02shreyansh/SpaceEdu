@@ -13,89 +13,105 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
   <style>
-   .popup-menu {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8); /* Black theme background color with transparency */
-    color: #ffd700; /* Yellow accent text color */
-    padding: 30px; /* Increased padding for better spacing */
-    width: 500px; /* Increased width for a wider modal */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Increased box shadow for a subtle glassmorphism effect */
-    z-index: 1;
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    text-align: center;
-}
+    .popup-menu {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      /* Black theme background color with transparency */
+      color: #ffd700;
+      /* Yellow accent text color */
+      padding: 30px;
+      /* Increased padding for better spacing */
+      width: 500px;
+      /* Increased width for a wider modal */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      /* Increased box shadow for a subtle glassmorphism effect */
+      z-index: 1;
+      backdrop-filter: blur(10px);
+      /* Glassmorphism effect */
+      border-radius: 10px;
+      /* Rounded corners for a modern look */
+      text-align: center;
+    }
 
-.popup-menu h2 {
-    font-size: 24px; /* Larger font size for the heading */
-    margin-bottom: 20px; /* Increased margin for better spacing */
-}
+    .popup-menu h2 {
+      font-size: 24px;
+      /* Larger font size for the heading */
+      margin-bottom: 20px;
+      /* Increased margin for better spacing */
+    }
 
-.popup-menu a {
-    display: block;
-    margin-bottom: 10px;
-    color: #ffd700; /* Yellow accent link color */
-    text-decoration: none;
-}
+    .popup-menu a {
+      display: block;
+      margin-bottom: 10px;
+      color: #ffd700;
+      /* Yellow accent link color */
+      text-decoration: none;
+    }
 
-.popup-menu a:hover {
-    text-decoration: underline;
-}
+    .popup-menu a:hover {
+      text-decoration: underline;
+    }
 
-.popup-menu button {
-    display: block;
-    margin-top: 20px; /* Increased margin for better spacing */
-    background-color: #ffd700; /* Yellow accent button background color */
-    color: #333; /* Black theme button text color */
-    padding: 12px;
-    width: 100%; /* Make the button full width */
-    border: none;
-    cursor: pointer;
-}
+    .popup-menu button {
+      display: block;
+      margin-top: 20px;
+      /* Increased margin for better spacing */
+      background-color: #ffd700;
+      /* Yellow accent button background color */
+      color: #333;
+      /* Black theme button text color */
+      padding: 12px;
+      width: 100%;
+      /* Make the button full width */
+      border: none;
+      cursor: pointer;
+    }
 
-.popup-menu button:hover {
-    background-color: #555; /* Darker yellow accent on hover */
-}
+    .popup-menu button:hover {
+      background-color: #555;
+      /* Darker yellow accent on hover */
+    }
 
-.close-popup-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #ffd700; /* Yellow accent close button color */
-    cursor: pointer;
-}
+    .close-popup-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #ffd700;
+      /* Yellow accent close button color */
+      cursor: pointer;
+    }
 
-.open-popup-btn {
-    background-color: #ffd700; /* Yellow accent button background color */
-    color: #333; /* Black theme button text color */
-    padding: 12px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
+    .open-popup-btn {
+      background-color: #ffd700;
+      /* Yellow accent button background color */
+      color: #333;
+      /* Black theme button text color */
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
 
-.open-popup-btn:hover {
-    background-color: #555; /* Darker yellow accent on hover */
-}
-
-
+    .open-popup-btn:hover {
+      background-color: #555;
+      /* Darker yellow accent on hover */
+    }
   </style>
 
   <script src="./index.js"></script>
 
-  <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
- (function(){
-    emailjs.init("WB9rAyWwwLZube-er");
- })();
-</script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("WB9rAyWwwLZube-er");
+    })();
+  </script>
 </head>
 
 <body>
@@ -140,22 +156,22 @@
           <div class="nav-right">
             <button class="open-popup-btn">Menu</button>
             <div class="popup-menu">
-                <span class="close-popup-btn">&times;</span>
-                <a class="nav-option" href="about.html">About</a>
-                <a class="nav-option" href="planet.html">Planets</a>
-                <a class="nav-option" href="apod.html">APoD</a>
-                <a class="nav-option" href="mars.html">Martian Imagery</a>
-                <a class="nav-option" href="trailer.html">Trailer</a>
-                <a class="nav-option" href="ticket.html">Tickets</a>
-                <a class="nav-option" href="blog.html">Blog</a>
-                <a class="nav-option" href="login.html" target="_blank">Login</a>
-                <a class="nav-option" href="#container">Contact</a>
-                <a class="nav-option" href="feedback.html">Rate Us</a>
-                
+              <span class="close-popup-btn">&times;</span>
+              <a class="nav-option" href="about.html">About</a>
+              <a class="nav-option" href="planet.html">Planets</a>
+              <a class="nav-option" href="apod.html">APoD</a>
+              <a class="nav-option" href="mars.html">Martian Imagery</a>
+              <a class="nav-option" href="trailer.html">Trailer</a>
+              <a class="nav-option" href="ticket.html">Tickets</a>
+              <a class="nav-option" href="blog.html">Blog</a>
+              <a class="nav-option" href="login.html" target="_blank">Login</a>
+              <a class="nav-option" href="#container">Contact</a>
+              <a class="nav-option" href="feedback.html">Rate Us</a>
+
             </div>
             <a href="enroll.html"><button>Enroll</button></a>
-        </div>
-        
+          </div>
+
         </div>
 
         <hr />
@@ -401,12 +417,12 @@
           <form action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input"  id="exampleInputName"/>
+              <input type="text" name="name" class="input" id="exampleInputName" />
               <label for="">Username</label>
               <span>Username</span>
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" id="exampleInputEmail2"/>
+              <input type="email" name="email" class="input" id="exampleInputEmail2" />
               <label for="">Email</label>
               <span>Email</span>
             </div>
@@ -453,20 +469,20 @@
       <span id="progress-value">&#x1F815; </span>
     </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    var openPopupBtn = document.querySelector('.open-popup-btn');
-    var popupMenu = document.querySelector('.popup-menu');
-    var closePopupBtn = document.querySelector('.close-popup-btn');
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var openPopupBtn = document.querySelector('.open-popup-btn');
+        var popupMenu = document.querySelector('.popup-menu');
+        var closePopupBtn = document.querySelector('.close-popup-btn');
 
-    openPopupBtn.addEventListener('click', function () {
-        popupMenu.style.display = 'block';
-    });
+        openPopupBtn.addEventListener('click', function () {
+          popupMenu.style.display = 'block';
+        });
 
-    closePopupBtn.addEventListener('click', function () {
-        popupMenu.style.display = 'none';
-    });
-});
+        closePopupBtn.addEventListener('click', function () {
+          popupMenu.style.display = 'none';
+        });
+      });
 
 
     </script>
