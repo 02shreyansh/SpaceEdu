@@ -17,19 +17,23 @@
         </div>
 
         <div class="nav-right">
-          <a class="nav-option" href="index.html">Home</a>
-          <a class="nav-option" href="planet.html">Planets</a>
-          <a class="nav-option" href="#">Trailer</a>
-          <a class="nav-option" href="#">Tickets</a>
-          <a class="nav-option" href="blog.html">Blog</a>
+          <button class="open-popup-btn">Menu</button>
+          <div class="popup-menu">
+            <span class="close-popup-btn">&times;</span>
+            <a class="nav-option" href="index.html">Home</a>
+            <a class="nav-option" href="planet.html">Planets</a>
+            <a class="nav-option" href="#">Trailer</a>
+            <a class="nav-option" href="#">Tickets</a>
+            <a class="nav-option" href="blog.html">Blog</a>
 
-          <a class="nav-option" href="login.html" target="_blank">Login</a>
-          <a class="nav-option" href="#contact">Contact</a>
-          <a class="nav-option" href="feedback.html">Rate Us</a>
+            <a class="nav-option" href="login.html" target="_blank">Login</a>
+            <a class="nav-option" href="#contact">Contact</a>
+            <a class="nav-option" href="feedback.html">Rate Us</a>
+            <!-- <a href="enroll.html"><button>Enroll</button></a> -->
+          </div>
           <a href="enroll.html"><button>Enroll</button></a>
         </div>
       </div>
-
 
       <div class="blogcontainer">
         <div class="card">
@@ -46,18 +50,18 @@
           </div>
         </div>
 
-          <div class="card">
-            <div class="image-section img-two"></div>
-            <div class="content">
-              <h2>Aditya-L1</h2>
-              <p>
-                Aditya-L1 is a spacecraft designed to study the Sun's
-                atmosphere. It was launched on September 2, 2023, and reached
-                its target orbit on January 6, 2024.Aditya-L1 is the first
-                Indian space-based observatory to study the Sun.
-              </p>
-              <a href="./Aditya_L1_blog.html" class="button">Read More</a>
-            </div>
+        <div class="card">
+          <div class="image-section img-two"></div>
+          <div class="content">
+            <h2>Aditya-L1</h2>
+            <p>
+              Aditya-L1 is a spacecraft designed to study the Sun's
+              atmosphere. It was launched on September 2, 2023, and reached
+              its target orbit on January 6, 2024.Aditya-L1 is the first
+              Indian space-based observatory to study the Sun.
+            </p>
+            <a href="./Aditya_L1_blog.html" class="button">Read More</a>
+          </div>
         </div>
 
 
@@ -193,6 +197,23 @@
     <span id="progress-value">&#x1F815; </span>
   </div>
   <script src="scroll.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var openPopupBtn = document.querySelector('.open-popup-btn');
+      var popupMenu = document.querySelector('.popup-menu');
+      var closePopupBtn = document.querySelector('.close-popup-btn');
+
+      openPopupBtn.addEventListener('click', function () {
+        popupMenu.style.display = 'block';
+      });
+
+      closePopupBtn.addEventListener('click', function () {
+        popupMenu.style.display = 'none';
+      });
+    });
+
+
+  </script>
 </body>
 
 </html>

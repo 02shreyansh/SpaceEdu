@@ -44,6 +44,95 @@
                 font-size: 3.5rem;
             }
         }
+
+        .popup-menu {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Black theme background color with transparency */
+            color: #ffd700;
+            /* Yellow accent text color */
+            padding: 30px;
+            /* Increased padding for better spacing */
+            width: 500px;
+            /* Increased width for a wider modal */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            /* Increased box shadow for a subtle glassmorphism effect */
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            /* Glassmorphism effect */
+            border-radius: 10px;
+            /* Rounded corners for a modern look */
+            text-align: center;
+        }
+
+        .popup-menu h2 {
+            font-size: 24px;
+            /* Larger font size for the heading */
+            margin-bottom: 20px;
+            /* Increased margin for better spacing */
+        }
+
+        .popup-menu a {
+            display: block;
+            margin-bottom: 10px;
+            color: #ffd700;
+            /* Yellow accent link color */
+            text-decoration: none;
+        }
+
+        .popup-menu a:hover {
+            text-decoration: underline;
+        }
+
+        .popup-menu button {
+            display: block;
+            margin-top: 20px;
+            /* Increased margin for better spacing */
+            background-color: #ffd700;
+            /* Yellow accent button background color */
+            color: #333;
+            /* Black theme button text color */
+            padding: 12px;
+            width: 100%;
+            /* Make the button full width */
+            border: none;
+            cursor: pointer;
+        }
+
+        .popup-menu button:hover {
+            background-color: #555;
+            /* Darker yellow accent on hover */
+        }
+
+        .close-popup-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ffd700;
+            /* Yellow accent close button color */
+            cursor: pointer;
+        }
+
+        .open-popup-btn {
+            background-color: #ffd700;
+            /* Yellow accent button background color */
+            color: #333;
+            /* Black theme button text color */
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .open-popup-btn:hover {
+            background-color: #555;
+            /* Darker yellow accent on hover */
+        }
     </style>
 
 
@@ -60,15 +149,20 @@
         </div>
 
         <div class="nav-right">
-            <a class="nav-option" href="index.html">Home</a>
-            <a class="nav-option" href="planet.html">Planets</a>
-            <a class="nav-option" href="#">Trailer</a>
-            <a class="nav-option" href="#">Tickets</a>
-            <a class="nav-option" href="blog.html">Blog</a>
+            <button class="open-popup-btn">Menu</button>
+            <div class="popup-menu">
+                <span class="close-popup-btn">&times;</span>
+                <a class="nav-option" href="index.html">Home</a>
+                <a class="nav-option" href="planet.html">Planets</a>
+                <a class="nav-option" href="#">Trailer</a>
+                <a class="nav-option" href="#">Tickets</a>
+                <a class="nav-option" href="blog.html">Blog</a>
 
-            <a class="nav-option" href="login.html" target="_blank">Login</a>
-            <a class="nav-option" href="#contact">Contact</a>
-            <a class="nav-option" href="feedback.html">Rate Us</a>
+                <a class="nav-option" href="login.html" target="_blank">Login</a>
+                <a class="nav-option" href="#contact">Contact</a>
+                <a class="nav-option" href="feedback.html">Rate Us</a>
+                <!-- <a href="enroll.html"><button>Enroll</button></a> -->
+            </div>
             <a href="enroll.html"><button>Enroll</button></a>
         </div>
     </div>
@@ -91,13 +185,15 @@
             <div class="col-md-12">
 
                 <div style="width: 100%; height:425px">
-                    <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2023/08/esa_ground_stations_support_isro_s_aditya-l1_solar_observatory/25064719-1-eng-GB/ESA_ground_stations_support_ISRO_s_Aditya-L1_solar_observatory_pillars.jpg" width="100%" height="500px">
+                    <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2023/08/esa_ground_stations_support_isro_s_aditya-l1_solar_observatory/25064719-1-eng-GB/ESA_ground_stations_support_ISRO_s_Aditya-L1_solar_observatory_pillars.jpg"
+                        width="100%" height="500px">
 
                 </div>
                 <br><br><br>
                 <article class="blog-post">
                     <h2 class="blog-post-title">Aditya-L1</h2>
-                    <p class="blog-post-meta">February 4, 2024 by <a href="https://github.com/Surajit0573">Surajit Maity</a></p>
+                    <p class="blog-post-meta">February 4, 2024 by <a href="https://github.com/Surajit0573">Surajit
+                            Maity</a></p>
                     <p>
 
                         <br>
@@ -320,7 +416,23 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var openPopupBtn = document.querySelector('.open-popup-btn');
+            var popupMenu = document.querySelector('.popup-menu');
+            var closePopupBtn = document.querySelector('.close-popup-btn');
 
+            openPopupBtn.addEventListener('click', function () {
+                popupMenu.style.display = 'block';
+            });
+
+            closePopupBtn.addEventListener('click', function () {
+                popupMenu.style.display = 'none';
+            });
+        });
+
+
+    </script>
 
 
 

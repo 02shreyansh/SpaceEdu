@@ -328,5 +328,92 @@ footer {
   
 }
 
+.popup-menu {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Black theme background color with transparency */
+  color: #ffd700;
+  /* Yellow accent text color */
+  padding: 30px;
+  /* Increased padding for better spacing */
+  width: 500px;
+  /* Increased width for a wider modal */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  /* Increased box shadow for a subtle glassmorphism effect */
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  /* Glassmorphism effect */
+  border-radius: 10px;
+  /* Rounded corners for a modern look */
+  text-align: center;
+}
 
+.popup-menu h2 {
+  font-size: 24px;
+  /* Larger font size for the heading */
+  margin-bottom: 20px;
+  /* Increased margin for better spacing */
+}
+
+.popup-menu a {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffd700;
+  /* Yellow accent link color */
+  text-decoration: none;
+}
+
+.popup-menu a:hover {
+  text-decoration: underline;
+}
+
+.popup-menu button {
+  display: block;
+  margin-top: 20px;
+  /* Increased margin for better spacing */
+  background-color: #ffd700;
+  /* Yellow accent button background color */
+  color: #333;
+  /* Black theme button text color */
+  padding: 12px;
+  width: 100%;
+  /* Make the button full width */
+  border: none;
+  cursor: pointer;
+}
+
+.popup-menu button:hover {
+  background-color: #555;
+  /* Darker yellow accent on hover */
+}
+
+.close-popup-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #ffd700;
+  /* Yellow accent close button color */
+  cursor: pointer;
+}
+
+.open-popup-btn {
+  background-color: #ffd700;
+  /* Yellow accent button background color */
+  color: #333;
+  /* Black theme button text color */
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.open-popup-btn:hover {
+  background-color: #555;
+  /* Darker yellow accent on hover */
+}
 
