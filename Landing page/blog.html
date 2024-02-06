@@ -1,170 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
-  <title>Blog</title>
-  <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cosmoXplore</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+    <style>
+
+.section_title{
+  background: -webkit-linear-gradient(#e4d6fb, #ffd901);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.card-container-outer{
+  width :100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.card-container-inner{
+  width :85%;
+
+}
+
+      article {
+  --img-scale: 1.001;
+  --title-color: black;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: none;
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
+/* basic article elements styling */
+article h2 {
+  margin: 0 0 18px 0;
+ 
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+article img {
+  max-width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.article-body {
+  padding: 24px;
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28666e;
+}
+
+article a:focus {
+  outline: 1px dotted #28666e;
+}
+
+article a .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+/* using the has() relational pseudo selector to update our custom properties */
+article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+.articles {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+@media screen and (max-width: 960px) {
+  article {
+    container: card/inline-size;
+  }
+  .article-body p {
+    display: none;
+  }
+}
+
+@container card (min-width: 380px) {
+  .article-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+  .article-body {
+    padding-left: 0;
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  figure img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+    </style>
+
+
+
+
   <link rel="stylesheet" href="blog.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
+
+  
 </head>
 
+
+
 <body>
-  <div class="top">
-    <div class="workingarea">
-      <div class="nav">
-        <div class="nav-left">
-          <h2>Spaces<span>EDU</span></h2>
-        </div>
 
-        <div class="nav-right">
-          <button class="open-popup-btn">Menu</button>
-          <div class="popup-menu">
-            <span class="close-popup-btn">&times;</span>
-            <a class="nav-option" href="index.html">Home</a>
-            <a class="nav-option" href="planet.html">Planets</a>
-            <a class="nav-option" href="#">Trailer</a>
-            <a class="nav-option" href="#">Tickets</a>
-            <a class="nav-option" href="blog.html">Blog</a>
+  <div class="nav">
+    <div class="nav-left">
+      <h2>Spaces<span>EDU</span></h2>
+    </div>
 
-            <a class="nav-option" href="login.html" target="_blank">Login</a>
-            <a class="nav-option" href="#contact">Contact</a>
-            <a class="nav-option" href="feedback.html">Rate Us</a>
-            <!-- <a href="enroll.html"><button>Enroll</button></a> -->
-          </div>
-          <a href="enroll.html"><button>Enroll</button></a>
-        </div>
+    <div class="nav-right">
+      <button class="open-popup-btn">Menu</button>
+      <div class="popup-menu">
+        <span class="close-popup-btn">&times;</span>
+        <a class="nav-option" href="index.html">Home</a>
+        <a class="nav-option" href="planet.html">Planets</a>
+        <a class="nav-option" href="#">Trailer</a>
+        <a class="nav-option" href="#">Tickets</a>
+        <a class="nav-option" href="blog.html">Blog</a>
+
+        <a class="nav-option" href="login.html" target="_blank">Login</a>
+        <a class="nav-option" href="#contact">Contact</a>
+        <a class="nav-option" href="feedback.html">Rate Us</a>
+        <!-- <a href="enroll.html"><button>Enroll</button></a> -->
       </div>
+      <a href="enroll.html"><button>Enroll</button></a>
+    </div>
+  </div>
 
-      <div class="blogcontainer">
-        <div class="card">
-          <div class="image-section img-one"></div>
-          <div class="content">
-            <h2>Gaganyaan</h2>
-            <p>
-              The Gaganyaan project is one of ISRO's latest projects. The
-              project aims to demonstrate India's human spaceflight
-              capabilities by launching a three-person crew into a 400 km
-              orbit for a three-day mission.
-            </p>
-            <a href="" class="button">Read More</a>
+  <br>
+ 
+
+
+  
+  <h1 align="center" class="section_title" id="apod">BLOGS</h1>
+   <br>
+  <br>
+  <div class="card-container-outer">
+    <div class="card-container-inner">
+
+
+      <section class="articles">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="https://imgk.timesnownews.com/story/1561392656-Gaganyaan_mission_poster.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Gaganyaan</h2>
+              <p>
+                The Gaganyaan project is one of ISRO's latest projects. The
+                project aims to demonstrate India's human spaceflight
+                capabilities by launching a three-person crew into a 400 km
+                orbit for a three-day mission.              </p>
+              <a href="#" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <div class="image-section img-two"></div>
-          <div class="content">
-            <h2>Aditya-L1</h2>
-            <p>
-              Aditya-L1 is a spacecraft designed to study the Sun's
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="https://static.tnn.in/thumb/msid-104254101,thumbsize-150244,width-1280,height-720,resizemode-75/104254101.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Aditya-L1</h2>
+              <p>
+                Aditya-L1 is a spacecraft designed to study the Sun's
               atmosphere. It was launched on September 2, 2023, and reached
               its target orbit on January 6, 2024.Aditya-L1 is the first
               Indian space-based observatory to study the Sun.
-            </p>
-            <a href="./Aditya_L1_blog.html" class="button">Read More</a>
+              </p>
+              <a href="./Aditya_L1_blog.html" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-
-
-        <div class="card">
-          <div class="image-section img-three"></div>
-          <div class="content">
-            <h2>Chandrayaan-3</h2>
-            <p>
-              Chandrayaan-3 is a lunar exploration mission developed by the
-              Indian Space Research Organisation (ISRO). It launched on July
-              14, 2023, and landed near the moon's south pole on August 23,
-              2023.
-            </p>
-            <a href="./chandrayaan.html" class="button">Read More</a>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2023/08/chandrayaan-3-5-1691547437.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Chandrayaan-3</h2>
+              <p>
+                Chandrayaan-3 is a lunar exploration mission developed by the
+                Indian Space Research Organisation (ISRO). It launched on July
+                14, 2023, and landed near the moon's south pole on August 23,
+                2023.              </p>
+              <a href="./chandrayaan.html" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <div class="image-section img-four"></div>
-          <div class="content">
-            <h2>James Web Telescope</h2>
-            <p>
-              The James Webb Space Telescope is a space telescope designed to conduct infrared astronomy. Its
-              high-resolution and high-sensitivity instruments allow it to view objects too old, distant, or faint for
-              the Hubble Space Telescope.
-            </p>
-            <a href="" class="button">Read More</a>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2023/02/020923_LG_quenched-galaxy_feat.jpg?resize=1380%2C776&ssl=1" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>James Web Telescope</h2>
+              <p>
+                The James Webb Space Telescope is a space telescope designed to conduct infrared astronomy. Its
+                high-resolution and high-sensitivity instruments allow it to view objects too old, distant, or faint for
+                the Hubble Space Telescope.              </p>
+              <a href="#" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <div class="image-section img-five"></div>
-          <div class="content">
-            <h2>Annular Eclipse</h2>
-            <p>
-              An annular solar eclipse happens when the Moon covers the Sun's center, leaving the Sun's visible outer
-              edges to form a “ring of fire” or annulus around the Moon.
-            </p>
-            <a href="" class="button">Read More</a>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="https://images.deccanherald.com/deccanherald%2F2023-09%2F7f331b59-949d-42ea-8dde-2a1e37655ffe%2Fistock_835999458_995643_1623254995.jpg?auto=format%2Ccompress&fmt=webp&fit=max&format=webp&q=70&w=900&dpr=1.3" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Annular Eclipse</h2>
+              <p>
+                An annular solar eclipse happens when the Moon covers the Sun's center, leaving the Sun's visible outer
+                edges to form a “ring of fire” or annulus around the Moon.              </p>
+              <a href="#" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <div class="image-section img-six"></div>
-          <div class="content">
-            <h2>International Space station</h2>
-            <p>
-              An annular solar eclipse happens when the Moon covers the Sun's center, leaving the Sun's visible outer
-              edges to form a “ring of fire” or annulus around the Moon.
-            </p>
-            <a href="" class="button">Read More</a>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="https://static.toiimg.com/thumb/msid-101362550,imgsize-37156,width-400,resizemode-4/101362550.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Virgin Galactic</h2>
+              <p>
+                Virgin Galactic Holdings Inc. commenced a flight carrying its first private space tourists, a key step in
+                founder Richard Branson’s quest to build a “spaceline for Earth.”              <a href="#" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-
-        <div class="card">
-          <div class="image-section img-seven"></div>
-          <div class="content">
-            <h2>Virgin Galactic</h2>
-            <p>
-              Virgin Galactic Holdings Inc. commenced a flight carrying its first private space tourists, a key step in
-              founder Richard Branson’s quest to build a “spaceline for Earth.” </p>
-            <a href="" class="button">Read More</a>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="https://physics.aps.org/assets/c3b9331f-5080-421d-b6d2-1944b1b26ae3/e28_1.png" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Wormholes</h2>
+              <p>
+                A wormhole is a hypothetical structure connecting disparate points in spacetime, and is based on a special
+                solution of the Einstein field equations.              </p>
+              <a href="./worm_blog.html" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <div class="image-section img-eight"></div>
-          <div class="content">
-            <h2>Wormholes</h2>
-            <p>
-              A wormhole is a hypothetical structure connecting disparate points in spacetime, and is based on a special
-              solution of the Einstein field equations.
-            </p>
-            <a href="./worm_blog.html" class="button">Read More</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="image-section img-nine"></div>
-          <div class="content">
-            <h2>Pragyan Rover</h2>
-            <p>
-              Pragyan is a lunar rover that forms part of Chandrayaan-3, a lunar mission developed by the Indian Space
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="https://www.konkan.me/wp-content/uploads/2023/08/Chandrayaan-3s-Pragyan-Rover-on-moon-only-Indian.png" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Pragyan Rover</h2>
+              <p>
+                Pragyan is a lunar rover that forms part of Chandrayaan-3, a lunar mission developed by the Indian Space
               Research Organisation. A previous iteration of the rover was launched as part of Chandrayaan-2 on 22 July
-              2019 and was destroyed with its lander, Vikram. </p>
-            <a href="" class="button">Read More</a>
+              2019 and was destroyed with its lander, Vikram.              </p>
+              <a href="" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <div class="image-section img-ten"></div>
-          <div class="content">
-            <h2>Small Satellite Launch Vehicle</h2>
-            <p>The SSLV is designed to provide a cost-effective and flexible solution for launching small satellites
-              into various orbits. </p>
-            <a href="" class="button">Read More</a>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="https://images.hindustantimes.com/img/2022/08/07/550x309/411abdaa-167d-11ed-8e54-c04000b81266_1659896845202.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Small Satellite Launch Vehicle</h2>
+              <p>
+                The SSLV is designed to provide a cost-effective and flexible solution for launching small satellites
+              into various orbits.            </p>
+              <a href="" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
+        
+      </section>
+
+
+
     </div>
   </div>
+
+
+  <br>
+  <br>
+  <br>
+
 
   <footer>
     <div class="footer-container">
@@ -193,10 +412,6 @@
       </div>
     </div>
   </footer>
-  <div id="progress">
-    <span id="progress-value">&#x1F815; </span>
-  </div>
-  <script src="scroll.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var openPopupBtn = document.querySelector('.open-popup-btn');
@@ -214,6 +429,10 @@
 
 
   </script>
+
+
+  <script src="./apod.js"></script>
+
 </body>
 
 </html>
