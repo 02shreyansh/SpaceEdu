@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <style>
         #video-container {
             text-align: center;
@@ -12,6 +13,7 @@
             border-width: 2px;
         }
         .button-container {
+            padding: 20px;
             text-align: center;
             margin-top: 20px;
         }
@@ -19,6 +21,7 @@
   appearance: button;
   background-color: #4D4AE8;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat;
   border: 1px solid #4D4AE8;
   border-radius: 1rem;
   box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,rgba(46, 54, 80, 0.075) 0 1px 1px;
@@ -146,7 +149,7 @@ body {
   justify-content: space-between;
   align-items: center;
   top: 9px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   color: #fff;
   overflow: hidden;
 }
@@ -161,28 +164,119 @@ body {
     text-shadow: 0 0 10px rgba(0, 200, 255, 1);
   }
 }
-    </style>
+.nav-left button.hamburger {
+  display: none; /* Initially hide the hamburger button */
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav-left .active button.hamburger {
+  color: blue; /* Change the color of the hamburger icon when the menu is active */
+}
+
+.close-btn{
+  display: none;
+}
+@media only screen and (max-width: 700px) {
+  .main {
+    padding: 20px;
+  }
+  .nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 220px;
+  margin-right: 20px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+.nav-left button.hamburger {
+  pointer-events:all;
+  display: block;
+  color: rgb(14, 192, 237);
+  font-size: 30px;
+  background-color: #098282c0;
+  border: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially off-screen */
+  width: 250px; /* Adjust width as needed */
+  height: 100%;
+  background-color: #333;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+}
+
+.sidebar.active {
+  right : 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 3000;
+  font-size: 1.5rem;
+  padding: 30px 0px;
+}
+
+.nav-right {
+  padding: 20px;
+  display:flex;
+  flex-direction: column;
+}
+.close-btn {
+  display: block;
+width: 20%;
+margin-left: 40px;
+background: none;
+border: none;
+color: rgb(246, 242, 242);
+font-size: 34px;
+cursor: pointer;
+z-index: 4000;
+}
+
+.close-btn:hover {
+color: #ddd;
+}
+}
+</style>
     
 </head>
 <body> 
   <div class="top">
     <div class="workingarea">
-        <div class="nav">
-            <div class="nav-left">
-                <h2>Spaces<span>EDU</span></h2>
-            </div>
-            <div class="nav-right">
-                <a class="nav-option" href="about.html">About</a>
-                <a class="nav-option" href="planet.html">Planets</a>
-                <a class="nav-option" href="trailer.html">Trailer</a>
-                <a class="nav-option" href="#">Tickets</a>
-                <a class="nav-option" href="blog.html">Blog</a>
-                <a class="nav-option" href="login.html" target="_blank">Login</a>
-                <a class="nav-option" href="#contact">Contact</a>
-                <a class="nav-option" href="feedback.html">Rate Us</a>
-                <a href="enroll.html"><button>Enroll</button></a>
-            </div>
+      <div class="nav">
+        <div class="nav-left">
+          <h2>Spaces<span>EDU</span></h2>
+          <button class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+  
+        <div class="sidebar" id="sidebar">
+          <button class="close-btn" onclick="closeSidebar()">
+            <i class="fas fa-times"></i>
+        </button>
+          <div class="nav-right">
+            <a class="nav-option" href="about.html">About</a>
+            <a class="nav-option" href="planet.html">Planets</a>
+            <a class="nav-option" href="trailer.html">Trailer</a>
+            <a class="nav-option" href="#">Tickets</a>
+            <a class="nav-option" href="blog.html">Blog</a>
+  
+            <a class="nav-option" href="login.html" target="_blank">Login</a>
+            <a class="nav-option" href="#container">Contact</a>
+            <a class="nav-option" href="feedback.html">Rate Us</a>
+            <a class="nav-option" href="enroll.html"><button>Enroll</button></a>
+          </div>
+        </div>
+      </div>
         <hr />
 <div id="video-container"> 
   <video id="video1" width="560">
@@ -197,6 +291,7 @@ body {
   <button class="button-20" onclick="makeNormal()">Normal</button>
 </div>
 
+<script src="./script.js"></script>
 <script> 
 var myVideo = document.getElementById("video1"); 
 

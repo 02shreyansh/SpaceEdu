@@ -123,3 +123,33 @@ elems.forEach(function (elem) {
     }
   });
 });
+
+function toggleMenu() {
+  let sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("active");
+}
+function closeSidebar() {
+  let sidebar = document.getElementById("sidebar");
+  sidebar.classList.remove("active");
+}
+
+// function closeSidebar() {
+//   let sidebar = document.getElementById("sidebar");
+//   // Check if the sidebar is currently animating
+//   if (!sidebar.classList.contains('active')) {
+//       return;
+//   }
+
+//   // Remove the "active" class
+//   sidebar.classList.remove("active");
+
+//   // Disable body scrolling while the sidebar is closing
+//   document.body.style.overflow = 'auto';
+
+//   // Allow some time for the animation to complete before re-enabling body scrolling
+//   setTimeout(function() {
+//       document.body.style.overflow = 'visible';
+//   }, 800); // Adjust the duration to match your CSS transition duration
+// }
+
+

@@ -53,7 +53,6 @@ body {
 .main {
   width: 100%;
   height: 100vh;
-
   position: relative;
 }
 .back {
@@ -97,6 +96,11 @@ body {
   color: #fff;
   overflow: hidden;
 }
+/* #btn{
+  background-image: url(./img/bars-solid.svg);
+  background-color: #0c012600;
+  border: none;
+} */
 .nav-left h2 {
   padding-left: 7px;
   color: #23224c;
@@ -265,19 +269,17 @@ body {
   margin-bottom: 8px;
 }
 
-
 .faq label {
   color: white;
 }
-
 
 #container {
   position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(45deg, black,black);
-  overflow: hidden; 
+  background: linear-gradient(45deg, black, black);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,7 +298,7 @@ body {
 }
 
 .contact-form {
-  background-color:  rgb(31, 29, 29);
+  background-color: rgb(31, 29, 29);
   position: relative;
 }
 
@@ -501,7 +503,7 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(45deg,black, #149279);
+  background: linear-gradient(45deg, black, #149279);
   color: #fff;
   text-align: center;
   line-height: 35px;
@@ -531,7 +533,7 @@ textarea.input {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: linear-gradient(to bottom,  rgb(34, 33, 33), #159b80);
+  background: linear-gradient(to bottom, rgb(34, 33, 33), #159b80);
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
@@ -698,7 +700,6 @@ footer {
   font-size: 1.2rem;
 }
 
-
 @media (max-width: 700px) {
   .footerNav ul {
     flex-direction: column;
@@ -788,7 +789,7 @@ input[type="radio"] {
   transform: rotate(135deg);
 }
 
-#progress{
+#progress {
   background-color: white;
   position: fixed;
   bottom: 20px;
@@ -798,15 +799,14 @@ input[type="radio"] {
   display: none;
   place-items: center;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0 , 0 , 0 , 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
- 
 }
-#progress-value{
+#progress-value {
   display: block;
   height: calc(100% - 15px);
   width: calc(100% - 15px);
-  background-color:#1f3959 ;
+  background-color: #1f3959;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -814,5 +814,158 @@ input[type="radio"] {
   font-weight: 700;
   /* color: #001a2e; */
   color: white;
-  
+}
+
+/* Add this at the end of your existing styles or in a separate CSS file */
+.nav-left button.hamburger {
+  display: none; /* Initially hide the hamburger button */
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav-left .active button.hamburger {
+  color: blue; /* Change the color of the hamburger icon when the menu is active */
+}
+
+.close-btn {
+  display: none;
+}
+/* // MY work */
+/* MOBILE VERSION */
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .back img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    top: 40%;
+    display: flex;
+    padding-bottom: 12vh;
+  }
+
+  .heroleft {
+    width: 100%;
+    height: 80%;
+  }
+  .heroleft .elem {
+    height: 38vw;
+  }
+
+  .heroleft .elem h1 {
+    font-weight: 700;
+    font-size: 8vw;
+    color: bisque;
+    text-shadow: 2px 2px #ea1491;
+  }
+  .heroleft .elem h3 {
+    background-color: rgba(123, 144, 240, 0.142);
+    color: rgb(237, 57, 47);
+    text-shadow: 0px 1px #ffffff;
+    line-height: 1.2;
+    font-size: 20px;
+    text-indent: 1.5cm;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+
+  .heroleft button {
+    background-color: #0191ff36;
+    pointer-events: all;
+    padding: 10px 22px;
+    font-size: 16px;
+    font-family: "Arial";
+    font-weight: 900;
+    margin-top: 4vw;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border: 2px solid rgba(255, 255, 255, 0.532);
+  }
+
+  .heroleft button a {
+    text-decoration: none;
+    color: white;
+  }
+  .nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    padding-right: 60px;
+    gap: 40px;
+  }
+
+  .nav-left button.hamburger {
+    pointer-events: all;
+    display: block;
+    color: rgb(14, 192, 237);
+    font-size: 30px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen */
+    width: 250px; /* Adjust width as needed */
+    height: 100%;
+    background-color: #333;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+  }
+
+  .sidebar.active {
+    pointer-events: all;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 2000;
+    font-size: 1.5rem;
+    padding: 30px 0px;
+  }
+
+  .nav-right {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .close-btn {
+    display: block;
+    width: 20%;
+    margin-left: 40px;
+    background: none;
+    border: none;
+    color: rgb(246, 242, 242);
+    font-size: 34px;
+    cursor: pointer;
+    z-index: 4000;
+  }
+
+  .close-btn:hover {
+    color: #ddd;
+  }
+}
+
+
+.section {
+  width: 95%;
+  height: 100%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-gap: 15px;
+}
+.card {
+  background-color: #333;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
 }

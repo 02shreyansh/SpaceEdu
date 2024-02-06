@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
@@ -77,7 +78,6 @@
         color: white;
       }
 
-    }
 
     footer {
       background-color: black;
@@ -172,188 +172,276 @@
       color: white;
 
     }
+    .nav {
+      position: absolute;
+      width: 100%;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      top: 9px;
+      padding-bottom: 30px;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .nav-left h2 {
+      padding-left: 40px;
+      color: #23224c;
+      font-family: "Arial";
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-left span {
+      color: #0190ff;
+    }
+
+    .nav-right {
+      pointer-events: all;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .nav-right button {
+      padding: 10px 20px;
+      border-radius: 34px;
+      color: #000;
+      font-family: "Arial";
+      font-weight: 700;
+      font-size: large;
+      background-color: #ffd700;
+      border: 2px solid #ffd700;
+      transition: background-color 2s ease;
+      margin-top: 0px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-size: 20px;
+      /* Increase font size */
+      color: #fff;
+      font-family: "Arial";
+      font-weight: 600;
+      display: inline-block;
+      position: relative;
+    }
+
+    .nav-option::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      top: 30px;
+      left: 0;
+      background-color: aqua;
+      transition: transform 0.25s ease-out;
+    }
+
+    .nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-right button:hover {
+      background-color: transparent;
+      color: #ffd700;
+    }
+    .nav-left h2 span {
+      animation: planetGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes planetGlow {
+      0% {
+        text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
+      }
+
+      100% {
+        text-shadow: 0 0 10px rgba(0, 200, 255, 1);
+      }
+    }
+
+    footer {
+      background-color: black;
+      border-top: 1px solid white;
+    }
+
+    .connect {
+      padding: 30px;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    .connect h2 {
+      text-align: center;
+      padding-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
+
+    .connect a {
+      padding-top: 20px;
+      color: white;
+      font-size: 1.57rem;
+      line-height: 40px;
+      letter-spacing: 20px;
+    }
+
+    .connect a:hover {
+      color: rgb(111, 185, 225);
+    }
+
+    .links {
+      text-align: center;
+    }
+
+    .links h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
+
+    .links li {
+      list-style: none;
+    }
+
+    .links li a {
+      text-decoration: none;
+      color: rgb(11, 81, 155);
+      line-height: 35px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .links li a:hover {
+      color: rgb(114, 152, 204);
+      text-decoration: underline;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+.nav-left button.hamburger {
+  display: none; /* Initially hide the hamburger button */
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav-left .active button.hamburger {
+  color: blue; /* Change the color of the hamburger icon when the menu is active */
+}
+
+.close-btn {
+  display: none;
+}
+@media only screen and (max-width: 500px) {
+  .nav {
+    display: block;
+    pointer-events: all;
+  }
+  .nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 100px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .nav-left button.hamburger {
+    pointer-events: all; /* Enable pointer events for the hamburger button */
+    display: block;
+    color: rgb(14, 192, 237);
+    font-size: 30px;
+  }
+
+  .sidebar {
+    pointer-events: all;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen */
+    width: 250px; /* Adjust width as needed */
+    height: 100%;
+    background-color: #333;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+  }
+
+  .sidebar.active {
+    pointer-events: all;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 3000;
+    font-size: 1.5rem;
+    padding: 30px 0px;
+  }
+
+  .nav-right {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .close-btn {
+    display: block;
+    width: 20%;
+    margin-left: 40px;
+    background: none;
+    border: none;
+    color: rgb(246, 242, 242);
+    font-size: 34px;
+    cursor: pointer;
+    z-index: 4000;
+  }
+  .close-btn:hover {
+    color: #ddd;
+  }
+  form {
+    width: 380px;
+    margin-bottom: 20px;
+  }
+  .footer-container{
+    width: 100%;
+    height: 100%;
+  }
+}
   </style>
 </head>
-
-<body>
-  <div class="nav">
-    <div class="nav-left">
-      <h2>space<span>edu</span></h2>
-    </div>
-
-
-      .nav {
-        position: absolute;
-        width: 100%;
-        padding: 10px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        top: 9px;
-        padding-bottom: 30px;
-        color: #fff;
-        overflow: hidden;
-      }
-
-      .nav-left h2 {
-        padding-left: 40px;
-        color: #23224c;
-        font-family: "Arial";
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      .nav-left span {
-        color: #0190ff;
-      }
-
-      .nav-right {
-        pointer-events: all;
-        display: flex;
-        align-items: center;
-        gap: 40px;
-      }
-
-      .nav-right button {
-        padding: 10px 20px;
-        border-radius: 34px;
-        color: #000;
-        font-family: "Arial";
-        font-weight: 700;
-        font-size: large;
-        background-color: #ffd700;
-        border: 2px solid #ffd700;
-        transition: background-color 2s ease;
-        margin-top: 0px;
-      }
-
-      .nav a {
-        text-decoration: none;
-        font-size: 20px;
-        /* Increase font size */
-        color: #fff;
-        font-family: "Arial";
-        font-weight: 600;
-        display: inline-block;
-        position: relative;
-      }
-
-      .nav-option::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        top: 30px;
-        left: 0;
-        background-color: aqua;
-        transition: transform 0.25s ease-out;
-      }
-
-      .nav a:hover::after {
-        transform: scaleX(1);
-      }
-
-      .nav-right button:hover {
-        background-color: transparent;
-        color: #ffd700;
-      }
-      .nav-left h2 span {
-        animation: planetGlow 2s ease-in-out infinite alternate;
-      }
-
-      @keyframes planetGlow {
-        0% {
-          text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
-        }
-
-        100% {
-          text-shadow: 0 0 10px rgba(0, 200, 255, 1);
-        }
-      }
-
-      footer {
-        background-color: black;
-        border-top: 1px solid white;
-      }
-
-      .connect {
-        padding: 30px;
-        padding-top: 20px;
-        text-align: center;
-      }
-
-      .connect h2 {
-        text-align: center;
-        padding-bottom: 20px;
-        font-weight: 600;
-        font-size: 1.7rem;
-      }
-
-      .connect a {
-        padding-top: 20px;
-        color: white;
-        font-size: 1.57rem;
-        line-height: 40px;
-        letter-spacing: 20px;
-      }
-
-      .connect a:hover {
-        color: rgb(111, 185, 225);
-      }
-
-      .links {
-        text-align: center;
-      }
-
-      .links h2 {
-        margin-bottom: 20px;
-        font-weight: 600;
-        font-size: 1.7rem;
-      }
-
-      .links li {
-        list-style: none;
-      }
-
-      .links li a {
-        text-decoration: none;
-        color: rgb(11, 81, 155);
-        line-height: 35px;
-        font-size: 1.3rem;
-        font-weight: 600;
-      }
-
-      .links li a:hover {
-        color: rgb(114, 152, 204);
-        text-decoration: underline;
-      }
-
-      .copyright {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 1.2rem;
-        color: #ccc;
-      }
-    </style>
-  </head>
-
   <body>
     <div class="nav">
       <div class="nav-left">
         <h2>Spaces<span>EDU</span></h2>
+        <button class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
 
+      <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">
+          <i class="fas fa-times"></i>
+      </button>
       <div class="nav-right">
-        <a class="nav-option" href="index.html">Home</a>
-        <a class="nav-option" href="#">Planets</a>
-        <a class="nav-option" href="#">Trailer</a>
+        <a class="nav-option" href="about.html">About</a>
+        <a class="nav-option" href="planet.html">Planets</a>
+        <a class="nav-option" href="trailer.html">Trailer</a>
         <a class="nav-option" href="#">Tickets</a>
-        <a class="nav-option" href="#">Blog</a>
-        <a class="nav-option" href="login.html">Login</a>
+        <a class="nav-option" href="blog.html">Blog</a>
+
+        <a class="nav-option" href="login.html" target="_blank">Login</a>
+        <a class="nav-option" href="#container">Contact</a>
         <a class="nav-option" href="feedback.html">Rate Us</a>
-        <a href="#"><button>Enroll</button></a>
+        <a class="nav-option" href="enroll.html"><button>Enroll</button></a>
       </div>
+    </div>
     </div>
 
     <form>
@@ -403,11 +491,11 @@
     </footer>
   </body>
 </html>
-
     <div id="progress">
       <span id="progress-value">&#x1F815; </span>
     </div>
     <script src="scroll.js"></script>
+    <script src="./script.js"></script>
   </footer>
 </body>
 
