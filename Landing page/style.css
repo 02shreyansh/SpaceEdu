@@ -6,6 +6,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 html,
 body {
   width: 100%;
@@ -39,12 +40,15 @@ body {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -56,11 +60,13 @@ body {
 
   position: relative;
 }
+
 .back {
   width: 100%;
   height: 100vh;
   pointer-events: all;
 }
+
 .back img {
   pointer-events: all;
   width: 100%;
@@ -70,6 +76,7 @@ body {
 
   object-fit: cover;
 }
+
 .top {
   pointer-events: none;
   position: absolute;
@@ -78,6 +85,7 @@ body {
   width: 100%;
   height: 100vh;
 }
+
 .workingarea {
   position: relative;
   margin: 0 auto;
@@ -85,6 +93,7 @@ body {
   max-width: 1920px;
   height: 100vh;
 }
+
 .nav {
   position: relative;
   width: 100%;
@@ -97,6 +106,7 @@ body {
   color: #fff;
   overflow: hidden;
 }
+
 .nav-left h2 {
   padding-left: 7px;
   color: #23224c;
@@ -108,18 +118,22 @@ body {
 hr {
   color: white;
 }
+
 .nav-left span {
   color: #0190ff;
 }
+
 #hr {
   color: white;
 }
+
 .nav-right {
   pointer-events: all;
   display: flex;
   align-items: center;
   gap: 40px;
 }
+
 .nav-right button {
   padding: 10px 20px;
   border-radius: 34px;
@@ -132,15 +146,18 @@ hr {
   transition: background-color 2s ease;
   margin-top: 0px;
 }
+
 .nav a {
   text-decoration: none;
-  font-size: 18px; /* Increase font size */
+  font-size: 18px;
+  /* Increase font size */
   color: #fff;
   font-family: "Arial";
   font-weight: 600;
   display: inline-block;
   position: relative;
 }
+
 .nav-option::after {
   content: "";
   position: absolute;
@@ -152,13 +169,16 @@ hr {
   background-color: aqua;
   transition: transform 0.25s ease-out;
 }
+
 .nav a:hover::after {
   transform: scaleX(1);
 }
+
 .nav-right button:hover {
   background-color: transparent;
   color: #ffd700;
 }
+
 .nav-left h2 span {
   animation: planetGlow 2s ease-in-out infinite alternate;
 }
@@ -167,6 +187,7 @@ hr {
   0% {
     text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
   }
+
   100% {
     text-shadow: 0 0 10px rgba(0, 200, 255, 1);
   }
@@ -187,15 +208,18 @@ hr {
   justify-content: space-between;
   width: 100%;
 }
+
 .heroleft {
   width: 38%;
 }
+
 .heroleft .elem {
   position: relative;
   overflow: hidden;
 
   height: 6vw;
 }
+
 .heroleft .elem h1 {
   top: 100%;
   left: 0;
@@ -207,9 +231,11 @@ hr {
   text-transform: uppercase;
   font-size: 3vw;
 }
+
 .heroleft .elem h1:nth-child(1) {
   top: 0;
 }
+
 .heroleft .elem h3 {
   top: 100%;
   left: 0;
@@ -221,6 +247,7 @@ hr {
   font-weight: 600;
   font-size: 15px;
 }
+
 .heroleft .elem h3:nth-child(1) {
   top: 0;
 }
@@ -239,9 +266,11 @@ hr {
 .heroleft a {
   color: #000;
 }
+
 .heroleft a:hover {
   color: blue;
 }
+
 body {
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   background-color: #000000;
@@ -260,6 +289,7 @@ body {
   margin-left: 350px;
   font-weight: 500;
 }
+
 .faq label {
   display: block;
   margin-bottom: 8px;
@@ -276,8 +306,8 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(45deg, black,black);
-  overflow: hidden; 
+  background: linear-gradient(45deg, black, black);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,7 +326,7 @@ body {
 }
 
 .contact-form {
-  background-color:  rgb(31, 29, 29);
+  background-color: rgb(31, 29, 29);
   position: relative;
 }
 
@@ -501,7 +531,7 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(45deg,black, #149279);
+  background: linear-gradient(45deg, black, #149279);
   color: #fff;
   text-align: center;
   line-height: 35px;
@@ -531,7 +561,7 @@ textarea.input {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: linear-gradient(to bottom,  rgb(34, 33, 33), #159b80);
+  background: linear-gradient(to bottom, rgb(34, 33, 33), #159b80);
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
@@ -650,17 +680,20 @@ footer {
   margin-top: 80px;
   border-top: 1px solid white;
 }
+
 .connect {
   padding: 30px;
   padding-top: 20px;
   text-align: center;
 }
+
 .connect h2 {
   text-align: center;
   padding-bottom: 20px;
   font-weight: 600;
   font-size: 1.7rem;
 }
+
 .connect a {
   padding-top: 20px;
   color: white;
@@ -668,30 +701,37 @@ footer {
   line-height: 40px;
   letter-spacing: 20px;
 }
+
 .connect a:hover {
   color: aqua;
 }
+
 .links {
   text-align: center;
 }
+
 .links h2 {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 1.7rem;
 }
+
 .links li {
   list-style: none;
 }
+
 .links li a {
   text-decoration: none;
   color: cadetblue;
   line-height: 35px;
   font-size: 1.3rem;
 }
+
 .links li a:hover {
   color: bisque;
   text-decoration: underline;
 }
+
 .copyright {
   text-align: center;
   margin-top: 20px;
@@ -703,6 +743,7 @@ footer {
   .footerNav ul {
     flex-direction: column;
   }
+
   .footerNav ul li {
     width: 100%;
     text-align: center;
@@ -714,12 +755,10 @@ footer {
   padding: 10px 12%;
   text-align: center;
   font-size: 18px;
-  background: linear-gradient(
-    to right bottom,
-    rgb(11, 11, 42),
-    rgb(21, 21, 21),
-    rgb(17, 17, 41)
-  );
+  background: linear-gradient(to right bottom,
+      rgb(11, 11, 42),
+      rgb(21, 21, 21),
+      rgb(17, 17, 41));
   margin: 100px auto;
   max-width: 80%;
   border-radius: 10px;
@@ -779,16 +818,16 @@ input[type="radio"] {
   transition: max-height 0.5s, padding 0.5s;
 }
 
-.accordion input[type="radio"]:checked + label + .content {
+.accordion input[type="radio"]:checked+label+.content {
   max-height: 600px;
   padding: 30px 20px;
 }
 
-.accordion input[type="radio"]:checked + label::after {
+.accordion input[type="radio"]:checked+label::after {
   transform: rotate(135deg);
 }
 
-#progress{
+#progress {
   background-color: white;
   position: fixed;
   bottom: 20px;
@@ -798,15 +837,16 @@ input[type="radio"] {
   display: none;
   place-items: center;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0 , 0 , 0 , 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
- 
+
 }
-#progress-value{
+
+#progress-value {
   display: block;
   height: calc(100% - 15px);
   width: calc(100% - 15px);
-  background-color:#1f3959 ;
+  background-color: #1f3959;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -814,5 +854,5 @@ input[type="radio"] {
   font-weight: 700;
   /* color: #001a2e; */
   color: white;
-  
+
 }

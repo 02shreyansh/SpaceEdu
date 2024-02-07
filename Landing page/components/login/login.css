@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+
 html {
   overflow-x: hidden;
 }
@@ -80,8 +81,8 @@ h2 {
   color: #fff;
 }
 
-.input-field input:focus ~ label,
-.input-field input:valid ~ label {
+.input-field input:focus~label,
+.input-field input:valid~label {
   font-size: 0.8rem;
   top: 10px;
   transform: translateY(-120%);
@@ -154,6 +155,7 @@ button:hover {
   color: #fff;
   overflow: hidden;
 }
+
 .nav-left h2 {
   padding-left: 7px;
   color: #23224c;
@@ -161,15 +163,18 @@ button:hover {
   font-size: 24px;
   font-weight: bold;
 }
+
 .nav-left span {
   color: #0190ff;
 }
+
 .nav-right {
   pointer-events: all;
   display: flex;
   align-items: center;
   gap: 40px;
 }
+
 .nav-right button {
   padding: 10px 20px;
   border-radius: 34px;
@@ -185,13 +190,15 @@ button:hover {
 
 .nav a {
   text-decoration: none;
-  font-size: 20px; /* Increase font size */
+  font-size: 20px;
+  /* Increase font size */
   color: #fff;
   font-family: "Arial";
   font-weight: 600;
   display: inline-block;
   position: relative;
 }
+
 .nav-option::after {
   content: "";
   position: absolute;
@@ -203,17 +210,21 @@ button:hover {
   background-color: aqua;
   transition: transform 0.25s ease-out;
 }
+
 .nav a:hover::after {
   transform: scaleX(1);
 }
+
 .nav-right button:hover {
   background-color: transparent;
   color: #ffd700;
 }
+
 @keyframes planetRotate {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -231,6 +242,7 @@ button:hover {
   0% {
     text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
   }
+
   100% {
     text-shadow: 0 0 10px rgba(0, 200, 255, 1);
   }
@@ -254,12 +266,14 @@ footer {
   padding-top: 20px;
   text-align: center;
 }
+
 .connect h2 {
   text-align: center;
   padding-bottom: 20px;
   font-weight: 600;
   font-size: 1.7rem;
 }
+
 .connect a {
   padding-top: 20px;
   color: white;
@@ -267,20 +281,25 @@ footer {
   line-height: 40px;
   letter-spacing: 20px;
 }
+
 .connect a:hover {
   color: black;
 }
+
 .links {
   text-align: center;
 }
+
 .links h2 {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 1.7rem;
 }
+
 .links li {
   list-style: none;
 }
+
 .links li a {
   text-decoration: none;
   color: rgb(155, 11, 128);
@@ -288,10 +307,12 @@ footer {
   font-size: 1.3rem;
   font-weight: 600;
 }
+
 .links li a:hover {
   color: rgb(24, 27, 31);
   text-decoration: underline;
 }
+
 .copyright {
   text-align: center;
   margin-top: 20px;

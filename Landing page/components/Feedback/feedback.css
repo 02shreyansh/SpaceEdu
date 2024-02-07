@@ -1,20 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 html,
 body {
   display: grid;
   height: 100%;
   place-items: center;
   text-align: center;
-  
+
 }
 
-body{
+body {
   background-image: url("./daksh.jpg");
 }
 
@@ -30,6 +32,7 @@ body{
   color: #fff;
   overflow: hidden;
 }
+
 .nav-left h2 {
   padding-left: 7px;
   color: #23224c;
@@ -37,15 +40,18 @@ body{
   font-size: 24px;
   font-weight: bold;
 }
+
 .nav-left span {
   color: #0190ff;
 }
+
 .nav-right {
   pointer-events: all;
   display: flex;
   align-items: center;
   gap: 40px;
 }
+
 .nav-right button {
   padding: 10px 20px;
   border-radius: 34px;
@@ -58,15 +64,18 @@ body{
   transition: background-color 2s ease;
   margin-top: 0px;
 }
+
 .nav a {
   text-decoration: none;
-  font-size: 20px; /* Increase font size */
+  font-size: 20px;
+  /* Increase font size */
   color: #fff;
   font-family: "Arial";
   font-weight: 600;
   display: inline-block;
   position: relative;
 }
+
 .nav-option::after {
   content: "";
   position: absolute;
@@ -78,13 +87,16 @@ body{
   background-color: aqua;
   transition: transform 0.25s ease-out;
 }
+
 .nav a:hover::after {
   transform: scaleX(1);
 }
+
 .nav-right button:hover {
   background-color: transparent;
   color: #ffd700;
 }
+
 .nav-left h2 span {
   animation: planetGlow 2s ease-in-out infinite alternate;
 }
@@ -93,6 +105,7 @@ body{
   0% {
     text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
   }
+
   100% {
     text-shadow: 0 0 10px rgba(0, 200, 255, 1);
   }
@@ -110,14 +123,17 @@ body{
   justify-content: center;
   flex-direction: column;
 }
+
 .container .post {
   display: none;
 }
+
 .container .text {
   font-size: 25px;
   color: #666;
   font-weight: 500;
 }
+
 .container .edit {
   position: absolute;
   right: 10px;
@@ -127,6 +143,7 @@ body{
   font-weight: 500;
   cursor: pointer;
 }
+
 .container .Home {
   position: absolute;
   right: 10px;
@@ -136,12 +153,15 @@ body{
   font-weight: 500;
   cursor: pointer;
 }
+
 .container .edit:hover {
   text-decoration: underline;
 }
+
 .container .star-widget input {
   display: none;
 }
+
 .star-widget label {
   font-size: 40px;
   color: #444;
@@ -149,38 +169,49 @@ body{
   float: right;
   transition: all 0.2s ease;
 }
-input:not(:checked) ~ label:hover,
-input:not(:checked) ~ label:hover ~ label {
+
+input:not(:checked)~label:hover,
+input:not(:checked)~label:hover~label {
   color: #fd4;
 }
-input:checked ~ label {
+
+input:checked~label {
   color: #fd4;
 }
-input#rate-5:checked ~ label {
+
+input#rate-5:checked~label {
   color: #fe7;
   text-shadow: 0 0 20px #952;
 }
-#rate-1:checked ~ form header:before {
+
+#rate-1:checked~form header:before {
   content: "I just hate it ";
 }
-#rate-2:checked ~ form header:before {
+
+#rate-2:checked~form header:before {
   content: "I don't like it ";
 }
-#rate-3:checked ~ form header:before {
+
+#rate-3:checked~form header:before {
   content: "It is awesome ";
 }
-#rate-4:checked ~ form header:before {
+
+#rate-4:checked~form header:before {
   content: "I just like it ";
 }
-#rate-5:checked ~ form header:before {
+
+#rate-5:checked~form header:before {
   content: "I just love it ";
 }
+
 .container form {
   display: none;
 }
-input:checked ~ form {
+
+input:checked~form {
   display: block;
 }
+
 form header {
   width: 100%;
   font-size: 25px;
@@ -190,11 +221,13 @@ form header {
   text-align: center;
   transition: all 0.2s ease;
 }
+
 form .textarea {
   height: 100px;
   width: 100%;
   overflow: hidden;
 }
+
 form .textarea textarea {
   height: 100%;
   width: 100%;
@@ -206,14 +239,17 @@ form .textarea textarea {
   font-size: 17px;
   resize: none;
 }
+
 .textarea textarea:focus {
   border-color: #444;
 }
+
 form .btn {
   height: 45px;
   width: 100%;
   margin: 15px 0;
 }
+
 form .btn button {
   height: 100%;
   width: 100%;
@@ -227,6 +263,7 @@ form .btn button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 form .btn button:hover {
   background: #1b1b1b;
 }

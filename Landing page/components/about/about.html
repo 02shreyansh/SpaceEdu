@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="shortcut icon" type="image/jpg" href="../../Asset/saturn.png" />
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    .about {
+      background-image: url(about-background.jpg);
+      background-size: cover;
+      background-size: cover;
+      background-position: center;
+      background-clip: padding-box;
+      margin: 0;
+      padding: 0;
+      border: 0px;
+      height: 100vh;
+    }
+
+    h1 {
+      padding: 10px;
+      margin: 10px;
+      font-size: 4rem;
+      text-align: center;
+      color: whitesmoke;
+      opacity: 100%;
+      font-weight: bolder;
+    }
+
+    .logo {
+      margin: 0px;
+      padding-top: 15px;
+      padding-left: 20px;
+      font-size: 2rem;
+      color: #23224C;
+    }
+
+    span {
+      color: #0190FF;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin: 0px;
+      opacity: 100%;
+      color: whitesmoke;
+    }
+
+    .index {
+      text-decoration: none;
+    }
+
+    .content {
+      background-color: rgba(223, 223, 223, .7);
+      width: 50%;
+      border-radius: 10px;
+      margin-left: 40px;
+      margin-top: 50px;
+      padding: 10px;
+    }
+
+    .content p {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: left;
+      font-weight: 500;
+      font-size: 20px;
+      color: #1A1A1A;
+      border: 0px;
+      margin: 0px;
+      padding: 10px;
+      opacity: 100%;
+
+    }
+
+    .span-content {
+      color: black;
+      font-style: italic;
+      font-weight: bolder;
+      padding: 0px;
+      margin: 0px;
+      border: 0px;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 23px;
+    }
+
+    hr {
+      opacity: 0%;
+    }
+
+    .about-us {
+      text-align: left;
+    }
+
+    .glow {
+      font-size: 70px;
+      color: #ffffff;
+      text-align: center;
+      -webkit-animation: glow 5s ease-in-out infinite alternate;
+      -moz-animation: glow 5s ease-in-out infinite alternate;
+      animation: glow 5s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #222B26, 0 0 30px #222B26, 0 0 40px #222B26,
+          0 0 50px #69796B, 0 0 60px #69796B, 0 0 70px #69796B;
+      }
+
+      to {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #222B26, 0 0 30px #222B26, 0 0 40px #222B26,
+          0 0 50px #69796B, 0 0 60px #69796B, 0 0 70px #69796B;
+      }
+    }
+
+    .logo-1 {
+      color: #23224C;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .nav {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .home i {
+      font-size: 25px;
+      color: white;
+      padding: 15px;
+      padding-right: 30px;
+
+    }
+
+    .home i:hover {
+      color: #0190FF;
+    }
+
+    @media (max-width: 1163px) {
+      .content {
+        width: 45%;
+      }
+
+      .content p:nth-child(n+3) {
+        display: none;
+      }
+
+    }
+
+    /* footer*/
+
+    .footerEl {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    footer {
+      overflow-x: hidden;
+      background-color: #1a1a1a;
+    }
+
+    .footerContainer {
+      width: 100%;
+    }
+
+    .socialIcons {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .socialIcons a {
+      text-decoration: none;
+      padding: 50 px;
+      background-color: #1a1a1a;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .socialIcons a i {
+      padding: 1px;
+      font-size: 2em;
+      color: whitesmoke;
+      opacity: 0.9;
+    }
+
+    .socialIcons a:hover {
+      background-color: whitesmoke;
+      transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+      color: black;
+      transition: 0.9s;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .footerNav {
+      margin: 30px 0;
+    }
+
+    .footerNav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+    }
+
+    .footerNav ul li {
+      color: white;
+      margin: 20px;
+      text-decoration: none;
+      font-size: 1.3em;
+      opacity: 0.7;
+      transition: 0.5s;
+    }
+
+    .footerNav ul li a {
+      color: whitesmoke;
+      text-decoration: none;
+    }
+
+    .footerNav ul li a:hover {
+      text-decoration: underline;
+      font-weight: bold;
+      color: #0192fd;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .footerNav ul {
+        flex-direction: column;
+      }
+
+      .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <div class="about">
+    <div class="nav">
+      <a class="index" href="../../index.html">
+        <h2 class="logo">Spaces<span>EDU</span></h2>
+      </a>
+      <a class="home" href="../../index.html"><i class="fa-solid fa-house"></i></a>
+
+    </div>
+
+    <div class="about-us">
+      <h1 class="glow">About Us</h1>
+      <div class="content">
+        <p><span class="span-content">"Mysteries unfold in the cosmic tapestry"</span></p>
+        <p>
+          Welcome to <span class="logo-1">Spaces</span><span>EDU</span>, where education becomes a cosmic adventure. Our
+          platform blends technology and learning seamlessly.</p>
+
+        <p>Guiding students and educators through a dynamic process of visible assessment. With adaptive design and
+          galactic navigation, explore the educational cosmos effortlessly on any device. Join us in making each
+          learning experience a captivating journey at SpacesEDU.</p>
+        <p>Step into a universe where learning comes to life with stellar hero animations and interactive celestial
+          bodies. Each planet tells its unique story, engaging learners in a way that goes beyond conventional methods.
+        </p>
+        <p>
+          We are dedicated to showcasing and celebrating growth, ensuring that every achievement becomes a shining star
+          in your educational constellation. Join us on this celestial adventure and let SpacesEDU be your guiding star
+          in the vast universe of knowledge.
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <div class="socialIcons footerEl">
+      <a href="https://www.linkedin.com/in/shreyansh-techenthusiastic/ "><i><i
+            class="fa-brands fa-linkedin-in"></i></i></a>
+      <a href="https://github.com/02shreyansh"><i><i class="fa-brands fa-github"></i></i></a>
+      <a href=""><i><i class="fa-regular fa-envelope"></i></i></a>
+      <a href=""><i><i class="fa-brands fa-instagram"></i></i></a>
+      <a href=""><i><i class="fa-brands fa-twitter"></i></a>
+    </div>
+
+    <div class="footerNav footerEl">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li>
+          <a href="https://02shreyansh.github.io/Portfolio/">Contact Me</a>
+        </li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    </div>
+  </footer>
+</body>
+
+</html>

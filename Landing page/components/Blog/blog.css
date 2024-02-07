@@ -7,10 +7,12 @@
 body {
   background-color: #000;
 }
-.top{
+
+.top {
   margin: 10px;
 }
-.blogcontainer{
+
+.blogcontainer {
   height: fit-content;
 }
 
@@ -110,19 +112,20 @@ body {
 
 .section {
   width: 95%;
-height: 100vh;
-background-color: #ffd700;
-margin: 40px auto;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); /* Add this line for a new row */
-grid-gap: 25px;
-max-width: 690px;
+  height: 100vh;
+  background-color: #ffd700;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  /* Add this line for a new row */
+  grid-gap: 25px;
+  max-width: 690px;
 
 }
 
 
-.blogcontainer{
+.blogcontainer {
   width: 95%;
   background-color: #000000;
   display: flex;
@@ -138,22 +141,26 @@ max-width: 690px;
   max-width: 350px;
   margin-top: 50px;
 }
+
 .image-section {
   min-height: 200px;
   border-radius: 10px;
 }
+
 .card .img-one {
   background-image: url("https://cdn.britannica.com/98/240698-050-AD1947D9/Gaganyaan-orbital-spacecraft-illustration-India-manned-space-flight.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 .card .img-two {
   background-image: url("https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2023/08/esa_ground_stations_support_isro_s_aditya-l1_solar_observatory/25064719-1-eng-GB/ESA_ground_stations_support_ISRO_s_Aditya-L1_solar_observatory_pillars.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 .card .img-three {
   background-image: url("https://th-i.thgim.com/public/incoming/lv1s03/article66946252.ece/alternates/FREE_1200/Chandrayaan-3.jpg");
   background-repeat: no-repeat;
@@ -202,7 +209,8 @@ max-width: 690px;
   background-size: cover;
   background-position: center;
 }
-.card .img-ten{
+
+.card .img-ten {
   background-image: url("https://djzw0xesrb3bn.cloudfront.net/transcoded_images/63eb629b5eb75a1912981ac5-1676370700-xl_image_16_9/360x203-large-xl_image_16_9.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -213,17 +221,20 @@ max-width: 690px;
   text-align: center;
   padding: 20px 10px;
 }
+
 .content h2 {
   letter-spacing: 2px;
   color: rgb(183, 255, 231);
   font-family: "Arial";
 }
+
 .content p {
   font-size: 16px;
   color: #f2e2e2;
   font-family: "Arial";
   margin: 15px 0px;
 }
+
 .content a {
   text-decoration: none;
   font-size: 16px;
@@ -240,27 +251,32 @@ max-width: 690px;
   position: relative;
   transition: background-color 1s ease;
 }
+
 .content a:hover {
   color: #ffd700;
   background-color: #333;
 }
+
 footer {
   width: 100%;
   color: white;
   /* margin: 10px; */
   border-top: 1px solid white;
 }
+
 .connect {
   padding: 30px;
   padding-top: 20px;
   text-align: center;
 }
+
 .connect h2 {
   text-align: center;
   padding-bottom: 20px;
   font-weight: 600;
   font-size: 1.7rem;
 }
+
 .connect a {
   padding-top: 20px;
   color: white;
@@ -268,30 +284,37 @@ footer {
   line-height: 40px;
   letter-spacing: 20px;
 }
+
 .connect a:hover {
   color: aqua;
 }
+
 .links {
   text-align: center;
 }
+
 .links h2 {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 1.7rem;
 }
+
 .links li {
   list-style: none;
 }
+
 .links li a {
   text-decoration: none;
   color: cadetblue;
   line-height: 35px;
   font-size: 1.3rem;
 }
+
 .links li a:hover {
   color: bisque;
   text-decoration: underline;
 }
+
 .copyright {
   text-align: center;
   margin-top: 20px;
@@ -299,7 +322,7 @@ footer {
 }
 
 
-#progress{
+#progress {
   background-color: white;
   position: fixed;
   bottom: 20px;
@@ -309,15 +332,16 @@ footer {
   display: none;
   place-items: center;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0 , 0 , 0 , 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
- 
+
 }
-#progress-value{
+
+#progress-value {
   display: block;
   height: calc(100% - 15px);
   width: calc(100% - 15px);
-  background-color:#1f3959 ;
+  background-color: #1f3959;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -325,8 +349,5 @@ footer {
   font-weight: 700;
   /* color: #001a2e; */
   color: white;
-  
+
 }
-
-
-
