@@ -1,0 +1,965 @@
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Blog Template · Bootstrap v5.1</title>
+
+    <link rel="stylesheet" href="./apod.css">
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .popup-menu {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Black theme background color with transparency */
+            color: #ffd700;
+            /* Yellow accent text color */
+            padding: 30px;
+            /* Increased padding for better spacing */
+            width: 500px;
+            /* Increased width for a wider modal */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            /* Increased box shadow for a subtle glassmorphism effect */
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            /* Glassmorphism effect */
+            border-radius: 10px;
+            /* Rounded corners for a modern look */
+            text-align: center;
+        }
+
+        .popup-menu h2 {
+            font-size: 24px;
+            /* Larger font size for the heading */
+            margin-bottom: 20px;
+            /* Increased margin for better spacing */
+        }
+
+        .popup-menu a {
+            display: block;
+            margin-bottom: 10px;
+            color: #ffd700;
+            /* Yellow accent link color */
+            text-decoration: none;
+        }
+
+        .popup-menu a:hover {
+            text-decoration: underline;
+        }
+
+        .popup-menu button {
+            display: block;
+            margin-top: 20px;
+            /* Increased margin for better spacing */
+            background-color: #ffd700;
+            /* Yellow accent button background color */
+            color: #333;
+            /* Black theme button text color */
+            padding: 12px;
+            width: 100%;
+            /* Make the button full width */
+            border: none;
+            cursor: pointer;
+        }
+
+        .popup-menu button:hover {
+            background-color: #555;
+            /* Darker yellow accent on hover */
+        }
+
+        .close-popup-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ffd700;
+            /* Yellow accent close button color */
+            cursor: pointer;
+        }
+
+        .open-popup-btn {
+            background-color: #ffd700;
+            /* Yellow accent button background color */
+            color: #333;
+            /* Black theme button text color */
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .open-popup-btn:hover {
+            background-color: #555;
+            /* Darker yellow accent on hover */
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-left">
+            <h2>Spaces<span>EDU</span></h2>
+        </div>
+
+        <div class="nav-right">
+            <button class="open-popup-btn">Menu</button>
+            <div class="popup-menu">
+                <span class="close-popup-btn">&times;</span>
+                <a class="nav-option" href="index.html">Home</a>
+                <a class="nav-option" href="planet.html">Planets</a>
+                <a class="nav-option" href="#">Trailer</a>
+                <a class="nav-option" href="#">Tickets</a>
+                <a class="nav-option" href="blog.html">Blog</a>
+
+                <a class="nav-option" href="login.html" target="_blank">Login</a>
+                <a class="nav-option" href="#contact">Contact</a>
+                <a class="nav-option" href="feedback.html">Rate Us</a>
+                <!-- <a href="enroll.html"><button>Enroll</button></a> -->
+            </div>
+            <a href="enroll.html"><button>Enroll</button></a>
+        </div>
+    </div>
+
+
+
+    <br><br>
+
+    <main class="container">
+        <!-- <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-12 px-0">
+      <h1 class="display-4 fst-italic">Unraveling the Mysteries of Wormholes</h1>
+      
+    </div>
+  </div> -->
+
+
+
+        <div class="row g-12">
+            <div class="col-md-12">
+
+                <div style="width: 100%; height:425px">
+                    <img src="https://science.nasa.gov/wp-content/uploads/2023/06/jwst-spacecraftpotentialtargetsmontageflip-1200px-4-jpg.webp"
+                        width="100%" height="500px">
+
+                </div>
+                <br><br><br>
+                <article class="blog-post">
+                    <h2 class="blog-post-title">James Webb Space Telescope (JWST)</h2>
+                    <p class="blog-post-meta">February 10, 2024 by <a href="https://github.com/Surajit0573">Surajit
+                            Maity</a></p>
+
+
+                    <br>
+                    <div class="blogpostext">
+                        <div id="article-body" class="text-copy bodyCopy auto">
+                            <p>The James Webb Space Telescope (JWST) is the largest and most powerful space telescope to
+                                date.&nbsp;</p>
+                            <div id="ad-unit-1" class="ad-unit"></div>
+                            <p>NASA's infrared space observatory, launched on Dec 25, 2021, from ESA's launch site at
+                                Kourou in French Guiana, at 7:20 a.m. EST (1220 GMT; 9:20 a.m. local time in Kourou),
+                                aboard an Arianespace <a data-analytics-id="inline-link"
+                                    href="https://www.space.com/40551-ariane-5-rocket.html"
+                                    data-before-rewrite-localise="https://www.space.com/40551-ariane-5-rocket.html"
+                                    data-component-tracked="1" class="hawk-link-parsed">Ariane 5</a> rocket.&nbsp;</p>
+                            <aside class="hawk-nest hawk-processed" data-render-type="fte" data-skip="dealsy"
+                                data-widget-type="seasonal" data-widget-id="bf4b7070-720f-4147-9124-a532ceb87c1b"
+                                data-result="missing">
+                                <div class="hawk-master-widget-hawk-wrapper"></div>
+                            </aside>
+                            <p>The $10 billion James Webb Telescope is probing the cosmos to uncover the history of the
+                                universe from the <a data-analytics-id="inline-link"
+                                    href="https://www.space.com/25126-big-bang-theory.html"
+                                    data-before-rewrite-localise="https://www.space.com/25126-big-bang-theory.html"
+                                    data-component-tracked="1" class="hawk-link-parsed">Big Bang</a> to exoplanet
+                                formation and beyond. It is one of NASA's Great Observatories, huge space instruments
+                                that include the likes of the Hubble Space Telescope that peer deep into the universe.
+                            </p>
+
+                            <p><strong>Related: </strong><a data-analytics-id="inline-link"
+                                    href="https://www.space.com/james-webb-space-telescope-best-images-all-time-gallery"
+                                    data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-best-images-all-time-gallery"
+                                    data-component-tracked="1" class="hawk-link-parsed">James Webb Space Telescope's
+                                    best images of all time (gallery)</a></p>
+
+                            <div class="person__heading">
+                                <div class="person__name-socials"><span class="person__name">Naomi
+                                        Rowe-Gurney</span>
+
+                                </div>
+                                <aside class="person__role">Planetary Scientist</aside>
+                            </div>
+                            <div class="person__bio">
+                                <p>Naomi Rowe-Gurney is a postdoctoral research associate at the NASA Goddard
+                                    Space Flight Center employed by the University of Maryland College Park. She
+                                    is also a solar system ambassador for the James Webb Space Telescope. &nbsp;
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="article__schema-question">
+                        <h3>How does the James Webb Space Telescope (JWST) work?</h3>
+                        <article class="article__schema-answer">
+                            <p>The JWST works very much like any telescope in that its main job is to capture
+                                light and focus it so we can see further into the distance. There are a lot of
+                                differences though like JWST sees in a different part of the electromagnetic
+                                spectrum than our eyes do. We see visible light but JWST sees infrared or
+                                "heat", just like a night vision security camera. It's also really big so it can
+                                capture a lot more light and therefore see more distant, smaller, and colder
+                                objects. This is also helped by it being in space because it doesn't have to
+                                look through the atmosphere, which blocks a lot of really useful and interesting
+                                information.&nbsp;</p>
+                        </article>
+                    </section>
+                    <section class="article__schema-question">
+                        <h3>How far can the James Webb Space Telescope "see"?</h3>
+                        <p>Why does this distant view allow the JWST to see galaxies in the early universe?</p>
+                        <article class="article__schema-answer">
+                            <p>The further away in the universe something is the faster it is traveling away
+                                from us. Fast things experience something called redshift and this makes the
+                                object appear redder. Eventually, when something is so far away it gets even
+                                redder than red and becomes infrared. This is why JWST can see further than any
+                                telescope we've had before.&nbsp;</p>
+                            <p>Light takes time to travel to us, so the furthest away objects are also the
+                                oldest. Telescopes like Hubble and JWST look back in time. JWST can see further
+                                than Hubble because it is in the infrared so it can look almost to the beginning
+                                of the universe, 13.7 billion years ago.</p>
+                        </article>
+                    </section>
+                    <section class="article__schema-question">
+                        <h3>Where is the James Webb Space Telescope now?</h3>
+                        <article class="article__schema-answer">
+                            <p>The JWST orbits around a point in space called the L2 Lagrange point. This is 1.5
+                                million km away from us so that the heat from Earth doesn't get in the way of
+                                what it's looking at. L2 is a gravity well so we can use less fuel to keep it
+                                there than if it was just floating at a random point in space. It is also useful
+                                that L2 follows us around the sun, so we are always able to communicate and
+                                download images from the telescope.&nbsp;</p>
+                        </article>
+                    </section>
+                    <section class="article__schema-question">
+                        <h3>Of the observations the JWST has made thus far, which is the most exciting for you?
+                        </h3>
+                        <article class="article__schema-answer">
+                            <p>I am a planetary scientist, so I am interested in everything in our own solar
+                                system! I especially love the ice giants Uranus and Neptune because we know so
+                                little about them. I did my Ph.D. looking at the atmospheres of both planets
+                                using the Spitzer Space Telescope which was like a mini-JWST. It was so mini
+                                that we couldn't get any images and had to look at the planet like it was as
+                                small as a distant star, so the first images of both of those planets have been
+                                the most exciting for me.</p>
+                        </article>
+                    </section>
+                    <h2 class="article-body__section" id="section-james-webb-space-telescope-launch-and-deployment">
+                        <span>James Webb Space
+                            Telescope launch and deployment</span>
+                    </h2>
+                    <p>NASA's JWST launched on Dec 25, 2021, from ESA's launch site at Kourou in French Guiana,
+                        at 7:20 a.m. EST (1220 GMT; 9:20 a.m. local time in Kourou), aboard an Arianespace
+                        Ariane 5 rocket. &nbsp;</p>
+                    <p>Thanks to a successful and precise launch, NASA announced that the JWST should have
+                        enough fuel to more than <a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-fuel-lifetime"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-fuel-lifetime"
+                            data-component-tracked="1" class="hawk-link-parsed">double its minimum mission life
+                            expectancy</a> of 10 years. Since, its launch, the James Webb Space Telescope's
+                        accomplishments just keep on coming.&nbsp;</p>
+                    <div class="fancy-box">
+                        <div class="fancy_box-title">Where is the James Webb Space Telescope? </div>
+                        <div class="fancy_box_body">
+                            <p class="fancy-box__body-text">The James Webb Space Telescope is currently located
+                                at L2, the second sun-Earth Lagrange point. L2 is a spot in space near <a
+                                    data-analytics-id="inline-link"
+                                    href="https://www.space.com/54-earth-history-composition-and-atmosphere.html"
+                                    data-before-rewrite-localise="https://www.space.com/54-earth-history-composition-and-atmosphere.html"
+                                    data-component-tracked="1" class="hawk-link-parsed">Earth</a> that lies
+                                opposite the <a data-analytics-id="inline-link"
+                                    href="https://www.space.com/58-the-sun-formation-facts-and-characteristics.html"
+                                    data-before-rewrite-localise="https://www.space.com/58-the-sun-formation-facts-and-characteristics.html"
+                                    data-component-tracked="1" class="hawk-link-parsed">sun</a>. You can keep
+                                track of Webb in more detail with <a data-analytics-id="inline-link"
+                                    href="https://jwst.nasa.gov/content/webbLaunch/whereIsWebb.html" target="_blank"
+                                    data-url="https://jwst.nasa.gov/content/webbLaunch/whereIsWebb.html"
+                                    data-component-tracked="1" class="hawk-link-parsed">NASA's Where is Webb
+                                    Website</a>.&nbsp;</p>
+                        </div>
+                    </div>
+                    <p>An <a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-last-view-4k-video?utm_source=twitter.com&amp;utm_medium=social&amp;utm_campaign=socialflow&amp;utm_content=spaceanswers"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-last-view-4k-video?utm_source=twitter.com&amp;utm_medium=social&amp;utm_campaign=socialflow&amp;utm_content=spaceanswers"
+                            data-component-tracked="1" class="hawk-link-parsed">impressive HD video</a> captured
+                        the observatory flying away from the Ariane 5 rocket that carried it into space. The
+                        three-minute video shows Webb slowly drifting away from its rocket stage and unfurling
+                        its solar panels.</p><a target="_blank" data-url="" href="" data-component-tracked="1"
+                        class="hawk-link-parsed">
+                        <figure class="van-image-figure inline-layout" data-bordeaux-image-check="">
+
+                            <figcaption itemprop="caption description" class=" inline-layout"><span
+                                    class="caption-text">The James Webb Space Telescope after separating from
+                                    the Ariane 5 rocket that carried it into space. This is one of our last
+                                    views of the impressive telescope.&nbsp; </span><span class="credit"
+                                    itemprop="copyrightHolder">(Image credit: ESA)</span></figcaption>
+                        </figure>
+                    </a>
+                    <p>The James Webb Telescope deployed and tested a key antenna on Dec. 26, 2021, in a process
+                        that took about one hour, according to a <a data-analytics-id="inline-link"
+                            href="https://blogs.nasa.gov/webb/2021/12/26/webb-antenna-released-and-tested/"
+                            target="_blank"
+                            data-url="https://blogs.nasa.gov/webb/2021/12/26/webb-antenna-released-and-tested/"
+                            data-component-tracked="1" class="hawk-link-parsed">NASA statement</a>. The antenna
+                        will be responsible for twice-daily science data dumps to Earth. Just a day later, on
+                        Dec. 27, the observatory <a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-beyond-moon-orbit"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-beyond-moon-orbit"
+                            data-component-tracked="1" class="hawk-link-parsed">sailed beyond the orbit of the
+                            moon</a>.&nbsp;</p>
+                    <p>On Dec. 31, 2021, Webb successfully unfurled its massive sunshield. The tensioning of the
+                        sunshield's five layers began on Jan, 3. 2022 and was <a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-completes-sunshield-deployment"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-completes-sunshield-deployment"
+                            data-component-tracked="1" class="hawk-link-parsed">completed the next day</a>. The
+                        telescope's secondary mirror was then <a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-secondary-mirror-deployed"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-secondary-mirror-deployed"
+                            data-component-tracked="1" class="hawk-link-parsed">successfully deployed</a> and
+                        latched on Jan. 5, 2022.&nbsp;</p>
+                    <p>Then on Jan, 8. 2022, NASA announced that the James Webb Space Telescope had successfully
+                        unfolded the giant primary mirror and is now <a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-fully-deployed"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-fully-deployed"
+                            data-component-tracked="1" class="hawk-link-parsed">fully deployed.</a> The next
+                        step for Webb is the alignment of the 18 individual mirrors that make up the
+                        observatory's primary mirror. NASA estimates the work could <a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-steps-after-deployment"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-steps-after-deployment"
+                            data-component-tracked="1" class="hawk-link-parsed">take up to 120 days</a> after
+                        launch for the alignment to be complete.</p>
+                    <p>The James Webb Space Telescope reached its final destination: L2, the second sun-Earth
+                        Lagrange point, which it will orbit, on Jan, 24. 2022 after traveling nearly a million
+                        miles (1.5 million kilometers).</p>
+                    <h2 class="article-body__section" id="section-james-webb-space-telescope-images"><span>James
+                            Webb Space Telescope images</span></h2>
+
+                    <div class="jw-preview jw-reset"
+                        style="background-image: url(&quot;https://cdn.jwplayer.com/v2/media/FAkBZ5gz/poster.jpg?width=640&quot;); background-size: cover;">
+                    </div>
+                    <div class="jw-controls-backdrop jw-reset"></div>
+                    <div class="jw-captions jw-reset" style="font-size: 16px;"></div>
+                    <div class="jw-title jw-reset-text" dir="auto">
+                        <div class="jw-title-primary jw-reset-text">Wow! Webb Space
+                            Telescope's view of the Carina Nebula is just stunning</div>
+                        <div class="jw-title-secondary jw-reset-text">See amazing imagery of
+                            the Carina Nebula as captured by the James Webb Space Telescope.
+                            NASA Goddard Space Flight Center astrophysicist Amber Straughn
+                            explains. [Behold! The James Webb Space Telescope's stunning 1st
+                            science images are
+                            here](https://www.space.com/james-webb-space-telescope-1st-photos)
+
+                            Credit: NASA</div>
+                    </div>
+
+
+                    <p>The James Webb Space Telescopes' first science images were officially
+                        released by NASA
+                        during a live event on July 12, at 10:30 a.m. EDT (1430 GMT). They included
+                        the Cosmic
+                        Cliffs in the Carina Nebula, the striking Southern Ring Nebula, Stephan's
+                        Quintet and an
+                        analysis of the atmospheric composition of the hot gas giant exoplanet
+                        WASP-96 b.&nbsp;
+                    </p>
+                    <p><strong>Related: </strong><a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-first-photos"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-first-photos"
+                            data-component-tracked="1" class="hawk-link-parsed">James Webb Space
+                            Telescope's 1st
+                            photos (gallery)</a></p>
+                    <p>"You know what I'm most excited about?" Thomas Zurbuchen, NASA's associate
+                        administrator
+                        for science, said during the event after the images were revealed. "There's
+                        tens of
+                        thousands of scientists — and frankly, some of them just got born or are not
+                        even born —
+                        who are benefiting from this amazing telescope because it will be with us
+                        for decades."
+                    </p>
+                    <p><strong>Related: </strong><a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-1st-photos"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-1st-photos"
+                            data-component-tracked="1" class="hawk-link-parsed">Behold! The James
+                            Webb Space
+                            Telescope's stunning 1st science images are here.</a></p>
+                    <p>A day earlier on July 11, 2022, President Joe Biden, Vice President Kamala
+                        Harris and
+                        NASA Administrator Bill Nelson unveiled the first science-quality image
+                        captured by the
+                        James Webb Space Telescope.&nbsp;</p>
+                    <p>The stunning image shows the deepest infrared view of the universe to date,
+                        according to
+                        a NASA&nbsp;<a data-analytics-id="inline-link"
+                            href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-delivers-deepest-infrared-image-of-universe-yet"
+                            target="_blank"
+                            data-url="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-delivers-deepest-infrared-image-of-universe-yet"
+                            data-component-tracked="1" class="hawk-link-parsed">statement</a>, and
+                        was created
+                        using just 12.5 hours of observing time on one of the telescope's four
+                        instruments.</p>
+                    <a target="_blank" data-url="" href="" data-component-tracked="1" class="hawk-link-parsed">
+                        <figure class="van-image-figure inline-layout" data-bordeaux-image-check="">
+                            <div class="image-full-width-wrapper">
+                                <div class="image-widthsetter" style="max-width:2799px;">
+                                    <p class="vanilla-image-block">
+                                        <picture>
+                                            <source type="image/webp" alt="Galaxy filled image captured by the JWST."
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-320-80.jpg.webp 320w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-480-80.jpg.webp 480w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-650-80.jpg.webp 650w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-970-80.jpg.webp 970w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1024-80.jpg.webp 1024w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1200-80.jpg.webp 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe.jpg"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe.jpg"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-320-80.jpg.webp 320w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-480-80.jpg.webp 480w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-650-80.jpg.webp 650w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-970-80.jpg.webp 970w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1024-80.jpg.webp 1024w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1200-80.jpg.webp 1200w">
+                                            <source type="image/jpeg" alt="Galaxy filled image captured by the JWST."
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1200-80.jpg 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe.jpg"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe.jpg"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1200-80.jpg 1200w">
+                                            <figure class="expandable-image"><img
+                                                    src="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    alt="Galaxy filled image captured by the JWST."
+                                                    class="expandable lazy-image-van loaded"
+                                                    onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                    data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    data-srcset="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1200-80.jpg 1200w"
+                                                    data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    data-original-mos="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe.jpg"
+                                                    data-pin-media="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe.jpg"
+                                                    loading="lazy" sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    srcset="https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/cMDRA3454bGvfZASbxviZe-1200-80.jpg 1200w"
+                                                    data-ll-status="loaded">
+                                                <div class="expand icon icon-expand-image"></div>
+                                            </figure>
+                                        </picture>
+                                    </p>
+                                </div>
+                            </div>
+                            <figcaption itemprop="caption description" class=" inline-layout"><span
+                                    class="caption-text">The first publicly released science-quality
+                                    image from
+                                    NASA's James Webb Space Telescope, revealed on July 11, 2022, is
+                                    the deepest
+                                    infrared view of the universe to date. </span><span class="credit"
+                                    itemprop="copyrightHolder">(Image credit: NASA,
+                                    ESA, CSA, and STScI)</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <p>Prior to the first image and data release, Webb had already treated us to
+                        several
+                        impressive images during its instrument checks.</p>
+                    <p>On Feb, 11. <a data-analytics-id="inline-link"
+                            href="https://blogs.nasa.gov/webb/2022/02/11/photons-received-webb-sees-its-first-star-18-times/?utm_source=TWITTER&amp;utm_medium=Dr_ThomasZ&amp;utm_campaign=NASASocial&amp;linkId=151796890"
+                            target="_blank"
+                            data-url="https://blogs.nasa.gov/webb/2022/02/11/photons-received-webb-sees-its-first-star-18-times/?utm_source=TWITTER&amp;utm_medium=Dr_ThomasZ&amp;utm_campaign=NASASocial&amp;linkId=151796890"
+                            data-component-tracked="1" class="hawk-link-parsed">NASA announced</a>
+                        that The JWST
+                        had captured its first images of starlight. The first image taken by Webb
+                        was of a <a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-first-target-star"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-first-target-star"
+                            data-component-tracked="1" class="hawk-link-parsed">star called HD
+                            84406</a>. Light
+                        from HD84406 was captured by Webb's 18 mirror segments located on the
+                        primary mirror,
+                        resulting in a mosaic of 18 scattered bright dots.&nbsp;</p><a target="_blank" data-url=""
+                        href="" data-component-tracked="1" class="hawk-link-parsed">
+                        <figure class="van-image-figure inline-layout" data-bordeaux-image-check="">
+                            <div class="image-full-width-wrapper">
+                                <div class="image-widthsetter" style="max-width:1400px;">
+                                    <p class="vanilla-image-block">
+                                        <picture>
+                                            <source type="image/webp"
+                                                alt="18 blobs of light against the black background of space."
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-320-80.jpg.webp 320w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-480-80.jpg.webp 480w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-650-80.jpg.webp 650w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-970-80.jpg.webp 970w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1024-80.jpg.webp 1024w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1200-80.jpg.webp 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd.jpg"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd.jpg"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-320-80.jpg.webp 320w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-480-80.jpg.webp 480w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-650-80.jpg.webp 650w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-970-80.jpg.webp 970w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1024-80.jpg.webp 1024w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1200-80.jpg.webp 1200w">
+                                            <source type="image/jpeg"
+                                                alt="18 blobs of light against the black background of space."
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1200-80.jpg 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd.jpg"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd.jpg"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1200-80.jpg 1200w">
+                                            <figure class="expandable-image"><img
+                                                    src="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    alt="18 blobs of light against the black background of space."
+                                                    class="expandable lazy-image-van loaded"
+                                                    onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                    data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    data-srcset="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1200-80.jpg 1200w"
+                                                    data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    data-original-mos="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd.jpg"
+                                                    data-pin-media="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd.jpg"
+                                                    loading="lazy" sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    srcset="https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/sod8fUKddieCKAfSLNdUbd-1200-80.jpg 1200w"
+                                                    data-ll-status="loaded">
+                                                <div class="expand icon icon-expand-image"></div>
+                                            </figure>
+                                        </picture>
+                                    </p>
+                                </div>
+                            </div>
+                            <figcaption itemprop="caption description" class=" inline-layout"><span
+                                    class="caption-text">The first published image taken by the
+                                    James Webb Space
+                                    Telescope shows part of a mosaic created over 25 hours beginning
+                                    on Feb. 2,
+                                    2022, early in the process of aligning the 18 segments of the
+                                    James Webb
+                                    Space Telescope's mirror. </span><span class="credit"
+                                    itemprop="copyrightHolder">(Image credit: NASA)</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <p>"As Webb aligns and focuses over the next few months, these 18 dots will
+                        slowly become a
+                        single star," Thomas Zurbuchen, NASA's Associate Administrator for the
+                        Science Mission
+                        Directorate, <a data-analytics-id="inline-link"
+                            href="https://twitter.com/Dr_ThomasZ/status/1492162590058942472" target="_blank"
+                            data-url="https://twitter.com/Dr_ThomasZ/status/1492162590058942472"
+                            data-component-tracked="1" class="hawk-link-parsed">said on
+                            Twitter</a>.&nbsp;</p>
+                    <p>On Feb, 18. NASA released a <a data-analytics-id="inline-link"
+                            href="https://www.space.com/james-webb-space-telescope-hexagonal-star-image"
+                            data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-hexagonal-star-image"
+                            data-component-tracked="1" class="hawk-link-parsed">new and improved
+                            image</a> of
+                        HD84406, bringing 18 unfocused copies of a star into a deliberate hexagonal
+                        formation.
+                        Once the observatory has successfully aligned the individual segments of the
+                        primary
+                        mirror it will begin the image stacking process. This will bring 18 images
+                        on top of
+                        each other into one clear view.&nbsp;</p>
+                    <p>Webb has also taken an impressive "selfie" using a specialized camera inside
+                        the NIRCam
+                        instrument. The camera is designed to be used for engineering and alignment
+                        purposes.
+                    </p><a target="_blank" data-url="" href="" data-component-tracked="1" class="hawk-link-parsed">
+                        <figure class="van-image-figure inline-layout" data-bordeaux-image-check="">
+                            <div class="image-full-width-wrapper">
+                                <div class="image-widthsetter" style="max-width:2133px;">
+                                    <p class="vanilla-image-block">
+                                        <picture>
+                                            <source type="image/webp"
+                                                alt="Hexagonal mirrors of JWST, one of the small hexagons that makes up the large mirror is shining brighter than the others."
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-320-80.jpg.webp 320w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-480-80.jpg.webp 480w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-650-80.jpg.webp 650w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-970-80.jpg.webp 970w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1024-80.jpg.webp 1024w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1200-80.jpg.webp 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G.jpg"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G.jpg"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-320-80.jpg.webp 320w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-480-80.jpg.webp 480w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-650-80.jpg.webp 650w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-970-80.jpg.webp 970w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1024-80.jpg.webp 1024w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1200-80.jpg.webp 1200w">
+                                            <source type="image/jpeg"
+                                                alt="Hexagonal mirrors of JWST, one of the small hexagons that makes up the large mirror is shining brighter than the others."
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1200-80.jpg 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G.jpg"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G.jpg"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1200-80.jpg 1200w">
+                                            <figure class="expandable-image"><img
+                                                    src="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    alt="Hexagonal mirrors of JWST, one of the small hexagons that makes up the large mirror is shining brighter than the others."
+                                                    class="expandable lazy-image-van loaded"
+                                                    onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                    data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    data-srcset="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1200-80.jpg 1200w"
+                                                    data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    data-original-mos="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G.jpg"
+                                                    data-pin-media="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G.jpg"
+                                                    loading="lazy" sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    srcset="https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/V7s8rhYFkzzQXvf7mFn68G-1200-80.jpg 1200w"
+                                                    data-ll-status="loaded">
+                                                <div class="expand icon icon-expand-image"></div>
+                                            </figure>
+                                        </picture>
+                                    </p>
+                                </div>
+                            </div>
+                            <figcaption itemprop="caption description" class=" inline-layout"><span
+                                    class="caption-text">A "selfie" shows the 18 segments of the
+                                    James Webb
+                                    Space Telescope's primary mirror as seen from a specialized
+                                    camera inside
+                                    the NIRCam instrument.&nbsp; </span><span class="credit"
+                                    itemprop="copyrightHolder">(Image credit: NASA)</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <p>In the "selfie" you can see one of the mirror segments is shining brighter
+                        than the
+                        others, this is because it is the only segment at the time successfully
+                        aligned and
+                        pointing at a star. The rest of the mirror segments were successfully
+                        aligned one by
+                        one.&nbsp;</p>
+                    <p>On April 28, NASA <a data-analytics-id="inline-link"
+                            href="https://blogs.nasa.gov/webb/2022/04/28/nasas-webb-in-full-focus-ready-for-instrument-commissioning/"
+                            target="_blank"
+                            data-url="https://blogs.nasa.gov/webb/2022/04/28/nasas-webb-in-full-focus-ready-for-instrument-commissioning/"
+                            data-component-tracked="1" class="hawk-link-parsed"><u>announced in a
+                                statement</u></a> that the James Webb Space Telescope had finished
+                        its alignment
+                        phase after demonstrating it can capture "crisp, well-focused images" will
+                        all four of
+                        its scientific instruments. &nbsp;</p><a target="_blank" data-url="" href=""
+                        data-component-tracked="1" class="hawk-link-parsed">
+                        <figure class="van-image-figure inline-layout" data-bordeaux-image-check="">
+                            <div class="image-full-width-wrapper">
+                                <div class="image-widthsetter" style="max-width:1200px;">
+                                    <p class="vanilla-image-block">
+                                        <picture>
+                                            <source type="image/webp"
+                                                alt="Numerous images showing the sharpness check from different instruments onboard. Each image shows bright points of light from stars and galaxies against the black backdrop of space."
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-320-80.png.webp 320w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-480-80.png.webp 480w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-650-80.png.webp 650w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-970-80.png.webp 970w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1024-80.png.webp 1024w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1200-80.png.webp 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU.png"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU.png"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-320-80.png.webp 320w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-480-80.png.webp 480w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-650-80.png.webp 650w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-970-80.png.webp 970w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1024-80.png.webp 1024w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1200-80.png.webp 1200w">
+                                            <source type="image/png"
+                                                alt="Numerous images showing the sharpness check from different instruments onboard. Each image shows bright points of light from stars and galaxies against the black backdrop of space."
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-480-80.png 480w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-650-80.png 650w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-970-80.png 970w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1024-80.png 1024w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1200-80.png 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU.png"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU.png"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-480-80.png 480w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-650-80.png 650w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-970-80.png 970w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1024-80.png 1024w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1200-80.png 1200w">
+                                            <figure class="expandable-image"><img
+                                                    src="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    alt="Numerous images showing the sharpness check from different instruments onboard. Each image shows bright points of light from stars and galaxies against the black backdrop of space."
+                                                    class="expandable lazy-image-van loaded"
+                                                    onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                    data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    data-srcset="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-480-80.png 480w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-650-80.png 650w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-970-80.png 970w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1024-80.png 1024w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1200-80.png 1200w"
+                                                    data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    data-original-mos="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU.png"
+                                                    data-pin-media="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU.png"
+                                                    loading="lazy" sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    srcset="https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-480-80.png 480w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-650-80.png 650w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-970-80.png 970w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1024-80.png 1024w, https://cdn.mos.cms.futurecdn.net/VivyVd9nZdbL9wbLrR6FxU-1200-80.png 1200w"
+                                                    data-ll-status="loaded">
+                                                <div class="expand icon icon-expand-image"></div>
+                                            </figure>
+                                        </picture>
+                                    </p>
+                                </div>
+                            </div>
+                            <figcaption itemprop="caption description" class=" inline-layout"><span
+                                    class="caption-text">NASA's James Webb Space Telescope can now
+                                    capture sharp
+                                    images of celestial objects with multiple instruments, the
+                                    agency announced
+                                    April 28, 2022. </span><span class="credit" itemprop="copyrightHolder">(Image
+                                    credit: NASA/STScI)</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <p>On July 11, 2022, President Joe Biden, Vice President Kamala Harris and NASA
+                        Administrator Bill Nelson unveiled the first science-quality image captured
+                        by the James
+                        Webb Space Telescope.&nbsp;</p>
+                    <p>The stunning image shows the deepest infrared view of the universe to date,
+                        according to
+                        a NASA&nbsp;<a data-analytics-id="inline-link"
+                            href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-delivers-deepest-infrared-image-of-universe-yet"
+                            target="_blank"
+                            data-url="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-delivers-deepest-infrared-image-of-universe-yet"
+                            data-component-tracked="1" class="hawk-link-parsed">statement</a>, and
+                        was created
+                        using just 12.5 hours of observing time on one of the telescope's four
+                        instruments.</p>
+                    <h2 class="article-body__section" id="section-james-webb-space-telescope-science-mandate">
+                        <span>James Webb Space Telescope science mandate</span>
+                    </h2>
+                    <p>JWST's science mandate is principally divided into four areas: &nbsp;</p>
+                    <p><strong>First light and reionization&nbsp;</strong></p>
+                    <p>This refers to the early stages of the universe after the Big Bang started
+                        the universe
+                        as we know it today. In the first stages after the Big Bang, the universe
+                        was a sea of
+                        particles (such as <a data-analytics-id="inline-link"
+                            href="https://www.space.com/electrons-negative-subatomic-particles"
+                            data-before-rewrite-localise="https://www.space.com/electrons-negative-subatomic-particles"
+                            data-component-tracked="1" class="hawk-link-parsed">electrons</a>,
+                        protons and
+                        neutrons), and the light was not visible until the universe cooled enough
+                        for these
+                        particles to begin combining. Another thing JWST will study is what happened
+                        after the
+                        first stars formed; this era is called "the epoch of reionization" because
+                        it refers to
+                        when neutral hydrogen was reionized (made to have an electric charge again)
+                        by radiation
+                        from these first stars.</p><a target="_blank" data-url="" href="" data-component-tracked="1"
+                        class="hawk-link-parsed">
+                        <figure class="van-image-figure inline-layout" data-bordeaux-image-check="">
+                            <div class="image-full-width-wrapper">
+                                <div class="image-widthsetter" style="max-width:1920px;">
+                                    <p class="vanilla-image-block" style=" ">
+                                        <picture>
+                                            <source type="image/webp"
+                                                alt="Photograph of the large primary golden mirror made up of 18 smaller hexagonal mirrors"
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-320-80.jpg.webp 320w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-480-80.jpg.webp 480w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-650-80.jpg.webp 650w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-970-80.jpg.webp 970w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1024-80.jpg.webp 1024w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1200-80.jpg.webp 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH.jpg"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH.jpg"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-320-80.jpg.webp 320w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-480-80.jpg.webp 480w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-650-80.jpg.webp 650w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-970-80.jpg.webp 970w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1024-80.jpg.webp 1024w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1200-80.jpg.webp 1200w">
+                                            <source type="image/jpeg"
+                                                alt="Photograph of the large primary golden mirror made up of 18 smaller hexagonal mirrors"
+                                                class="expandable lazy-image-van"
+                                                onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                data-srcset="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1200-80.jpg 1200w"
+                                                data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                data-original-mos="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH.jpg"
+                                                data-pin-media="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH.jpg"
+                                                sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                srcset="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1200-80.jpg 1200w">
+                                            <figure class="expandable-image"><img
+                                                    src="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    alt="Photograph of the large primary golden mirror made up of 18 smaller hexagonal mirrors"
+                                                    class="expandable lazy-image-van loaded"
+                                                    onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)"
+                                                    data-normal="https://vanilla.futurecdn.net/space/media/img/missing-image.svg"
+                                                    data-srcset="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1200-80.jpg 1200w"
+                                                    data-sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    data-original-mos="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH.jpg"
+                                                    data-pin-media="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH.jpg"
+                                                    loading="lazy" sizes="(min-width: 1000px) 970px, calc(100vw - 40px)"
+                                                    srcset="https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/TXivf7seQ3YfDufKihxoJH-1200-80.jpg 1200w"
+                                                    data-ll-status="loaded">
+                                                <div class="expand icon icon-expand-image"></div>
+                                            </figure>
+                                        </picture>
+                                    </p>
+                                </div>
+                            </div>
+                            <figcaption itemprop="caption description" class=" inline-layout"><span
+                                    class="caption-text">The James Webb Space Telescope's 21.3-foot
+                                    (6.5 meter)
+                                    diameter primary mirror. </span><span class="credit"
+                                    itemprop="copyrightHolder">(Image credit: NASA/C. Gunn)</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <p><strong>Assembly of galaxies</strong>&nbsp;</p>
+                    <p>Looking at galaxies is a useful way to see how matter is organized on
+                        gigantic scales,
+                        which in turn gives us hints as to how the universe evolved. The spiral and
+                        elliptical
+                        <a data-analytics-id="inline-link" href="https://www.space.com/15680-galaxies.html"
+                            data-before-rewrite-localise="https://www.space.com/15680-galaxies.html"
+                            data-component-tracked="1" class="hawk-link-parsed">galaxies</a> we see
+                        today
+                        actually evolved from different shapes over billions of years, and one of
+                        JWST's goals
+                        is to look back at the earliest galaxies to better understand that
+                        evolution. Scientists
+                        are also trying to figure out how we got the variety of galaxies that are
+                        visible today,
+                        and the current ways that galaxies form and assemble.
+                    </p>
+                    <div class="fancy-box">
+                        <div class="fancy_box-title">Related stories:</div>
+                        <div class="fancy_box_body">
+                            <p class="fancy-box__body-text">— <a data-analytics-id="inline-link"
+                                    href="https://www.space.com/james-webb-space-telescope-science-overview"
+                                    data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-science-overview"
+                                    data-component-tracked="1" class="hawk-link-parsed">James Webb
+                                    Space
+                                    Telescope: The scientific mysteries no other observatory could
+                                    unravel</a>
+                            </p>
+                            <p class="fancy-box__body-text">— <a data-analytics-id="inline-link"
+                                    href="https://www.space.com/james-webb-space-telescope-engineering-challenges"
+                                    data-before-rewrite-localise="https://www.space.com/james-webb-space-telescope-engineering-challenges"
+                                    data-component-tracked="1" class="hawk-link-parsed">The
+                                    engineering behind a
+                                    'first light machine' that is not allowed to fail</a>&nbsp;</p>
+                            <p class="fancy-box__body-text">— <a data-analytics-id="inline-link"
+                                    href="https://www.space.com/nasa-james-webb-space-telescope-black-paint-video-birb"
+                                    data-before-rewrite-localise="https://www.space.com/nasa-james-webb-space-telescope-black-paint-video-birb"
+                                    data-component-tracked="1" class="hawk-link-parsed">Paint it
+                                    black: behind
+                                    the James Webb Space Telescope's signature color </a>&nbsp;</p>
+                        </div>
+                    </div>
+                    <p><strong>Birth of stars and protoplanetary systems</strong></p>
+                    <p>The Eagle Nebula's "<a data-analytics-id="inline-link"
+                            href="https://www.space.com/16396-eagle-nebula-m16-hubble-images-pillars-of-creation.html"
+                            data-before-rewrite-localise="https://www.space.com/16396-eagle-nebula-m16-hubble-images-pillars-of-creation.html"
+                            data-component-tracked="1" class="hawk-link-parsed">Pillars of
+                            Creation</a>" are
+                        some of the most famous birthplaces for stars. Stars come to be in clouds of
+                        gas, and as
+                        the stars grow, the radiation pressure they exert blows away the cocooning
+                        gas (which
+                        could be used again for other stars, if not too widely dispersed.) However,
+                        it's
+                        difficult to see inside the gas. JWST's infrared eyes will be able to look
+                        at sources of
+                        heat, including stars that are being born in these cocoons.</p>
+                    <p><strong>Planets and origins of life</strong></p>
+                    <p>The last decade has seen vast numbers of exoplanets discovered, including
+                        with NASA's
+                        planet-seeking Kepler Space Telescope. JWST's powerful sensors will be able
+                        to peer at
+                        these planets in more depth, including (in some cases) imaging their
+                        atmospheres.
+                        Understanding the atmospheres and the formation conditions for planets could
+                        help
+                        scientists better predict if certain planets are habitable or not.</p>
+                    <h2 class="article-body__section" id="section-james-webb-space-telescope-onboard-instruments">
+                        <span>James Webb
+                            Space
+                            Telescope onboard instruments </span>
+                    </h2>
+                    <p>The JWST is equipped with four science instruments that will enable
+                        observations in
+                        visible, near-infrared and mid-infrared (0.6 to 28.5 micrometers)
+                        wavelengths.&nbsp;</p>
+
+            </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="connect">
+                <h2>Connect With Us</h2>
+                <a href=""><i class="bi bi-github"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-envelope"></i></a>
+            </div>
+            <div class="links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="enroll.html">ENROLL</a></li>
+                    <li><a href="index.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>
+                    &copy; 2024 Landing Blog Page. All rights reserved. | Designed by
+                    Shreyansh
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var openPopupBtn = document.querySelector('.open-popup-btn');
+            var popupMenu = document.querySelector('.popup-menu');
+            var closePopupBtn = document.querySelector('.close-popup-btn');
+
+            openPopupBtn.addEventListener('click', function () {
+                popupMenu.style.display = 'block';
+            });
+
+            closePopupBtn.addEventListener('click', function () {
+                popupMenu.style.display = 'none';
+            });
+        });
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
