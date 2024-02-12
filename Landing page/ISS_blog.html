@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>The International Space Station</title>
+
+    <link rel="stylesheet" href="./apod.css">
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .popup-menu {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Black theme background color with transparency */
+            color: #ffd700;
+            /* Yellow accent text color */
+            padding: 30px;
+            /* Increased padding for better spacing */
+            width: 500px;
+            /* Increased width for a wider modal */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            /* Increased box shadow for a subtle glassmorphism effect */
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            /* Glassmorphism effect */
+            border-radius: 10px;
+            /* Rounded corners for a modern look */
+            text-align: center;
+        }
+
+        .popup-menu h2 {
+            font-size: 24px;
+            /* Larger font size for the heading */
+            margin-bottom: 20px;
+            /* Increased margin for better spacing */
+        }
+
+        .popup-menu a {
+            display: block;
+            margin-bottom: 10px;
+            color: #ffd700;
+            /* Yellow accent link color */
+            text-decoration: none;
+        }
+
+        .popup-menu a:hover {
+            text-decoration: underline;
+        }
+
+        .popup-menu button {
+            display: block;
+            margin-top: 20px;
+            /* Increased margin for better spacing */
+            background-color: #ffd700;
+            /* Yellow accent button background color */
+            color: #333;
+            /* Black theme button text color */
+            padding: 12px;
+            width: 100%;
+            /* Make the button full width */
+            border: none;
+            cursor: pointer;
+        }
+
+        .popup-menu button:hover {
+            background-color: #555;
+            /* Darker yellow accent on hover */
+        }
+
+        .close-popup-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ffd700;
+            /* Yellow accent close button color */
+            cursor: pointer;
+        }
+
+        .open-popup-btn {
+            background-color: #ffd700;
+            /* Yellow accent button background color */
+            color: #333;
+            /* Black theme button text color */
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .open-popup-btn:hover {
+            background-color: #555;
+            /* Darker yellow accent on hover */
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-left">
+            <h2>Spaces<span>EDU</span></h2>
+        </div>
+
+        <div class="nav-right">
+            <button class="open-popup-btn">Menu</button>
+            <div class="popup-menu">
+                <span class="close-popup-btn">&times;</span>
+                <a class="nav-option" href="index.html">Home</a>
+                <a class="nav-option" href="planet.html">Planets</a>
+                <a class="nav-option" href="#">Trailer</a>
+                <a class="nav-option" href="#">Tickets</a>
+                <a class="nav-option" href="blog.html">Blog</a>
+
+                <a class="nav-option" href="login.html" target="_blank">Login</a>
+                <a class="nav-option" href="#contact">Contact</a>
+                <a class="nav-option" href="feedback.html">Rate Us</a>
+                <!-- <a href="enroll.html"><button>Enroll</button></a> -->
+            </div>
+            <a href="enroll.html"><button>Enroll</button></a>
+        </div>
+    </div>
+
+
+
+    <br><br>
+
+    <main class="container">
+        <div class="row g-12">
+            <div class="col-md-12">
+                <div style="width: 100%; height:425px">
+                    <img src="https://images.theconversation.com/files/286891/original/file-20190805-36363-18aqkpa.jpg?ixlib=rb-1.1.0&rect=20%2C6%2C4473%2C2984&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip"
+                        width="100%" height="500px">
+                </div>
+                <br><br><br>
+                <article class="blog-post">
+                    <h2 class="blog-post-title">The International Space Station: Humanity's Gateway to the Cosmos</h2>
+                    <p class="blog-post-meta">February 12, 2024 by <a href="https://github.com/Surajit0573">Surajit
+                            Maity</a></p>
+                    <p>
+                        <br>
+                    <div class="blogpostext">
+                        <h4>Introduction</h4>
+                        <p>In the vast expanse of space, amidst the darkness and silence, orbits a symbol of human
+                            ingenuity, collaboration, and exploration: the International Space Station (ISS). Since its
+                            inception, the ISS has served as a beacon of international cooperation, scientific research,
+                            and technological innovation. In this comprehensive exploration, we delve into the
+                            intricacies of the ISS, its historical evolution, technical marvels, groundbreaking
+                            research, and the profound impact it has had on humanity's understanding of space.</p>
+
+                        <h4>Genesis of the International Space Station</h4>
+                        <p>The origins of the International Space Station can be traced back to the early days of space
+                            exploration, when the United States and the Soviet Union engaged in a fierce competition to
+                            conquer the cosmos. However, with the end of the Cold War, a new era of cooperation emerged,
+                            leading to the creation of the ISS. The collaborative effort involving space agencies from
+                            the United States, Russia, Europe, Japan, and Canada culminated in the signing of the ISS
+                            Intergovernmental Agreement in 1998.</p>
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/ISS_blueprint.png/521px-ISS_blueprint.png"
+                            alt="">
+                        <h4>Design and Construction of the ISS</h4>
+                        <p>The International Space Station is a marvel of engineering, comprising interconnected
+                            modules, laboratories, and solar arrays that span the length of a football field. The
+                            assembly of the ISS involved numerous space shuttle missions, Russian Soyuz and Progress
+                            spacecraft, as well as robotic arms and astronauts conducting extravehicular activities
+                            (EVAs) in the vacuum of space. Despite the challenges posed by microgravity and extreme
+                            temperatures, the construction of the ISS proceeded according to plan, showcasing humanity's
+                            ability to overcome adversity in pursuit of a shared goal.</p>
+
+
+                        <h4>Living and Working in Space</h4>
+                        <p>Life aboard the International Space Station is a testament to human adaptability and
+                            resilience. Astronauts and cosmonauts from around the world spend months at a time aboard
+                            the ISS, conducting scientific experiments, maintaining equipment, and performing routine
+                            tasks essential for survival in the harsh environment of space. From growing plants in
+                            microgravity to studying the effects of long-duration spaceflight on the human body, the ISS
+                            serves as a unique laboratory for advancing our understanding of biology, physics, and
+                            materials science.</p>
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/ISS-08_Michael_Foale_conducts_an_inspection_of_the_Microgravity_Science_Glovebox.jpg/259px-ISS-08_Michael_Foale_conducts_an_inspection_of_the_Microgravity_Science_Glovebox.jpg"
+                            alt="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Crew_in_ATV_with_Jules_Verne_manuscript.jpg/220px-Crew_in_ATV_with_Jules_Verne_manuscript.jpg"
+                            alt="">
+                        <h4>Scientific Discoveries and Research Breakthroughs</h4>
+                        <p>The International Space Station has facilitated groundbreaking research in a wide range of
+                            fields, from medicine and microbiology to astronomy and astrophysics. Experiments conducted
+                            aboard the ISS have led to discoveries with far-reaching implications for humanity,
+                            including advancements in regenerative medicine, environmental monitoring, and materials
+                            manufacturing. Moreover, the ISS serves as a platform for testing technologies and
+                            techniques essential for future human exploration of deep space, such as life support
+                            systems, radiation shielding, and autonomous robotics.</p>
+
+                        <h4>International Cooperation and Diplomacy</h4>
+                        <p>The success of the International Space Station is a testament to the power of international
+                            cooperation and diplomacy in the pursuit of shared goals. Despite political differences and
+                            cultural barriers, space agencies from different countries have come together to build and
+                            operate the ISS, transcending national boundaries in the name of science and exploration.
+                            The ISS serves as a shining example of what can be achieved when nations set aside their
+                            differences and work together for the common good.</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/View_of_the_ISS_taken_during_Crew-2_flyaround_%28ISS066-E-081311%29.jpg/450px-View_of_the_ISS_taken_during_Crew-2_flyaround_%28ISS066-E-081311%29.jpg"
+                            alt="">
+                        <h4>Future Prospects and Beyond</h4>
+                        <p>As we look to the future, the International Space Station remains at the forefront of
+                            humanity's quest to explore and colonize the cosmos. Plans are underway to extend the
+                            lifespan of the ISS beyond its original retirement date, ensuring that it continues to serve
+                            as a platform for scientific research and technological innovation for years to come.
+                            Moreover, the ISS serves as a springboard for future human missions to the Moon, Mars, and
+                            beyond, laying the groundwork for a new era of space exploration and colonization.</p>
+
+                        <h4>Conclusion</h4>
+                        <p>In the grand tapestry of human history, few achievements rival the significance of the
+                            International Space Station. From its humble beginnings as a dream of exploration to its
+                            current status as a symbol of international cooperation and scientific progress, the ISS
+                            stands as a testament to the boundless potential of humanity to reach for the stars. As we
+                            gaze up at the night sky, let us not forget the remarkable journey that has brought us to
+                            this moment, and let us continue to push the boundaries of knowledge and exploration as we
+                            venture ever further into the cosmos.</p>
+                    </div>
+                    <br><br><br><br>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="connect">
+                <h2>Connect With Us</h2>
+                <a href=""><i class="bi bi-github"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-envelope"></i></a>
+            </div>
+            <div class="links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="enroll.html">ENROLL</a></li>
+                    <li><a href="index.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>
+                    &copy; 2024 Landing Blog Page. All rights reserved. | Designed by
+                    Shreyansh
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var openPopupBtn = document.querySelector('.open-popup-btn');
+            var popupMenu = document.querySelector('.popup-menu');
+            var closePopupBtn = document.querySelector('.close-popup-btn');
+
+            openPopupBtn.addEventListener('click', function () {
+                popupMenu.style.display = 'block';
+            });
+
+            closePopupBtn.addEventListener('click', function () {
+                popupMenu.style.display = 'none';
+            });
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
