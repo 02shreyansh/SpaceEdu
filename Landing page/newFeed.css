@@ -68,7 +68,7 @@
 }
 
 .rating-section .message {
-    margin-right: 5rem;
+    margin-right: 7rem;
 }
 
 .rating-description {
@@ -80,10 +80,11 @@
 
 .rating-description>.message {
     margin-right: 1.5rem;
+    margin-right: 6rem;
 }
 
 .rating-description div {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 
