@@ -1,0 +1,323 @@
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Blog Template · Bootstrap v5.1</title>
+
+  <link rel="stylesheet" href="./apod.css">
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#7952b3">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .popup-menu {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      /* Black theme background color with transparency */
+      color: #ffd700;
+      /* Yellow accent text color */
+      padding: 30px;
+      /* Increased padding for better spacing */
+      width: 500px;
+      /* Increased width for a wider modal */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      /* Increased box shadow for a subtle glassmorphism effect */
+      z-index: 1;
+      backdrop-filter: blur(10px);
+      /* Glassmorphism effect */
+      border-radius: 10px;
+      /* Rounded corners for a modern look */
+      text-align: center;
+    }
+
+    .popup-menu h2 {
+      font-size: 24px;
+      /* Larger font size for the heading */
+      margin-bottom: 20px;
+      /* Increased margin for better spacing */
+    }
+
+    .popup-menu a {
+      display: block;
+      margin-bottom: 10px;
+      color: #ffd700;
+      /* Yellow accent link color */
+      text-decoration: none;
+    }
+
+    .popup-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .popup-menu button {
+      display: block;
+      margin-top: 20px;
+      /* Increased margin for better spacing */
+      background-color: #ffd700;
+      /* Yellow accent button background color */
+      color: #333;
+      /* Black theme button text color */
+      padding: 12px;
+      width: 100%;
+      /* Make the button full width */
+      border: none;
+      cursor: pointer;
+    }
+
+    .popup-menu button:hover {
+      background-color: #555;
+      /* Darker yellow accent on hover */
+    }
+
+    .close-popup-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #ffd700;
+      /* Yellow accent close button color */
+      cursor: pointer;
+    }
+
+    .open-popup-btn {
+      background-color: #ffd700;
+      /* Yellow accent button background color */
+      color: #333;
+      /* Black theme button text color */
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .open-popup-btn:hover {
+      background-color: #555;
+      /* Darker yellow accent on hover */
+    }
+
+    #progress {
+      background-color: white;
+      position: fixed;
+      bottom: 20px;
+      right: 10px;
+      height: 60px;
+      width: 60px;
+      display: none;
+      place-items: center;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+
+    }
+
+    #progress-value {
+      display: block;
+      height: calc(100% - 15px);
+      width: calc(100% - 15px);
+      background-color: #1f3959;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 25px;
+      font-weight: 700;
+      /* color: #001a2e; */
+      color: white;
+
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="blog.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-left">
+      <h2>Spaces<span>EDU</span></h2>
+    </div>
+
+    <div class="nav-right">
+      <button class="open-popup-btn">Menu</button>
+      <div class="popup-menu">
+        <span class="close-popup-btn">&times;</span>
+        <a class="nav-option" href="index.html">Home</a>
+        <a class="nav-option" href="planet.html">Planets</a>
+        <a class="nav-option" href="#">Trailer</a>
+        <a class="nav-option" href="#">Tickets</a>
+        <a class="nav-option" href="blog.html">Blog</a>
+
+        <a class="nav-option" href="login.html" target="_blank">Login</a>
+        <a class="nav-option" href="#contact">Contact</a>
+        <a class="nav-option" href="feedback.html">Rate Us</a>
+        <!-- <a href="enroll.html"><button>Enroll</button></a> -->
+      </div>
+      <a href="enroll.html"><button>Enroll</button></a>
+    </div>
+  </div>
+
+
+
+  <br><br>
+
+  <main class="container">
+    <!-- <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-12 px-0">
+      <h1 class="display-4 fst-italic">Unraveling the Mysteries of Wormholes</h1>
+      
+    </div>
+  </div> -->
+
+
+
+    <div class="row g-12">
+      <div class="col-md-12">
+
+        <div style="width: 100%; height:500px">
+          <img src="https://newsonair.gov.in/writereaddata/News_Pictures/MIS/2023/Jul/NPIC-202371013447.jpg"
+            width="100%" height="500px">
+
+        </div>
+
+        <article class="blog-post">
+          <h2 class="blog-post-title">Small Space Launch Vehicle</h2>
+          <p class="blog-post-meta">February 12, 2024 by <a href="https://github.com/PranavBarthwal">Pranav Barthwal</a>
+          </p>
+          <p>
+
+            <br>
+          
+          <p>In the vast expanse of space exploration, every innovation propels humanity closer to unlocking the mysteries of the cosmos. Among the latest advancements in this realm stands the Small Satellite Launch Vehicle (SSLV), a compact yet powerful rocket poised to revolutionize how we access and utilize space. Developed by the Indian Space Research Organisation (ISRO), the SSLV represents a significant leap forward in India's space capabilities, offering a cost-effective and efficient solution for deploying small satellites into orbit.</p>
+
+          <br>
+          
+          <p>
+            The SSLV, aptly named for its ability to cater to the growing demand for launching small satellites, embodies a spirit of innovation and adaptability. Standing at the forefront of India's space missions, this versatile rocket promises to democratize access to space, opening up new opportunities for scientific research, commercial ventures, and societal benefits.
+          </p>
+
+          <br>
+        
+
+          <p>One of the most remarkable features of the SSLV is its compact size and modular design. With a height of around 34 meters and a diameter of just 2 meters, this rocket is designed for agility and flexibility. Its modular architecture allows for swift assembly and integration, significantly reducing launch preparation time and costs. Moreover, the SSLV's ability to carry payloads ranging from 300 to 700 kilograms to Low Earth Orbit (LEO) makes it an ideal choice for a wide range of missions, including Earth observation, communication, technology demonstration, and scientific research.</p>
+
+          <br>
+          
+          <p>
+            The SSLV's propulsion system, powered by a combination of solid and liquid propulsion stages, ensures optimal performance and reliability during launch. Its advanced guidance and control systems enable precise trajectory management, ensuring that payloads reach their designated orbits with pinpoint accuracy. This reliability makes the SSLV an attractive option for both government and commercial customers seeking dependable access to space for their satellites and experiments.
+          </p>
+
+          <br>
+          
+          <p>Furthermore, the SSLV's cost-effectiveness is a game-changer in the space industry. By streamlining launch operations and optimizing resources, ISRO aims to provide competitive pricing for launching small satellites, thereby lowering barriers to entry for emerging space players and startups. This approach aligns with India's vision of fostering innovation and entrepreneurship in the space sector, driving economic growth and technological advancement.</p>
+          <br>
+          
+          <p>
+            Looking ahead, the SSLV holds immense promise for the future of space exploration. As ISRO continues to refine and expand its capabilities, the SSLV is poised to play a crucial role in advancing our understanding of the universe and addressing global challenges here on Earth. Whether it's monitoring the environment, enhancing communication networks, or conducting groundbreaking scientific research, the SSLV offers a reliable and efficient means of harnessing the potential of space for the benefit of humanity.
+
+            In conclusion, the Small Satellite Launch Vehicle represents a significant milestone in India's space journey and a testament to the nation's commitment to pushing the boundaries of exploration. With its compact design, modular architecture, and cost-effective approach, the SSLV is set to democratize access to space and empower innovators and visionaries to reach for the stars. As we embark on this exciting new chapter in space exploration, the SSLV stands as a beacon of progress and possibility, inspiring us to dream big and explore beyond the limits of our imagination.
+          </p>
+          <br>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="connect">
+        <h2>Connect With Us</h2>
+        <a href=""><i class="bi bi-github"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href=""><i class="bi bi-twitter"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-envelope"></i></a>
+      </div>
+      <div class="links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="enroll.html">ENROLL</a></li>
+          <li><a href="index.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; 2024 Landing Blog Page. All rights reserved. | Designed by
+          Shreyansh
+        </p>
+      </div>
+    </div>
+  </footer>
+  <div id="progress">
+    <span id="progress-value">&#x1F815; </span>
+  </div>
+  <script src="scroll.js"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var openPopupBtn = document.querySelector('.open-popup-btn');
+      var popupMenu = document.querySelector('.popup-menu');
+      var closePopupBtn = document.querySelector('.close-popup-btn');
+
+      openPopupBtn.addEventListener('click', function () {
+        popupMenu.style.display = 'block';
+      });
+
+      closePopupBtn.addEventListener('click', function () {
+        popupMenu.style.display = 'none';
+      });
+    });
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>
