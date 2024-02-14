@@ -136,6 +136,10 @@ Generic layout (demo looks)
       gap: 24px;
     }
 
+    article{
+      margin-bottom: 5rem;
+    }
+
     @media screen and (max-width: 960px) {
       article {
         container: card/inline-size;
@@ -178,6 +182,67 @@ Generic layout (demo looks)
       position: absolute;
       white-space: nowrap;
       width: 1px;
+    }
+
+
+
+
+
+    .reveal {
+      position: relative;
+      opacity: 0;
+    }
+
+    .reveal.active {
+      opacity: 1;
+    }
+
+    .active.fade-bottom {
+      animation: fade-bottom 2s ease-in;
+    }
+
+    .active.fade-left {
+      animation: fade-left 2s ease-in;
+    }
+
+    .active.fade-right {
+      animation: fade-right 2s ease-in;
+    }
+
+    @keyframes fade-bottom {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-left {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-right {
+      0% {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   </style>
 
@@ -414,21 +479,19 @@ Generic layout (demo looks)
         <article>
           <div class="article-wrapper">
             <figure>
-              <img
-              src="https://cosmosmagazine.com/wp-content/uploads/2020/04/171004_sputnik_vision.jpg"
-              alt="" />
-          </figure>
-          <div class="article-body">
-            <h2>Sputnik 1</h2>
-            <p>
-              Sputnik 1 was the first artificial Earth satellite. It was launched into an elliptical low Earth orbit
-              by the Soviet Union on 4 October 1957 as part of the Soviet space program. It sent a radio signal back
-              to Earth for three weeks before its three silver-zinc batteries ran out. </p>
-            <a href="./Sputnik_blog.html" class="read-more">Read more </a>
+              <img src="https://cosmosmagazine.com/wp-content/uploads/2020/04/171004_sputnik_vision.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Sputnik 1</h2>
+              <p>
+                Sputnik 1 was the first artificial Earth satellite. It was launched into an elliptical low Earth orbit
+                by the Soviet Union on 4 October 1957 as part of the Soviet space program. It sent a radio signal back
+                to Earth for three weeks before its three silver-zinc batteries ran out. </p>
+              <a href="./Sputnik_blog.html" class="read-more">Read more </a>
+            </div>
           </div>
-        </div>
-      </article>
-        
+        </article>
+
       </section>
 
 
@@ -472,6 +535,66 @@ Generic layout (demo looks)
   <div id="progress">
     <span id="progress-value">&#x1F815; </span>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+
+    var tl = gsap.timeline();
+
+    tl.from(".nav", {
+      opacity: 0,
+      y: -20,
+      delay: 1,
+      duration: 1
+    })
+
+    tl.from(".section_title", {
+      opacity: 0,
+      y: 20,
+      duration: 1
+    })
+    
+    tl.from("footer" , {
+      opacity:0,
+      x:20,
+      duration:1
+    })
+
+    var articles = document.querySelectorAll('.articles article');
+    Array.from(articles).forEach((e)=>{
+      e.classList.add("reveal");
+    })
+
+
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+  </script>
+
+
+
   <script src="scroll.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
