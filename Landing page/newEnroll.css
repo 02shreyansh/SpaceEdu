@@ -425,7 +425,7 @@ body{
     /* Increased width for a wider modal */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     /* Increased box shadow for a subtle glassmorphism effect */
-    z-index: 1;
+    z-index: 999;
     backdrop-filter: blur(10px);
     /* Glassmorphism effect */
     border-radius: 10px;
