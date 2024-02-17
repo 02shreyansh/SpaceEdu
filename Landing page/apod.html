@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="blog.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 
@@ -23,11 +24,11 @@
 <body>
 
   <div class="nav">
-    <div class="nav-left">
+    <div class="nav-left" data-aos="slide-left">
       <h2>Spaces<span>EDU</span></h2>
     </div>
 
-    <div class="nav-right">
+    <div class="nav-right" data-aos="slide-right">
       <button class="open-popup-btn">Menu</button>
       <div class="popup-menu">
         <span class="close-popup-btn">&times;</span>
@@ -52,8 +53,8 @@
 
 
   <!-- APOD SECTION -->
-  <h1 align="center" class="section_title" id="apod">Astronomy Picture of The Day</h1>
-  <div class="container my-5">
+  <h1 align="center" class="section_title" id="apod" data-aos="zoom-in">Astronomy Picture of The Day</h1>
+  <div class="container my-5" data-aos="zoom-in-up">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
       <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
         <h2 id="title" class="display-7 fw-bold lh-1 text-light">APoD Title</h2><br>
@@ -66,7 +67,7 @@
 
       </div>
 
-      <div class="apod_img_container">
+      <div class="apod_img_container" data-aos="slide-right">
         <div class="img">
           <img src="./assets/64e4e4aabd98a600197c0ca3.webp" id="apod_img" width="100%" height="100%">
         </div>
@@ -87,7 +88,7 @@
   <br>
 
 
-  <footer>
+  <footer data-aos="fade-right">
     <div class="footer-container">
       <div class="connect">
         <h2>Connect With Us</h2>
@@ -138,6 +139,12 @@
 
 
   <script src="./apod.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      AOS.init({
+          duration: 2000,
+      });
+  </script>
 
 </body>
 

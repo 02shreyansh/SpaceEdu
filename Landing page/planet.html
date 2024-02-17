@@ -6,15 +6,16 @@
   <title>Planets</title>
   <link rel="shortcut icon" type="image/jpg" href="saturn.png" />
   <link rel="stylesheet" href="planet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="opening hide-UI view-2D zoom-large data-close controls-close">
   <div class="nav">
-    <div class="nav-left">
+    <div class="nav-left" data-aos="slide-left">
       <h2>Spaces<span>EDU</span></h2>
     </div>
 
-    <div class="nav-right">
+    <div class="nav-right" data-aos="slide-right">
       <button class="open-popup-btn">Menu</button>
       <div class="popup-menu">
         <span class="close-popup-btn">&times;</span>
@@ -199,6 +200,13 @@
   <script src="js/scripts.min.js"></script>
 
   <script src="planet.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      AOS.init({
+          duration: 2000,
+      });
+  </script>
 </body>
 
 </html>

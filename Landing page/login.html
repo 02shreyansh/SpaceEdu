@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="blog.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 		<link rel="shortcut icon" type="image/jpg" href="saturn.png" />
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<style>
 		body {
 			display: flex;
@@ -91,11 +92,11 @@
 
 
 	<div class="nav">
-		<div class="nav-left">
+		<div class="nav-left" data-aos="slide-left">
 			<h2>Spaces<span>EDU</span></h2>
 		</div>
 
-		<div class="nav-right">
+		<div class="nav-right" data-aos="slide-right">
 			<button class="open-popup-btn">Menu</button>
 			<div class="popup-menu">
 				<span class="close-popup-btn">&times;</span>
@@ -197,6 +198,12 @@
 
 	<script src="./apod.js"></script>
 
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration: 2000,
+		});
+	</script>
 </body>
 
 </html>

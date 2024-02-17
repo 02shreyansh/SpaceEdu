@@ -8,17 +8,18 @@
   <link rel="stylesheet" href="newFeed.css">
   <link rel="stylesheet" href="feedback.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 
 <body>
 
   <div class="nav">
-    <div class="nav-left">
+    <div class="nav-left" data-aos="slide-left">
       <h2>Spaces<span>EDU</span></h2>
     </div>
 
-    <div class="nav-right">
+    <div class="nav-right" data-aos="slide-right">
       <button class="open-popup-btn">Menu</button>
       <div class="popup-menu">
         <span class="close-popup-btn">&times;</span>
@@ -189,6 +190,13 @@
 
 
   </script> -->
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration: 2000,
+		});
+	</script>
 </body>
 
 </html>
