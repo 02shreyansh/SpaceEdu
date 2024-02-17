@@ -122,3 +122,24 @@ function  PrepareInput(input){
     }
     return input_array.join("");
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const themeIcon = document.getElementById('themeIcon');
+
+    themeToggle.addEventListener('click', function () {
+        body.classList.toggle('dark-mode');
+        updateThemeIcon();
+    });
+
+    function updateThemeIcon() {
+        if (body.classList.contains('dark-mode')) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        } else {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+    }
+    updateThemeIcon();
+});
