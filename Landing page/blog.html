@@ -133,7 +133,7 @@ Generic layout (demo looks)
       margin-inline: auto;
       padding-inline: 24px;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 24px;
+      gap: 64px;
     }
 
     article{
@@ -244,6 +244,45 @@ Generic layout (demo looks)
         opacity: 1;
       }
     }
+
+    .read-more{
+      color: skyblue;
+    }
+
+    /* Hover effect for article */
+article:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin-bottom: 6rem; /* Increase space between articles */
+
+}
+article :hover .read-more{
+  color: red;
+}
+
+/* Reset transition for specific properties to avoid interfering with hover effect */
+article img,
+article h2,
+article a .icon {
+  transition: none;
+}
+
+/* Hover effect for article text */
+article:hover h2 {
+  color: #ea3a0e;
+}
+
+article:hover a .icon {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Reset transition for article text and icon */
+article h2,
+article a .icon {
+  transition: all 0.3s;
+}
+
   </style>
 
 
