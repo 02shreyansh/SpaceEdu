@@ -18,8 +18,8 @@
     width: auto;
     padding: 3rem;
     background: #ffb347;
-    background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);
-    background: linear-gradient(to right, #ffcc33, #ffb347);
+    background: -webkit-linear-gradient(to right, #0f0f15, #040c36);
+    background: linear-gradient(to right, #05081b, #121a2e);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,14 +92,14 @@
     text-decoration: none;
     font-size: 2rem;
     padding: 0.5rem 1rem;
-    background-color: gold;
-    color: black;
+    background-color: rgb(42, 41, 41);
+    color: white;
     border-radius: 10px;
     transition: all 0.2s ease-in-out;
 }
 
 .submit-section a:hover {
-    background-color: rgb(254, 221, 36);
+    background-color: black;
     transition: all 0.2s ease-in-out;
 }
 
@@ -108,4 +108,62 @@
     align-self: flex-end;
     transition: all 0.2s ease-in-out;
 }
-
+html{
+    overflow-x: hidden;
+}
+footer {
+    width: 100%;
+    color: white;
+    /* margin: 10px; */
+    margin-top: 80px;
+    border-top: 1px solid white;
+    background-color: black;
+  }
+  .connect {
+    padding: 30px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .connect h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  .connect a {
+    padding-top: 20px;
+    color: white;
+    font-size: 1.57rem;
+    line-height: 40px;
+    letter-spacing: 20px;
+  }
+  .connect a:hover {
+    color: aqua;
+  }
+  .links {
+    text-align: center;
+  }
+  .links h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  .links li {
+    list-style: none;
+  }
+  .links li a {
+    text-decoration: none;
+    color: cadetblue;
+    line-height: 35px;
+    font-size: 1.3rem;
+  }
+  .links li a:hover {
+    color: bisque;
+    text-decoration: underline;
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
