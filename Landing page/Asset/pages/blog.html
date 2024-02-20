@@ -332,6 +332,9 @@ article a .icon {
 
   <h1 align="center" class="section_title" id="apod">BLOGS</h1>
   <br>
+  <input type="text" id="searchInput" placeholder="Search" oninput="searchBlog()">
+
+  <br>
   <br>
   <div class="card-container-outer">
     <div class="card-container-inner">
@@ -646,6 +649,23 @@ article a .icon {
 
     window.addEventListener("scroll", reveal);
 
+  </script>
+   <script>
+    function searchBlog() {
+      var searchInput = document.getElementById('searchInput').value.toLowerCase();
+      var articles = document.querySelectorAll('.article-wrapper');
+
+      articles.forEach(function (article) {
+        var h2Tag = article.querySelector('h2');
+        var articleText = h2Tag.textContent.toLowerCase();
+
+        if (articleText.includes(searchInput)) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    }
   </script>
 
 
