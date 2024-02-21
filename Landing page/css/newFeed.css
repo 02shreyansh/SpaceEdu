@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./daksh.jpg");
+    background-image: url("../images/daksh.jpg");
 }
 
 .outer-container {
