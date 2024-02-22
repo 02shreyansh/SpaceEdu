@@ -43,12 +43,7 @@ body {
   color: white;
 }
 
-.nav-right {
-  pointer-events: all;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
+
 
 .nav-right button {
   padding: 10px 20px;
@@ -71,7 +66,12 @@ body {
   display: inline-block;
   position: relative;
 }
-
+.nav-right {
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 .nav-option::after {
   content: "";
   position: absolute;
@@ -84,17 +84,30 @@ body {
   transition: transform 0.25s ease-out;
 }
 
+.nav-right button {
+  padding: 10px 20px;
+  border-radius: 34px;
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: large;
+  background-color: #ffd700;
+  border: 2px solid #ffd700;
+  transition: background-color 2s ease;
+  margin-top: 0px;
+}
+
 .nav a:hover::after {
   transform: scaleX(1);
 }
 
-.nav-right button:hover {
-  background-color: transparent;
-  color: #ffd700;
-}
+
 
 .nav-left h2 span {
   animation: planetGlow 2s ease-in-out infinite alternate;
+}
+.nav-right button:hover {
+  background-color: transparent;
+  color: #ffd700;
 }
 
 @keyframes planetGlow {

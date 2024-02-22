@@ -286,6 +286,25 @@ article a .icon {
   </style>
 
 
+<style>
+  /* Style for the search input */
+  #blogSearch {
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: width 0.3s ease-in-out;
+  }
+
+  /* Animation when focusing on the search input */
+  #blogSearch:focus {
+    width: 90%;
+  }
+</style>
 
 
   <link rel="stylesheet" href="../css/blog.css" />
@@ -332,6 +351,8 @@ article a .icon {
 
   <h1 align="center" class="section_title" id="apod">BLOGS</h1>
   <br>
+<input type="text" id="blogSearch" placeholder="Search blogs...">
+
   <br>
   <br>
   <div class="card-container-outer">
@@ -650,7 +671,41 @@ article a .icon {
   </script>
    
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  var openPopupBtn = document.querySelector('.open-popup-btn');
+  var popupMenu = document.querySelector('.popup-menu');
+  var closePopupBtn = document.querySelector('.close-popup-btn');
+  var searchInput = document.getElementById('blogSearch'); // Add this line
 
+  openPopupBtn.addEventListener('click', function () {
+    popupMenu.style.display = 'block';
+  });
+
+  closePopupBtn.addEventListener('click', function () {
+    popupMenu.style.display = 'none';
+  });
+
+  // Handle blog search
+  searchInput.addEventListener('input', function () {
+    var searchQuery = searchInput.value.toLowerCase();
+
+    // Get all articles
+    var articles = document.querySelectorAll('.articles article');
+
+    // Loop through articles and hide/show based on search
+    Array.from(articles).forEach(function (article) {
+      var title = article.querySelector('h2').innerText.toLowerCase();
+      if (title.includes(searchQuery)) {
+        article.style.display = 'block';
+      } else {
+        article.style.display = 'none';
+      }
+    });
+  });
+});
+
+</script>
 
   <script src="../script/scroll.js"></script>
   <script>
