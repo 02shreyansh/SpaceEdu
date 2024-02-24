@@ -147,6 +147,35 @@
             background: linear-gradient(#1f3959, rgb(58, 57, 57));
             border-radius: 10px;
         }
+        #progress {
+            background-color: white;
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            height: 60px;
+            width: 60px;
+            display: none;
+            place-items: center;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+
+        }
+
+        #progress-value {
+            display: block;
+            height: calc(100% - 15px);
+            width: calc(100% - 15px);
+            background-color: #1f3959;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 25px;
+            font-weight: 700;
+            /* color: #001a2e; */
+            color: white;
+
+        }
     </style>
 
 
@@ -311,6 +340,9 @@
             </div>
         </div>
     </footer>
+    <div id="progress">
+        <span id="progress-value">&#x1F815; </span>
+      </div>
 
     <script src="../../script/scroll.js"></script>
     <script>
