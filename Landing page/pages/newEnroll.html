@@ -105,6 +105,26 @@
         <span id="progress-value">&#x1F815; </span>
       </div>
       <script src="../script/scroll.js"></script>
+
+
+        <!--Start of Conferbot Script-->
+    <script type="text/javascript">
+      (function (d, s, id) {
+        var js, el = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.async = true;
+        js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+        js.id = id;
+        js.charset = 'UTF-8';
+        el.parentNode.insertBefore(js, el);
+        js.onload = function () {
+          var w = window.ConferbotWidget("65d7ad07d747469302accbe7", "live_chat");
+        };
+      })(document, 'script', 'conferbot-js');
+    </script>
+    <!--End of Conferbot Script-->
+
       <script>
         document.addEventListener('DOMContentLoaded', function () {
           var openPopupBtn = document.querySelector('.open-popup-btn');
